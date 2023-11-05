@@ -1,0 +1,40 @@
+/* CSS for NavBar */
+
+.navbar {
+  background-color: #38b6ff;
+  border-bottom: 10px solid #120554;
+}
+
+/* Logo */
+.logo {
+  position: absolute;
+  top: 10px;
+  left: 30px;
+}
+
+/* NavBar Links */
+.navContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navLinks ul {
+  display: flex;
+  margin-right: 30px;
+}
+
+.navLinks li {
+  margin: 15px;
+}
+
+.dropdownTeams {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown:hover .dropdownTeams {
+  display: block;
+}
