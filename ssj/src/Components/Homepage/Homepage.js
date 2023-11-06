@@ -1,5 +1,7 @@
 // Homepage Component
 import "./Homepage.css";
+import Events from "../Events/Events";
+import News from "../News/News";
 
 function Homepage() {
   return (
@@ -19,6 +21,8 @@ function Homepage() {
           </p>
         </div>
       </div>
+      <Events />
+      <News />
     </div>
   );
 }

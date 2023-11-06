@@ -1,9 +1,13 @@
 /* CSS for NavBar */
 
 .navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
   background-color: var(--light-blue);
   border-bottom: 10px solid var(--dark-blue);
   color: var(--off-white);
+  box-shadow: var(--box-shadow);
 }
 
 /* Logo */

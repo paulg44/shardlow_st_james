@@ -1,13 +1,17 @@
 /* CSS file for Homepage */
 
 /* Main */
+.homepage {
+  overflow: auto;
+}
 
 .homepageWrapper {
-  min-height: 80vh;
+  height: 100vh;
   width: 60%;
-  position: absolute;
-  top: 30%;
-  left: 15%;
+  padding-top: 15%;
+  margin-left: 15%;
+  /* Placeholder */
+  border-bottom: 10px solid red;
 }
 
 /* Header */

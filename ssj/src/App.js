@@ -5,6 +5,7 @@ import "./App.css";
 // Imported Components
 import NavBar from "./Components/NavBar/NavBar";
 import Homepage from "./Components/Homepage/Homepage";
+// import Events from "./Components/Events/Events";
 
 function App() {
   return (
