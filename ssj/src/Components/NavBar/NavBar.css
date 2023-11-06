@@ -8,6 +8,7 @@
   border-bottom: 10px solid var(--dark-blue);
   color: var(--off-white);
   box-shadow: var(--box-shadow);
+  z-index: 1;
 }
 
 /* Logo */

@@ -3,9 +3,16 @@ import "./Homepage.css";
 import Events from "../Events/Events";
 import News from "../News/News";
 
-function Homepage() {
+function Homepage({ homepageImg }) {
   return (
     <div className="homepage">
+      <div className="homepageObject"></div>
+      <div
+        className="backgroundImage"
+        style={{
+          background: `url(${homepageImg}) no-repeat center center/cover`,
+        }}
+      ></div>
       <div className="homepageWrapper">
         <div className="homepageHeader">
           <p>Welcome to</p>
