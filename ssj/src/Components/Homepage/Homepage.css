@@ -1,16 +1,30 @@
 /* CSS file for Homepage */
 
-.homepage {
+/* Main */
+
+.homepageWrapper {
   min-height: 80vh;
+  width: 60%;
+  position: absolute;
+  top: 30%;
+  left: 15%;
 }
 
 /* Header */
 .homepageHeader h1 {
-  width: 50%;
   border-bottom: 7px solid var(--dark-blue);
 }
 
 /* About */
+.about {
+  margin-top: 40px;
+}
+
+.about h2 {
+  width: 70%;
+  border-bottom: 5px solid var(--dark-blue);
+}
+
 .aboutDesc {
   width: 60%;
 }
