@@ -1,14 +1,15 @@
 /* CSS for NavBar */
 
 .navbar {
-  background-color: #38b6ff;
-  border-bottom: 10px solid #120554;
+  background-color: var(--light-blue);
+  border-bottom: 10px solid var(--dark-blue);
+  color: var(--off-white);
 }
 
 /* Logo */
 .logo {
   position: absolute;
-  top: 10px;
+  top: 5px;
   left: 30px;
 }
 
@@ -24,7 +25,7 @@
 }
 
 .navLinks li {
-  margin: 15px;
+  margin: 30px 15px;
 }
 
 .dropdownTeams {
