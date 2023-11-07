@@ -28,7 +28,7 @@ function Homepage({ homepageImg }) {
           </p>
         </div>
       </div>
-      <Events />
+      <Events id="events" />
       <News />
     </div>
   );

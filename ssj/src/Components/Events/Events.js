@@ -3,9 +3,9 @@
 import "./Events.css";
 import EventsContainer from "../EventsContainer/EventsContainer";
 
-function Events({ props }) {
+function Events({ id }) {
   return (
-    <div className="events">
+    <div id={id} className="events">
       <h3>Upcoming Events</h3>
       <EventsContainer
         eventTitle="Charity Match"

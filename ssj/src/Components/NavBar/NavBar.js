@@ -1,5 +1,5 @@
 // NavBar Component
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import logo from "../../IMG/ssj_badge-removebg-preview.png";
 import "./NavBar.css";
 
@@ -12,8 +12,12 @@ function NavBar() {
         </Link>
         <div className="navLinks">
           <ul className="list">
-            <li className="listItem">News</li>
-            <li className="listItem">Events</li>
+            <li className="listItem">
+              <a href="#events">Events</a>
+            </li>
+            <li className="listItem">
+              <NavLink to="#news">News</NavLink>
+            </li>
             <li className="listItem dropdown">
               Teams
               {/* <ul className="dropdownTeams">

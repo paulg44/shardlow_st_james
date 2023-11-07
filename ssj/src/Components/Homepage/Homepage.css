@@ -46,7 +46,7 @@
   position: absolute;
   right: 100px;
   width: 400px;
-  height: 120vh;
+  height: 100vh;
   background: linear-gradient(var(--light-blue), transparent);
   opacity: 0.8;
   z-index: -1;
