@@ -1,1 +1,21 @@
 /* CSS file for events container */
+
+.eventsContainer {
+  width: 500px;
+  margin: 10px 0;
+}
+
+.eventsContainer h6 {
+  font-size: 1.5rem;
+  border-bottom: 2px solid var(--light-blue);
+  width: 50%;
+}
+
+.eventDate {
+  margin-bottom: 10px;
+  font-style: italic;
+}
+
+.eventLocation {
+  font-weight: bold;
+}

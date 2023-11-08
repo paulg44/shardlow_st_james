@@ -2,9 +2,9 @@
 
 import "./News.css";
 
-function News() {
+function News({ id }) {
   return (
-    <div className="news">
+    <div id={id} className="news">
       <h4>News</h4>
     </div>
   );

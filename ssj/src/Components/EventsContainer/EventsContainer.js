@@ -4,11 +4,11 @@ import "./EventsContainer .css";
 
 function EventsContainer(props) {
   return (
-    <div>
+    <div className="eventsContainer">
       <h6>{props.eventTitle}</h6>
-      <p>{props.eventDate}</p>
-      <p>{props.eventDesc}</p>
-      <p>{props.eventLocation}</p>
+      <p className="eventDate">{props.eventDate}</p>
+      <p className="eventDesc">{props.eventDesc}</p>
+      <p className="eventLocation">{props.eventLocation}</p>
     </div>
   );
 }
