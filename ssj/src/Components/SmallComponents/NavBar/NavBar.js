@@ -1,29 +1,19 @@
 // NavBar Component
-
-import logo from "../../IMG/ssj_badge-removebg-preview.png";
+import { NavLink, Link } from "react-router-dom";
+import logo from "../../../IMG/ssj_badge-removebg-preview.png";
 import "./NavBar.css";
-import { useRef } from "react";
 
 function NavBar() {
-  const eventsRef = useRef(null);
-
-  const scrollToEvents = () => {
-    const navbarHeight = 80;
-    const eventsPosition = eventsRef.current.offsetTop - navbarHeight;
-    window.scrollTo({ top: eventsPosition, behavior: "smooth" });
-  };
   return (
     <nav className="navbar">
       <div className="navContainer">
-        <a href={"/"} id="logo">
+        <Link to={"/"} id="logo">
           <img src={logo} alt="logo" className="logo"></img>
-        </a>
+        </Link>
         <div className="navLinks">
           <ul className="list">
             <li className="listItem">
-              <a href="#events" onClick={scrollToEvents}>
-                Events
-              </a>
+              <Link to={"/events"}>Events</Link>
             </li>
             <li className="listItem">
               <a href="#news">News</a>

@@ -14,8 +14,9 @@
 /* Logo */
 .logo {
   position: absolute;
+  width: 110px;
   top: 5px;
-  left: 30px;
+  left: 40px;
 }
 
 /* NavBar Links */
@@ -30,7 +31,7 @@
 }
 
 .navLinks li {
-  margin: 30px 15px;
+  margin: 15px;
 }
 
 .dropdownTeams {

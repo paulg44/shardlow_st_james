@@ -1,7 +1,5 @@
 // Homepage Component
 import "./Homepage.css";
-import Events from "../Events/Events";
-import News from "../News/News";
 
 function Homepage({ homepageImg }) {
   return (
@@ -28,8 +26,6 @@ function Homepage({ homepageImg }) {
           </p>
         </div>
       </div>
-      <Events id="events" />
-      <News id="news" />
     </div>
   );
 }
