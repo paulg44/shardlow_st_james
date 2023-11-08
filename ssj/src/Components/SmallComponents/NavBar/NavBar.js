@@ -1,5 +1,5 @@
 // NavBar Component
-import { NavLink, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import logo from "../../../IMG/ssj_badge-removebg-preview.png";
 import "./NavBar.css";
 
