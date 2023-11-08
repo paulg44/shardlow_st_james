@@ -6,15 +6,21 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-bottom: 30px;
 }
 
 .events h3 {
   text-align: right;
   margin-left: 20%;
-  margin-bottom: 30px;
   font-size: 2rem;
   width: 50%;
   border-bottom: 5px solid var(--dark-blue);
+}
+
+.eventsSubHeader {
+  width: 70%;
+  text-align: right;
+  font-size: large;
 }
 
 .eventList {
@@ -22,4 +28,10 @@
   grid-template-columns: 1fr 1fr;
   align-items: center;
   justify-content: center;
+}
+
+/* Background Object */
+.eventsObject {
+  left: 0;
+  transform: rotate(-60deg);
 }
