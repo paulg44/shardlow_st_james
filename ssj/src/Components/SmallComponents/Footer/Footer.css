@@ -1,0 +1,27 @@
+/* CSS file for Footer */
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+}
+
+.footerContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footerLinks a {
+  font-size: 2rem;
+  margin: 5px;
+  color: var(--dark-blue);
+}
+
+.footerInfo {
+  margin-right: 20px;
+  font-size: 0.75rem;
+}
+
+.footerInfo p {
+  font-family: "Oswald", sans-serif;
+}

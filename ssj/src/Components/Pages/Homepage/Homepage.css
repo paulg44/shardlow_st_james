@@ -3,8 +3,6 @@
 /* Main */
 .homepage {
   position: relative;
-  overflow-y: auto;
-  overflow-x: hidden;
 }
 
 .homepageWrapper {
@@ -31,8 +29,8 @@
 
 .about h2 {
   font-size: 2rem;
-  width: 70%;
-  border-bottom: 5px solid var(--dark-blue);
+  width: 40%;
+  border-bottom: 5px solid var(--light-blue);
   margin-bottom: 20px;
 }
 
