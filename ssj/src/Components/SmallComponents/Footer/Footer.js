@@ -9,10 +9,18 @@ function Footer() {
     <footer className="footer">
       <div className="footerContainer">
         <div className="footerLinks">
-          <a href="#https://www.facebook.com/groups/819820298102783">
+          <a
+            href="https://www.facebook.com/groups/819820298102783"
+            target="_blank"
+            rel="noreferrer"
+          >
             <FaFacebook />
           </a>
-          <a href="#https://twitter.com/FCShardlow">
+          <a
+            href="https://twitter.com/FCShardlow"
+            target="_blank"
+            rel="noreferrer"
+          >
             <FaTwitter />
           </a>
         </div>
