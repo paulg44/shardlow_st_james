@@ -26,8 +26,12 @@ function NavBar() {
                 <li>Team 3</li>
               </ul> */}
             </li>
-            <li className="listItem">Sponsors</li>
-            <li className="listItem">Contact</li>
+            <li className="listItem">
+              <Link to={"/sponsors"}>Sponsors</Link>
+            </li>
+            <li className="listItem">
+              <Link to={"/contact"}>Contact</Link>
+            </li>
           </ul>
         </div>
       </div>
