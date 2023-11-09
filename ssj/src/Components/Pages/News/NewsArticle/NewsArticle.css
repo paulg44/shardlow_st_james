@@ -1,0 +1,28 @@
+/* CSS file for news article */
+
+.newsArticle {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+/* Alternate layout */
+.newsSwitch {
+  justify-content: flex-end;
+  .newsInfo {
+    text-align: left;
+  }
+}
+
+.newsInfo {
+  text-align: right;
+}
+
+.newsImg img {
+  border-radius: 10px;
+  margin: 10px;
+}
+
+.newsDesc {
+  width: 300px;
+}

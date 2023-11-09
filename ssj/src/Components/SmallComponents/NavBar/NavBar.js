@@ -16,7 +16,7 @@ function NavBar() {
               <Link to={"/events"}>Events</Link>
             </li>
             <li className="listItem">
-              <a href="#news">News</a>
+              <Link to={"/news"}>News</Link>
             </li>
             <li className="listItem dropdown">
               Teams

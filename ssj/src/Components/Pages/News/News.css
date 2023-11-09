@@ -1,7 +1,38 @@
 /* CSS file for news section */
 
 .news {
-  height: 90vh;
-  /* Placeholder for testing */
-  border-bottom: 10px solid red;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: linear-gradient(to right, transparent 60%, var(--light-blue));
+}
+
+.news h3 {
+  position: absolute;
+  top: 20%;
+  right: 10%;
+  text-align: right;
+  font-size: 2rem;
+  width: 40%;
+  border-bottom: 5px solid var(--yellow);
+  margin-bottom: 20px;
+}
+
+.newsArticle {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+/* Alternate layout */
+.newsSwitch {
+  justify-content: flex-end;
+  .newsInfo {
+    text-align: left;
+  }
+}
+
+.newsInfo {
+  text-align: right;
 }
