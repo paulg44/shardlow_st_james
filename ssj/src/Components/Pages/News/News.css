@@ -15,7 +15,7 @@
   text-align: right;
   font-size: 2rem;
   width: 40%;
-  border-bottom: 5px solid var(--yellow);
+  /* border-bottom: 5px solid var(--yellow); */
   margin-bottom: 20px;
 }
 
@@ -35,4 +35,11 @@
 
 .newsInfo {
   text-align: right;
+}
+
+/* Background Object */
+.newsObject {
+  transform: rotate(90deg);
+  width: 21%;
+  height: 900px;
 }

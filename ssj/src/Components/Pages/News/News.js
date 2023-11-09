@@ -7,6 +7,7 @@ import NewsArticle from "./NewsArticle/NewsArticle";
 function News({ id }) {
   return (
     <div id={id} className="news">
+      <div className="homepageObject newsObject"></div>
       <h3>Latest News</h3>
       <div className="newsList">
         <NewsArticle
