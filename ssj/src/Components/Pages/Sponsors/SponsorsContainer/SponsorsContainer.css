@@ -1,1 +1,6 @@
 /* CSS file for sponsors container */
+
+.sponsor img {
+  width: 150px;
+  height: 150px;
+}
