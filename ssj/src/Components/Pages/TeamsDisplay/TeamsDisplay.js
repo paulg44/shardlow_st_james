@@ -11,6 +11,12 @@ import "./TeamsDisplay.css";
 import Teams from "./Teams/Teams";
 
 function TeamsDisplay() {
+  // Data will be pulled from fa
+  const teamsData = [
+    {
+      teamName: "SSJ First Team",
+    },
+  ];
   return (
     <div>
       <Teams />
