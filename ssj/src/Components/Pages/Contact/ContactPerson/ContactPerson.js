@@ -1,24 +1,24 @@
 // Contact Person's Component
 
-import { FaEnvelope, FaPhone, FaUser } from "react-icons/fa";
+import { FaRegBell, FaRegEnvelope, FaRegUser } from "react-icons/fa";
 import "./ContactPerson.css";
 
 function ContactPerson(props) {
   return (
     <div className="contactPerson">
       <h6>{props.contactName}</h6>
-      <p className="position">
-        <FaUser />
-        {props.contactPosition}
-      </p>
-      <p className="phone">
-        <FaPhone />
-        {props.contactNumber}
-      </p>
-      <p className="email">
-        <FaEnvelope />
-        {props.contactEmail}
-      </p>
+      <div className="contactInfo">
+        <FaRegUser className="icon" />
+        <p className="position">{props.contactPosition}</p>
+      </div>
+      <div className="contactInfo">
+        <FaRegBell className="icon" />
+        <p className="phone">{props.contactNumber}</p>
+      </div>
+      <div className="contactInfo">
+        <FaRegEnvelope className="icon" />
+        <p className="email">{props.contactEmail}</p>
+      </div>
     </div>
   );
 }

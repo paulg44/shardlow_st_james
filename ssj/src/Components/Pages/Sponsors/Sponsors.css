@@ -10,7 +10,7 @@
 .sponsors h3 {
   font-size: 2rem;
   width: 40%;
-  border-bottom: 3px solid var(--light-blue);
+  border-bottom: 5px solid var(--light-blue);
 }
 
 .sponsorsList {
