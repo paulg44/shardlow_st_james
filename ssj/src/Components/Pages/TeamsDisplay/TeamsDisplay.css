@@ -1,1 +1,7 @@
-/* CSS file for teams */
+/* CSS file for teams display */
+.teamsDisplay {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
