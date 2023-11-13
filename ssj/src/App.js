@@ -1,4 +1,4 @@
-import { React } from "react";
+import { React, useEffect, useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 import homepageImg from "./IMG/ssj_1.jpg";
@@ -14,14 +14,60 @@ import Sponsors from "./Components/Pages/Sponsors/Sponsors";
 import Contact from "./Components/Pages/Contact/Contact";
 
 function App() {
+  // Data will be pulled from fa, for now using dummy data
+  const teamsData = [
+    {
+      teamName: "SSJ First Team",
+      latestResult: "2-0",
+      nextFixture: "Aston FC (A)",
+      table: "Blank for now",
+    },
+    {
+      teamName: "SSJ Reserves",
+      latestResult: "6-2",
+      nextFixture: "Weston FC (H)",
+      table: "Blank for now",
+    },
+    {
+      teamName: "SSJ Veterans",
+      latestResult: "100-0",
+      nextFixture: "Derby County (A)",
+      table: "Blank for now",
+    },
+    {
+      teamName: "SSJ U15",
+      latestResult: "7-1",
+      nextFixture: "Alvaston U15 (H)",
+      table: "Blank for now",
+    },
+  ];
+
+  // Possibly use this with the api?
+  const [activeTeam, setActiveTeam] = useState(null);
+
+  const handleTeamClick = (teamName) => {
+    const selectedTeam = teamsData.find((team) => team.teamName === teamName);
+    console.log("Selected Team:", selectedTeam);
+    setActiveTeam(selectedTeam);
+  };
+
+  useEffect(() => {
+    console.log("active team from app.js", activeTeam);
+  }, [activeTeam]);
+
   return (
     <BrowserRouter className="App">
-      <NavBar />
+      <NavBar onTeamClick={handleTeamClick} teamsData={teamsData} />
       <Routes>
         <Route path="/" element={<Homepage homepageImg={homepageImg} />} />
         <Route path="/events" element={<Event />} />
         <Route path="/news" element={<News />} />
-        <Route path="/teams" element={<TeamsDisplay />} />
+        <Route
+          path="/teams"
+          element={
+            <TeamsDisplay teamsData={teamsData} activeTeam={activeTeam} />
+          }
+        />
         <Route path="/sponsors" element={<Sponsors />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>

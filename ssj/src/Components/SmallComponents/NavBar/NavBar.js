@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import logo from "../../../IMG/ssj_badge-removebg-preview.png";
 import "./NavBar.css";
 
-function NavBar() {
+function NavBar({ onTeamClick, teamsData }) {
   return (
     <nav className="navbar">
       <div className="navContainer">
@@ -21,10 +21,16 @@ function NavBar() {
             <li className="listItem dropdown">
               <Link to={"/teams"}>Teams</Link>
               <ul className="dropdownList">
-                <li>First Team</li>
+                {/* <li>First Team</li>
                 <li>Reserves</li>
                 <li>Veterans</li>
                 <li>U15</li>
+              </ul> */}
+                {teamsData.map((team, index) => (
+                  <li key={index} onClick={() => onTeamClick(team.teamName)}>
+                    <Link to={`/teams/${team.teamName}`}>{team.teamName}</Link>
+                  </li>
+                ))}
               </ul>
             </li>
             <li className="listItem">

@@ -2,7 +2,14 @@
 
 import "./Teams.css";
 
-function Teams({ teamName, latestResult, nextFixture, table, faLink }) {
+function Teams({
+  teamName,
+  latestResult,
+  nextFixture,
+  table,
+  faLink,
+  isActive,
+}) {
   return (
     <div className="teams">
       <h4>{teamName}</h4>
