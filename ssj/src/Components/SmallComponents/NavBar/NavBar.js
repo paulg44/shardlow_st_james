@@ -18,8 +18,14 @@ function NavBar() {
             <li className="listItem">
               <Link to={"/news"}>News</Link>
             </li>
-            <li className="listItem">
+            <li className="listItem dropdown">
               <Link to={"/teams"}>Teams</Link>
+              <ul className="dropdownList">
+                <li>First Team</li>
+                <li>Reserves</li>
+                <li>Veterans</li>
+                <li>U15</li>
+              </ul>
             </li>
             <li className="listItem">
               <Link to={"/sponsors"}>Sponsors</Link>

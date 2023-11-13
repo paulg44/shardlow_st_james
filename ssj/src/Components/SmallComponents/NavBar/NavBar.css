@@ -34,14 +34,25 @@
   margin: 15px;
 }
 
-.dropdownTeams {
-  display: none;
+.dropdownList {
+  visibility: hidden;
   position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  /* top: 55px; */
+  height: 500px;
+  background: linear-gradient(to bottom, var(--dark-blue), transparent);
+  border-left: 1px solid var(--yellow);
+  border-right: 1px solid var(--yellow);
+  display: flex;
+  flex-direction: column;
 }
 
-.dropdown:hover .dropdownTeams {
-  display: block;
+.dropdownList li {
+  visibility: hidden;
+}
+
+.dropdown:hover {
+  .dropdownList,
+  .dropdownList li {
+    visibility: visible;
+  }
 }
