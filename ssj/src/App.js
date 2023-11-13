@@ -17,25 +17,25 @@ function App() {
   // Data will be pulled from fa, for now using dummy data
   const teamsData = [
     {
-      teamName: "SSJ First Team",
+      teamName: "First Team",
       latestResult: "2-0",
       nextFixture: "Aston FC (A)",
       table: "Blank for now",
     },
     {
-      teamName: "SSJ Reserves",
+      teamName: "Reserves",
       latestResult: "6-2",
       nextFixture: "Weston FC (H)",
       table: "Blank for now",
     },
     {
-      teamName: "SSJ Veterans",
+      teamName: "Veterans",
       latestResult: "100-0",
       nextFixture: "Derby County (A)",
       table: "Blank for now",
     },
     {
-      teamName: "SSJ U15",
+      teamName: "U15",
       latestResult: "7-1",
       nextFixture: "Alvaston U15 (H)",
       table: "Blank for now",
@@ -57,13 +57,13 @@ function App() {
 
   return (
     <BrowserRouter className="App">
-      <NavBar onTeamClick={handleTeamClick} teamsData={teamsData} />
+      <NavBar handleTeamClick={handleTeamClick} teamsData={teamsData} />
       <Routes>
         <Route path="/" element={<Homepage homepageImg={homepageImg} />} />
         <Route path="/events" element={<Event />} />
         <Route path="/news" element={<News />} />
         <Route
-          path="/teams"
+          path="/teams/:teamName"
           element={
             <TeamsDisplay teamsData={teamsData} activeTeam={activeTeam} />
           }

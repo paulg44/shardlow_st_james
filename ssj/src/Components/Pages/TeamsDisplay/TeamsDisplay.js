@@ -22,10 +22,11 @@ function TeamsDisplay({ teamsData, activeTeam }) {
       <div>
         {teamsData.map((team, index) => (
           <div key={index}>
-            <Teams
-              {...team}
-              isActive={activeTeam && team.teamName === activeTeam.teamName}
-            />
+            {activeTeam && team.teamName === activeTeam.teamName ? (
+              <Teams {...team} isActive={true} />
+            ) : (
+              ""
+            )}
           </div>
         ))}
       </div>

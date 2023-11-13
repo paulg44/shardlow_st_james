@@ -11,7 +11,7 @@ function Teams({
   isActive,
 }) {
   return (
-    <div className="teams">
+    <div className={`team ${isActive ? "active" : ""}`}>
       <h4>{teamName}</h4>
       {/* All of these will be fetched from the fa full time website */}
       <p>Latest Result: {latestResult}</p>
