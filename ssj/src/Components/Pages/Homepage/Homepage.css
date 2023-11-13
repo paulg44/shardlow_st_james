@@ -47,3 +47,35 @@
   z-index: -10;
   opacity: 0.3;
 }
+
+@media (max-width: 1000px) {
+  .homepage {
+    width: auto;
+    height: fit-content;
+    text-align: right;
+  }
+
+  .homepageWrapper {
+    width: fit-content;
+    height: 80vh;
+    margin: 0 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .about h2 {
+    text-align: right;
+    width: 100%;
+  }
+
+  .aboutDesc {
+    width: auto;
+    text-align: justify;
+  }
+
+  .homepageObject {
+    width: 150px;
+    left: 0;
+  }
+}
