@@ -1,15 +1,24 @@
 // NavBar Component
+// import { useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../../../IMG/ssj_badge-removebg-preview.png";
 import "./NavBar.css";
+// import { FaFootballBall } from "react-icons/fa";
 
 function NavBar({ handleTeamClick, teamsData }) {
+  // const [burgerMenuOpen, setBurgerMenuOpen] = useState(false);
+
+  // const toggleBurgerMenu = () => {
+  //   setBurgerMenuOpen(!burgerMenuOpen);
+  // };
+
   return (
     <nav className="navbar">
       <div className="navContainer">
         <Link to={"/"} id="logo">
           <img src={logo} alt="logo" className="logo"></img>
         </Link>
+
         <div className="navLinks">
           <ul className="list">
             <li className="listItem">

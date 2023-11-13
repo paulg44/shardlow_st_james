@@ -25,3 +25,9 @@
 .footerInfo p {
   font-family: "Oswald", sans-serif;
 }
+
+@media (min-width: 1000px) {
+  .footer {
+    position: relative;
+  }
+}
