@@ -7,14 +7,6 @@
   margin-left: 20px;
 }
 
-/* Alternate layout */
-.newsSwitch {
-  justify-content: flex-end;
-  .newsInfo {
-    text-align: left;
-  }
-}
-
 .newsInfo {
   text-align: right;
 }
@@ -22,6 +14,10 @@
 .newsImg img {
   border-radius: 10px;
   margin: 10px;
+}
+
+.newsDate {
+  margin: 5px 0;
 }
 
 .newsDesc {
@@ -32,6 +28,8 @@
   .newsArticle {
     flex-direction: column;
     justify-content: center;
+    /* width: 100%; */
+    margin: 0;
   }
 
   .newsInfo {

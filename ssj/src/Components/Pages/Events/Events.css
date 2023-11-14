@@ -39,7 +39,7 @@
 @media (max-width: 1000px) {
   .events {
     width: auto;
-    height: auto;
+    height: fit-content;
   }
 
   .events h3 {
@@ -56,6 +56,9 @@
   .eventList {
     display: flex;
     flex-direction: column;
-    /* margin-left: 10px; */
+  }
+
+  .eventsObject {
+    height: 400px;
   }
 }

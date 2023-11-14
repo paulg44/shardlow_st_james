@@ -1,3 +1,7 @@
+/* ## IMPORTANT ## 
+      the background object on each page affects the media queries in a negative way when it overlaps the page
+*/
+
 import { React, useEffect, useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
