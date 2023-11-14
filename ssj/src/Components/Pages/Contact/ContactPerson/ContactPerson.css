@@ -25,3 +25,9 @@ h6 {
   font-size: 1.75rem;
   color: var(--light-blue);
 }
+
+@media (max-width: 1000px) {
+  .contactPerson h6 {
+    margin-top: 20px;
+  }
+}
