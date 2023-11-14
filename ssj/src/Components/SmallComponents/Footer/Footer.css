@@ -26,5 +26,8 @@
   font-family: "Oswald", sans-serif;
 }
 
-@media (min-width: 1000px) {
+@media (max-height: 800px) {
+  .footer {
+    position: relative;
+  }
 }

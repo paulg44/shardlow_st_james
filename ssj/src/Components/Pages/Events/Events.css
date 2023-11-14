@@ -39,24 +39,25 @@
 @media (max-width: 1000px) {
   .events {
     position: relative;
-    width: auto;
-    height: max-content;
+    display: block;
+    overflow-y: scroll;
   }
 
   .events h3 {
     font-size: 1.5rem;
     margin-top: 100px;
     width: auto;
+    margin-right: 40px;
   }
 
   .eventsSubHeader {
-    width: fit-content;
     margin-bottom: 20px;
   }
 
   .eventList {
     display: flex;
     flex-direction: column;
+    margin-left: 20px;
   }
 
   .eventsObject {

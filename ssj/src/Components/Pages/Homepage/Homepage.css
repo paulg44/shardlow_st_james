@@ -51,7 +51,7 @@
 @media (max-width: 1000px) {
   .homepage {
     width: auto;
-    height: fit-content;
+    min-height: 94vh;
     text-align: right;
   }
 
