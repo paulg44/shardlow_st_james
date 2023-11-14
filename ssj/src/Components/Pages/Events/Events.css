@@ -38,8 +38,9 @@
 
 @media (max-width: 1000px) {
   .events {
+    position: relative;
     width: auto;
-    height: fit-content;
+    height: max-content;
   }
 
   .events h3 {

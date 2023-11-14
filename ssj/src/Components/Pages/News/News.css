@@ -26,20 +26,17 @@
 
 @media (max-width: 1000px) {
   .news {
+    display: block;
     height: fit-content;
     align-items: center;
+    overflow-y: scroll;
   }
 
   .news h3 {
     position: relative;
     margin-top: 100px;
-    /* margin-left: 30%; */
     width: 80%;
     border-bottom: 3px solid var(--dark-blue);
-  }
-
-  .newsArticle {
-    padding: 0;
   }
 
   .newsObject {
