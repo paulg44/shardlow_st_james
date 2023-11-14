@@ -41,3 +41,9 @@
   width: 21%;
   height: 900px;
 }
+
+@media (max-width: 1000px) {
+  .news {
+    width: fit-content;
+  }
+}

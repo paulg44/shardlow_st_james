@@ -27,3 +27,14 @@
 .newsDesc {
   width: 300px;
 }
+
+@media (max-width: 1000px) {
+  .newsArticle {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .newsInfo {
+    text-align: left;
+  }
+}
