@@ -1,10 +1,20 @@
 // Homepage Component
 import "./Homepage.css";
+import { useSpring, animated } from "react-spring";
 
 function Homepage({ homepageImg }) {
+  // Spring test
+  const springs = useSpring({
+    from: { y: -1000 },
+    to: { y: 0 },
+  });
+
   return (
     <div className="homepage">
-      <div className="homepageObject"></div>
+      <animated.div
+        className="homepageObject"
+        style={{ ...springs }}
+      ></animated.div>
       <div
         className="backgroundImage"
         style={{
