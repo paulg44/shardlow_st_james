@@ -28,7 +28,7 @@
   .news {
     position: relative;
     display: block;
-    height: 100vh;
+    /* height: fit-content; */
     align-items: center;
     overflow-y: scroll;
   }
@@ -40,7 +40,7 @@
   }
 
   .newsList {
-    margin-top: 160px;
+    margin-top: 180px;
   }
 
   .newsObject {
