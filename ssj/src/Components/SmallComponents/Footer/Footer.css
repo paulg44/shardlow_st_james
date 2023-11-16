@@ -18,6 +18,7 @@
 }
 
 .footerInfo {
+  text-align: right;
   margin-right: 20px;
   font-size: 0.75rem;
 }
