@@ -51,7 +51,6 @@
 @media (max-width: 1000px) {
   .homepage {
     width: auto;
-    min-height: 94vh;
     text-align: right;
   }
 
