@@ -8,42 +8,42 @@ import { FaTshirt } from "react-icons/fa";
 function NavBar({ handleTeamClick, teamsData }) {
   const [burgerMenuOpen, setBurgerMenuOpen] = useState(false);
 
-  const toggleBurgerMenu = () => {
-    if (!burgerMenuOpen) {
-      setBurgerMenuOpen(burgerMenuOpen);
-    } else {
-      setBurgerMenuOpen(!burgerMenuOpen);
-    }
+  // Open Menu
+  const openBurgerMenu = () => {
+    setBurgerMenuOpen(!burgerMenuOpen);
+  };
+
+  // Close Menu
+  const closeBurgerMenu = () => {
+    setBurgerMenuOpen(false);
   };
 
   return (
     <nav className="navbar">
       <div className="navContainer">
-        <Link to={"/"} id="logo">
+        <Link to={"/"} id="logo" onClick={closeBurgerMenu}>
           <img src={logo} alt="logo" className="logo"></img>
         </Link>
 
         {/* Burger Menu */}
-        <div className="burgerMenuBtn" onClick={toggleBurgerMenu}>
+        <div className="burgerMenuBtn" onClick={openBurgerMenu}>
           <FaTshirt />
         </div>
 
         <div className={`navLinks ${burgerMenuOpen ? "open" : ""}`}>
           <ul className="list">
             <li className="listItem">
-              <Link to={"/events"} onClick={toggleBurgerMenu}>
+              <Link to={"/events"} onClick={closeBurgerMenu}>
                 Events
               </Link>
             </li>
             <li className="listItem">
-              <Link to={"/news"} onClick={toggleBurgerMenu}>
+              <Link to={"/news"} onClick={closeBurgerMenu}>
                 News
               </Link>
             </li>
             <li className="listItem dropdown">
-              <Link to={"/teams"} onClick={toggleBurgerMenu}>
-                Teams
-              </Link>
+              <Link to={"/teams"}>Teams</Link>
               <ul className="dropdownList">
                 {teamsData.map((team, index) => (
                   <li
@@ -52,7 +52,7 @@ function NavBar({ handleTeamClick, teamsData }) {
                   >
                     <Link
                       to={`/teams/${team.teamName}`}
-                      onClick={toggleBurgerMenu}
+                      onClick={closeBurgerMenu}
                     >
                       {team.teamName}{" "}
                     </Link>
@@ -61,12 +61,12 @@ function NavBar({ handleTeamClick, teamsData }) {
               </ul>
             </li>
             <li className="listItem">
-              <Link to={"/sponsors"} onClick={toggleBurgerMenu}>
+              <Link to={"/sponsors"} onClick={closeBurgerMenu}>
                 Sponsors
               </Link>
             </li>
             <li className="listItem">
-              <Link to={"/contact"} onClick={toggleBurgerMenu}>
+              <Link to={"/contact"} onClick={closeBurgerMenu}>
                 Contact
               </Link>
             </li>

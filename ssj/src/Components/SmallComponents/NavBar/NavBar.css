@@ -74,20 +74,25 @@
     width: 100%;
     text-align: right;
     display: block;
-    margin: 10px;
+    margin: 10px 20px;
   }
 
   .navLinks ul {
+    display: none;
+  }
+
+  .navLinks.open .list {
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 40px;
+    top: 55px;
     right: 0;
-    background-color: #333;
+    background-color: var(--dark-blue);
     width: 50%;
     z-index: 1;
     margin: 0;
     padding-bottom: 30px;
+    border-bottom-left-radius: 20px;
   }
 
   .navLinks.open {
@@ -97,5 +102,19 @@
   .listItem {
     margin: 0;
     padding: 10px;
+  }
+
+  .navLinks.open .dropdownList {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    /* top: 55px; */
+    border: none;
+    right: 0;
+    background-color: var(--yellow);
+    width: 50%;
+    z-index: 1;
+    margin: 0;
+    border-bottom-left-radius: 20px;
   }
 }
