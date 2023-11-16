@@ -28,6 +28,6 @@
 
 @media (max-width: 1000px) {
   .footer {
-    position: relative;
+    /* position: relative; */
   }
 }
