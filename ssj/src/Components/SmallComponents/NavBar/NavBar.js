@@ -1,16 +1,20 @@
 // NavBar Component
-// import { useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../../../IMG/ssj_badge-removebg-preview.png";
 import "./NavBar.css";
-// import { FaFootballBall } from "react-icons/fa";
+import { FaTshirt } from "react-icons/fa";
 
 function NavBar({ handleTeamClick, teamsData }) {
-  // const [burgerMenuOpen, setBurgerMenuOpen] = useState(false);
+  const [burgerMenuOpen, setBurgerMenuOpen] = useState(false);
 
-  // const toggleBurgerMenu = () => {
-  //   setBurgerMenuOpen(!burgerMenuOpen);
-  // };
+  const toggleBurgerMenu = () => {
+    if (!burgerMenuOpen) {
+      setBurgerMenuOpen(burgerMenuOpen);
+    } else {
+      setBurgerMenuOpen(!burgerMenuOpen);
+    }
+  };
 
   return (
     <nav className="navbar">
@@ -19,37 +23,52 @@ function NavBar({ handleTeamClick, teamsData }) {
           <img src={logo} alt="logo" className="logo"></img>
         </Link>
 
-        <div className="navLinks">
+        {/* Burger Menu */}
+        <div className="burgerMenuBtn" onClick={toggleBurgerMenu}>
+          <FaTshirt />
+        </div>
+
+        <div className={`navLinks ${burgerMenuOpen ? "open" : ""}`}>
           <ul className="list">
             <li className="listItem">
-              <Link to={"/events"}>Events</Link>
+              <Link to={"/events"} onClick={toggleBurgerMenu}>
+                Events
+              </Link>
             </li>
             <li className="listItem">
-              <Link to={"/news"}>News</Link>
+              <Link to={"/news"} onClick={toggleBurgerMenu}>
+                News
+              </Link>
             </li>
             <li className="listItem dropdown">
-              <Link to={"/teams"}>Teams</Link>
+              <Link to={"/teams"} onClick={toggleBurgerMenu}>
+                Teams
+              </Link>
               <ul className="dropdownList">
-                {/* <li>First Team</li>
-                <li>Reserves</li>
-                <li>Veterans</li>
-                <li>U15</li>
-              </ul> */}
                 {teamsData.map((team, index) => (
                   <li
                     key={index}
                     onClick={() => handleTeamClick(team.teamName)}
                   >
-                    <Link to={`/teams/${team.teamName}`}>{team.teamName}</Link>
+                    <Link
+                      to={`/teams/${team.teamName}`}
+                      onClick={toggleBurgerMenu}
+                    >
+                      {team.teamName}{" "}
+                    </Link>
                   </li>
                 ))}
               </ul>
             </li>
             <li className="listItem">
-              <Link to={"/sponsors"}>Sponsors</Link>
+              <Link to={"/sponsors"} onClick={toggleBurgerMenu}>
+                Sponsors
+              </Link>
             </li>
             <li className="listItem">
-              <Link to={"/contact"}>Contact</Link>
+              <Link to={"/contact"} onClick={toggleBurgerMenu}>
+                Contact
+              </Link>
             </li>
           </ul>
         </div>
