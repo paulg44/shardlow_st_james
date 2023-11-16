@@ -3,17 +3,30 @@ import "./Homepage.css";
 import { useSpring, animated } from "react-spring";
 
 function Homepage({ homepageImg }) {
-  // Spring test
-  const springs = useSpring({
+  // Object slide in
+  const object = useSpring({
     from: { y: -1000 },
     to: { y: 0 },
+  });
+
+  // Header
+  const header = useSpring({
+    from: { x: -1000 },
+    to: { x: 0 },
+    config: { delay: 2000 },
+  });
+
+  // About
+  const about = useSpring({
+    from: { x: -1000 },
+    to: { x: 0 },
   });
 
   return (
     <div className="homepage">
       <animated.div
         className="homepageObject"
-        style={{ ...springs }}
+        style={{ ...object, transform: "rotate(10deg)" }}
       ></animated.div>
       <div
         className="backgroundImage"
@@ -22,11 +35,11 @@ function Homepage({ homepageImg }) {
         }}
       ></div>
       <div className="homepageWrapper">
-        <div className="homepageHeader">
+        <animated.div className="homepageHeader" style={{ ...header }}>
           <p>Welcome to</p>
           <h1>Shardlow St James FC</h1>
-        </div>
-        <div className="about">
+        </animated.div>
+        <animated.div className="about" style={{ ...about }}>
           <h2>About Us</h2>
           <p className="aboutDesc">
             Shardlow St James F.C is a Sunday morning football team that play in
@@ -34,7 +47,7 @@ function Homepage({ homepageImg }) {
             football teams in the country and play our games at The Wharf,
             Shardlow, Derbyshire.
           </p>
-        </div>
+        </animated.div>
       </div>
     </div>
   );
