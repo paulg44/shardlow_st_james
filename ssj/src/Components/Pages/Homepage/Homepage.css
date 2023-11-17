@@ -3,10 +3,10 @@
 /* Main */
 .homepage {
   position: relative;
+  height: 100vh;
 }
 
 .homepageWrapper {
-  height: 100vh;
   width: 60%;
   padding-top: 15%;
   margin-left: 15%;
@@ -56,8 +56,8 @@
 
   .homepageWrapper {
     width: fit-content;
-    height: 80vh;
-    margin: 0 40px;
+    height: fit-content;
+    margin: 50px 40px;
     display: flex;
     flex-direction: column;
     justify-content: center;

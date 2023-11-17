@@ -40,8 +40,8 @@
   .events {
     position: relative;
     display: block;
-    /* height: fit-content; */
-    overflow-y: scroll;
+    /* min-height: fit-content; */
+    overflow-y: auto;
   }
 
   .events h3 {
@@ -58,7 +58,9 @@
   .eventList {
     display: flex;
     flex-direction: column;
+    flex: 1;
     margin-left: 20px;
+    margin-bottom: 100px;
   }
 
   .eventsObject {
