@@ -42,6 +42,11 @@ function NavBar({ handleTeamClick, teamsData }) {
                 News
               </Link>
             </li>
+            <li className="listItem">
+              <Link to={"/shop"} onClick={closeBurgerMenu}>
+                Shop
+              </Link>
+            </li>
             <li className="listItem dropdown">
               <Link to={"/teams"}>Teams</Link>
               <ul className="dropdownList">

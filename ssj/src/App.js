@@ -13,6 +13,7 @@ import Footer from "./Components/SmallComponents/Footer/Footer";
 import Homepage from "./Components/Pages/Homepage/Homepage";
 import Event from "./Components/Pages/Events/Events";
 import News from "./Components/Pages/News/News";
+import Shop from "./Components/Pages/Shop/Shop";
 import TeamsDisplay from "./Components/Pages/TeamsDisplay/TeamsDisplay";
 import Sponsors from "./Components/Pages/Sponsors/Sponsors";
 import Contact from "./Components/Pages/Contact/Contact";
@@ -66,6 +67,7 @@ function App() {
         <Route path="/" element={<Homepage homepageImg={homepageImg} />} />
         <Route path="/events" element={<Event />} />
         <Route path="/news" element={<News />} />
+        <Route path="/shop" element={<Shop />} />
         <Route
           path="/teams/:teamName"
           element={
