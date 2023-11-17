@@ -7,19 +7,21 @@ function Homepage({ homepageImg }) {
   const object = useSpring({
     from: { y: -1000 },
     to: { y: 0 },
+    delay: 250,
   });
 
   // Header
   const header = useSpring({
-    from: { x: -1000 },
+    from: { x: 1500 },
     to: { x: 0 },
-    config: { delay: 2000 },
+    delay: 500,
   });
 
   // About
   const about = useSpring({
     from: { x: -1000 },
     to: { x: 0 },
+    delay: 750,
   });
 
   return (
