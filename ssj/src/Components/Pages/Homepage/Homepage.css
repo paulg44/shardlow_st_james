@@ -76,5 +76,6 @@
   .homepageObject {
     width: 150px;
     left: 0;
+    top: -15px;
   }
 }
