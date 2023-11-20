@@ -2,10 +2,15 @@
 
 import "./ShopItem.css";
 
-function ShopItem() {
+function ShopItem(props) {
   return (
-    <div>
-      <p>Shop Item</p>
+    <div className="shopItem">
+      <img src={props.itemIMG} alt={props.itemIMGAlt}></img>
+      <p className="itemDesc">{props.itemDesc}</p>
+      <p className="itemPrice">{props.itemPrice}</p>
+      <a href={props.itemLink} target="_blank" rel="noreferrer">
+        External Link
+      </a>
     </div>
   );
 }
