@@ -1,1 +1,5 @@
 /* CSS file for shop item */
+
+.shopItem img {
+  width: 250px;
+}
