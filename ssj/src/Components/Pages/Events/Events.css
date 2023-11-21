@@ -6,7 +6,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-bottom: 30px;
+  /* margin-bottom: 30px; */
+  overflow: hidden;
 }
 
 .events h3 {
@@ -32,6 +33,7 @@
 
 /* Background Object */
 .eventsObject {
+  top: -25px;
   left: 0;
   transform: rotate(-60deg);
 }
