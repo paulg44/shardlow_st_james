@@ -9,8 +9,17 @@
   height: 100vh;
 }
 
+.shop h2 {
+  border-bottom: 3px solid var(--yellow);
+  width: 70%;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
 .shopPageInfo {
   margin-bottom: 20px;
+  text-align: left;
+  width: 70%;
 }
 
 .shopItems {
@@ -20,4 +29,26 @@
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 20px;
   overflow: scroll;
+}
+
+@media (max-width: 1000px) {
+  .shopPageInfo {
+    width: 60%;
+  }
+
+  .shop h2 {
+    width: auto;
+  }
+
+  .shopPageInfo {
+    font-size: 12px;
+    /* border-bottom: 1px solid var(--dark-blue); */
+  }
+
+  .shopItems {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 80px;
+  }
 }

@@ -3,4 +3,15 @@
 .shopItem img {
   width: 250px;
   box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.3);
+  opacity: 0.7;
+}
+
+.shopItem img:hover {
+  opacity: 1;
+}
+
+@media (max-width: 1000px) {
+  .shopItem img {
+    opacity: 1;
+  }
 }
