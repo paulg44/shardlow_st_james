@@ -12,14 +12,14 @@ function Shop() {
       id: 1,
       image: parkaJacket,
       description: "Shardlow Parka Jacket",
-      price: "From £39.99 GBP",
+      price: "From £39.99",
       link: "https://kelmeteamwear.co.uk/products/shardlow-parka-jacket",
     },
     {
       id: 2,
       image: rainJacket,
       description: "Shardlow Rain Jacket",
-      price: "From £23.99 GBP",
+      price: "From £23.99",
       link: "https://kelmeteamwear.co.uk/products/shardlow-rain-jacket",
     },
   ];
