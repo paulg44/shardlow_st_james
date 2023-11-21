@@ -20,7 +20,7 @@ import jomaTracksuit from "../../../IMG/ssj_joma_tracksuit.jfif";
 import jomaPolo from "../../../IMG/ssj_joma_polo.jfif";
 import jomaBottoms from "../../../IMG/ssj_joma_bottoms.jfif";
 import jomaRainJacket from "../../../IMG/ssj_joma_rain_jacket.jfif";
-import jomaSoftShell from "../../../IMG/ssj_joma_rain_jacket.jfif";
+import jomaSoftShell from "../../../IMG/ssj_joma_softshell_jacket.jfif";
 
 function Shop() {
   const shopItems = [
@@ -43,119 +43,121 @@ function Shop() {
       image: linceZip,
       description: "Shardlow Lince Jacket",
       price: "From £23.99",
-      link: "https://kelmeteamwear.co.uk/products/shardlow-rain-jacket",
+      link: "https://kelmeteamwear.co.uk/products/shardlow-lince-jacket",
     },
     {
       id: 4,
       image: trainingTee,
       description: "Shardlow Training Tee",
       price: "From £14.99",
-      link: "https://kelmeteamwear.co.uk/products/shardlow-rain-jacket",
+      link: "https://kelmeteamwear.co.uk/products/shardlow-training-tee",
     },
     {
       id: 5,
       image: trainingTop,
       description: "Shardlow 1/4 Zip Training Top",
       price: "From £24.00",
-      link: "https://kelmeteamwear.co.uk/products/shardlow-rain-jacket",
+      link: "https://kelmeteamwear.co.uk/products/shardlow-1-4-zip-training-top",
     },
     {
       id: 6,
       image: polo,
       description: "Shardlow Polo(3 Colour Options)",
       price: "From £13.99",
-      link: "https://kelmeteamwear.co.uk/products/shardlow-rain-jacket",
+      link: "https://kelmeteamwear.co.uk/products/shardlow-polo-navy",
     },
     {
       id: 7,
       image: pants,
       description: "Shardlow Training Pant",
       price: "From £14.49",
-      link: "https://kelmeteamwear.co.uk/products/shardlow-rain-jacket",
+      link: "https://kelmeteamwear.co.uk/products/shardlow-training-pant",
     },
     {
       id: 8,
       image: homeKit,
       description: "Shardlow Home Kit",
       price: "From £24.99",
-      link: "https://kelmeteamwear.co.uk/products/shardlow-rain-jacket",
+      link: "https://kelmeteamwear.co.uk/products/shardlow-home-set",
     },
     {
       id: 9,
       image: awayKit,
       description: "Shardlow Away Kit",
       price: "From £24.99",
-      link: "https://kelmeteamwear.co.uk/products/shardlow-rain-jacket",
+      link: "https://kelmeteamwear.co.uk/products/copy-of-shardlow-away-set",
     },
     {
       id: 10,
       image: shorts,
       description: "Shardlow Training Short",
       price: "From £6.99",
-      link: "https://kelmeteamwear.co.uk/products/shardlow-rain-jacket",
+      link: "https://kelmeteamwear.co.uk/products/shardlow-training-short",
     },
     {
       id: 11,
       image: jomaTee,
       description: "Shardlow Academy IV Training Tee",
       price: "From £16.50",
-      link: "https://kelmeteamwear.co.uk/products/shardlow-rain-jacket",
+      link: "https://www.eurosoccercompany.com/shardlow-st-james-club-shop/shardlow-sj-joma-academy-iv-training-tee",
     },
     {
       id: 12,
       image: jomaHalfZip,
       description: "Shardlow Champion IV Half Zip",
       price: "From £27.75",
-      link: "https://kelmeteamwear.co.uk/products/shardlow-rain-jacket",
+      link: "https://www.eurosoccercompany.com/shardlow-st-james-club-shop/shardlow-sj-joma-champion-vi-half-zip",
     },
     {
       id: 13,
       image: jomaHoodie,
       description: "Shardlow Academy IV Full Zip Hoodie",
       price: "From £35.35",
-      link: "https://kelmeteamwear.co.uk/products/shardlow-rain-jacket",
+      link: "https://www.eurosoccercompany.com/shardlow-st-james-club-shop/shardlow-sj-joma-academy-iv-full-zip-hoody",
     },
     {
       id: 14,
       image: jomaTracksuit,
       description: "Shardlow Champion IV Tracksuit",
       price: "From £36.75",
-      link: "https://kelmeteamwear.co.uk/products/shardlow-rain-jacket",
+      link: "https://www.eurosoccercompany.com/shardlow-st-james-club-shop/shardlow-sj-joma-champion-vi-tracksuit",
     },
     {
       id: 15,
       image: jomaPolo,
       description: "Shardlow Champion IV Polo (slim fit)",
       price: "From £19.50",
-      link: "https://kelmeteamwear.co.uk/products/shardlow-rain-jacket",
+      link: "https://www.eurosoccercompany.com/shardlow-st-james-club-shop/shardlow-sj-champion-vi-polo-shirt-slim-fit",
     },
     {
       id: 16,
       image: jomaBottoms,
       description: "Shardlow Champion IV Skinny Bottoms",
       price: "From £19.25",
-      link: "https://kelmeteamwear.co.uk/products/shardlow-rain-jacket",
+      link: "https://www.eurosoccercompany.com/shardlow-st-james-club-shop/shardlow-sj-champion-vi-skinny-bottoms",
     },
     {
       id: 17,
       image: jomaRainJacket,
       description: "Shardlow Iris Rain Jacket",
       price: "From £18.75",
-      link: "https://kelmeteamwear.co.uk/products/shardlow-rain-jacket",
+      link: "https://www.eurosoccercompany.com/shardlow-st-james-club-shop/shardlow-sj-joma-iris-rain-jacket",
     },
     {
       id: 18,
       image: jomaSoftShell,
       description: "Shardlow Berna Sof Shell Jacket",
       price: "From £51.00",
-      link: "https://kelmeteamwear.co.uk/products/shardlow-rain-jacket",
+      link: "https://www.eurosoccercompany.com/shardlow-st-james-club-shop/shardlow-sj-joma-berna-soft-shell-jacket-slim-fit",
     },
   ];
 
   return (
     <div className="shop">
       <h2>Welcome to our shop</h2>
-      <p>*Links take you to external site</p>
+      <p className="shopPageInfo">
+        *Click item image to take you to external site (Kelme or Euro Soccer)
+      </p>
       <div className="shopItems">
         {shopItems.map((item) => (
           <ShopItem

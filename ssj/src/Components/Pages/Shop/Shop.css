@@ -9,6 +9,10 @@
   height: 100vh;
 }
 
+.shopPageInfo {
+  margin-bottom: 20px;
+}
+
 .shopItems {
   height: 100vh;
   position: relative;
