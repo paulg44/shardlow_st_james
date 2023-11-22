@@ -1,5 +1,7 @@
 import { useEffect } from "react";
 
+// Could these be changed to props?
+
 function Table() {
   useEffect(() => {
     // This code will be executed after the component is mounted
