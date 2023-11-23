@@ -32,6 +32,11 @@
 
 .navLinks li {
   margin: 15px;
+  /* color: white; */
+}
+
+.navLinks a {
+  color: white;
 }
 
 .dropdownList {

@@ -25,7 +25,17 @@ function Footer() {
       </div>
       <div className="footerInfo">
         <p>SSJ &copy; 2023</p>
-        <p>Designed & Built by P.Garton</p>
+        <p>
+          Designed & Built by{" "}
+          <a
+            href="https://paulgarton.com"
+            target="_blank"
+            rel="noreferrer"
+            style={{ color: "var(--light-blue)" }}
+          >
+            P.Garton
+          </a>
+        </p>
       </div>
     </footer>
   );
