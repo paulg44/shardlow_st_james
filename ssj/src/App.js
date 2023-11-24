@@ -24,7 +24,6 @@ function App() {
     {
       teamName: "First Team",
       lrcode: "25025117",
-      divisionSeason: "88093185",
       latestResult: "2-0",
       nextFixture: "Aston FC (A)",
       table: "Blank for now",
