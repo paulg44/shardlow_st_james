@@ -24,7 +24,8 @@ function App() {
     {
       teamName: "First Team",
       lrcode: "25025117",
-      latestResult: "2 vs 0",
+      homeScore: "2",
+      awayScore: "0",
       awayTeam: "Aston FC",
       nextFixture: "Aston FC (A)",
     },

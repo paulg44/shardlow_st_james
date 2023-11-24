@@ -14,17 +14,45 @@
 
 /* Results/Fixtures */
 
-.result {
+.resultsCard {
+  position: relative;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
+  margin: 10px 0;
   border: 5px solid var(--light-blue);
-  height: 200px;
+  height: 220px;
   width: 500px;
 }
 
-.latestResult {
+.home {
   border: 2px solid var(--yellow);
+}
+
+.away {
+  border: 2px solid red;
+}
+
+.teamNames {
+  text-align: center;
+  width: 150px;
+}
+
+.vs {
+  border: 5px solid var(--light-blue);
   border-radius: 50%;
-  margin: 0 5px;
+  padding: 10px;
+  background-color: #f4f4f4;
+}
+
+.vs::before {
+  content: "";
+  position: absolute;
+  height: 215px;
+  width: 5px;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -10;
+  background-color: var(--light-blue);
 }

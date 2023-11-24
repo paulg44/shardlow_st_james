@@ -6,7 +6,8 @@ import { useEffect } from "react";
 
 function Teams({
   teamName,
-  latestResult,
+  homeScore,
+  awayScore,
   awayTeam,
   nextFixture,
   isActive,
@@ -43,11 +44,19 @@ function Teams({
         </div>
       </div>
       <div className="resultFixtures">
-        <p>Full Time</p>
-        <p className="result">
-          Shardlow {teamName}
-          <span className="latestResult">{latestResult}</span> {awayTeam}
-        </p>
+        <p className="fullTime">Full Time</p>
+        <div className="resultsCard">
+          <p className="home teamNames">
+            Shardlow {teamName} <br />
+            {homeScore}
+          </p>
+          <p className="vs">VS</p>
+          <p className="away teamNames">
+            {awayTeam}
+            <br />
+            {awayScore}
+          </p>
+        </div>
         <p className="fixture">Next Fixture: {nextFixture}</p>
       </div>
     </div>
