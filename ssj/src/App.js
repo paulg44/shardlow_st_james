@@ -24,27 +24,27 @@ function App() {
     {
       teamName: "First Team",
       lrcode: "25025117",
-      latestResult: "2-0",
+      latestResult: "2 vs 0",
+      awayTeam: "Aston FC",
       nextFixture: "Aston FC (A)",
-      table: "Blank for now",
     },
     {
       teamName: "Reserves",
       latestResult: "6-2",
+      awayTeam: "Aston FC",
       nextFixture: "Weston FC (H)",
-      table: "Blank for now",
     },
     {
       teamName: "Veterans",
       latestResult: "100-0",
+      awayTeam: "Aston FC",
       nextFixture: "Derby County (A)",
-      table: "Blank for now",
     },
     {
       teamName: "U15",
       latestResult: "7-1",
+      awayTeam: "Aston FC",
       nextFixture: "Alvaston U15 (H)",
-      table: "Blank for now",
     },
   ];
 

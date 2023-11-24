@@ -4,7 +4,14 @@ import "./Teams.css";
 // import Table from "./Table";
 import { useEffect } from "react";
 
-function Teams({ teamName, latestResult, nextFixture, isActive, lrcode }) {
+function Teams({
+  teamName,
+  latestResult,
+  awayTeam,
+  nextFixture,
+  isActive,
+  lrcode,
+}) {
   useEffect(() => {
     // This code will be executed after the component is mounted
     const script = document.createElement("script");
@@ -22,20 +29,27 @@ function Teams({ teamName, latestResult, nextFixture, isActive, lrcode }) {
   }, [lrcode]);
   return (
     <div className={`team ${isActive ? "active" : ""}`}>
-      <h4>{teamName}</h4>
-      {/* Table */}
-      <div id={`lrep${lrcode}`} style={{ width: "350px" }}>
-        Data loading....
-        <a href="https://fulltime.thefa.com/index.html?divisionseason=88093185">
-          click here for Two
-        </a>
-        <br />
-        <br />
-        <a href="http://www.thefa.com/FULL-TIME">FULL-TIME Home</a>
+      <div className="table">
+        <h3>{teamName}</h3>
+        {/* Table */}
+        <div id={`lrep${lrcode}`} style={{ width: "350px" }}>
+          Data loading....
+          <a href="https://fulltime.thefa.com/index.html?divisionseason=88093185">
+            click here for Two
+          </a>
+          <br />
+          <br />
+          <a href="http://www.thefa.com/FULL-TIME">FULL-TIME Home</a>
+        </div>
       </div>
-      {/* All of these will be fetched from the fa full time website */}
-      <p>Latest Result: {latestResult}</p>
-      <p>Next Fixture: {nextFixture}</p>
+      <div className="resultFixtures">
+        <p>Full Time</p>
+        <p className="result">
+          Shardlow {teamName}
+          <span className="latestResult">{latestResult}</span> {awayTeam}
+        </p>
+        <p className="fixture">Next Fixture: {nextFixture}</p>
+      </div>
     </div>
   );
 }
