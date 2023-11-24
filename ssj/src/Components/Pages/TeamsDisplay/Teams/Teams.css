@@ -25,12 +25,11 @@
   width: 500px;
 }
 
-.home {
-  border: 2px solid var(--yellow);
-}
-
-.away {
-  border: 2px solid red;
+.resultFixtures {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.5rem;
+  font-weight: bolder;
+  font-style: italic;
 }
 
 .teamNames {
@@ -41,8 +40,12 @@
 .vs {
   border: 5px solid var(--light-blue);
   border-radius: 50%;
+  width: 60px;
+  color: var(--yellow);
+  text-align: center;
   padding: 10px;
-  background-color: #f4f4f4;
+  font-style: normal;
+  background-color: var(--dark-blue);
 }
 
 .vs::before {
@@ -55,4 +58,16 @@
   transform: translateX(-50%);
   z-index: -10;
   background-color: var(--light-blue);
+}
+
+.fixture {
+  font-weight: 400;
+}
+
+.backgroundImage {
+  position: fixed;
+  width: 500px;
+  height: 220px;
+  z-index: -10;
+  opacity: 0.2;
 }

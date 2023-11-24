@@ -3,6 +3,8 @@
 import "./Teams.css";
 // import Table from "./Table";
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
+import homepageImg from "../../../../IMG/ssj_1.jpg";
 
 function Teams({
   teamName,
@@ -31,7 +33,7 @@ function Teams({
   return (
     <div className={`team ${isActive ? "active" : ""}`}>
       <div className="table">
-        <h3>{teamName}</h3>
+        <h3>Shardlow {teamName}</h3>
         {/* Table */}
         <div id={`lrep${lrcode}`} style={{ width: "350px" }}>
           Data loading....
@@ -46,8 +48,14 @@ function Teams({
       <div className="resultFixtures">
         <p className="fullTime">Full Time</p>
         <div className="resultsCard">
+          <div
+            className="backgroundImage"
+            style={{
+              background: `url(${homepageImg}) no-repeat center center/cover`,
+            }}
+          ></div>
           <p className="home teamNames">
-            Shardlow {teamName} <br />
+            {teamName} <br />
             {homeScore}
           </p>
           <p className="vs">VS</p>
@@ -57,7 +65,9 @@ function Teams({
             {awayScore}
           </p>
         </div>
-        <p className="fixture">Next Fixture: {nextFixture}</p>
+        <p className="fixture">
+          Next <Link to={"/events"}>Fixture</Link>: {nextFixture}
+        </p>
       </div>
     </div>
   );
