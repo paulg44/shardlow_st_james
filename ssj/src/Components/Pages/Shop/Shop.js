@@ -2,6 +2,7 @@
 
 import "./Shop.css";
 import ShopItem from "./ShopItem/ShopItem";
+import { useSpring, animated } from "react-spring";
 // Imported Images
 import parkaJacket from "../../../IMG/ShardlowParka.webp";
 import rainJacket from "../../../IMG/ShardlowRain.webp";
@@ -152,13 +153,35 @@ function Shop() {
     },
   ];
 
+  // Animation
+  const fadeIn = useSpring({
+    from: { opacity: 0 },
+    to: { opacity: 1 },
+    config: { duration: "1500" },
+    delay: 250,
+  });
+
+  const p = useSpring({
+    from: { opacity: 0 },
+    to: { opacity: 1 },
+    config: { duration: "1600" },
+    delay: 500,
+  });
+
+  const items = useSpring({
+    from: { opacity: 0 },
+    to: { opacity: 1 },
+    config: { duration: "1800" },
+    delay: 750,
+  });
+
   return (
     <div className="shop">
-      <h2>Welcome to our shop</h2>
-      <p className="shopPageInfo">
+      <animated.h2 style={{ ...fadeIn }}>Welcome to our shop</animated.h2>
+      <animated.p className="shopPageInfo" style={{ ...p }}>
         *Click item image to take you to external site (Kelme or Euro Soccer)
-      </p>
-      <div className="shopItems">
+      </animated.p>
+      <animated.div className="shopItems" style={{ ...items }}>
         {shopItems.map((item) => (
           <ShopItem
             key={item.id}
@@ -168,7 +191,7 @@ function Shop() {
             itemLink={item.link}
           />
         ))}
-      </div>
+      </animated.div>
     </div>
   );
 }
