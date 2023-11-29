@@ -6,6 +6,7 @@ import EventsContainer from "../../SmallComponents/EventsContainer/EventsContain
 
 function Events({ id }) {
   // Animations
+
   // Header
   const header = useSpring({
     from: { x: 1500 },
