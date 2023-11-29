@@ -49,7 +49,7 @@ function Teams({
         <p className="fullTime">Full Time</p>
         <div className="resultsCard">
           <div
-            className="backgroundImage"
+            className="backgroundImage teamBackground"
             style={{
               background: `url(${homepageImg}) no-repeat center center/cover`,
             }}
