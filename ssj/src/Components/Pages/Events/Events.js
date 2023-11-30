@@ -48,28 +48,22 @@ function Events({ id }) {
       </animated.p>
       <animated.div className="eventList" style={{ ...event }}>
         <EventsContainer
-          eventTitle="First"
-          eventDate="22/6/2023"
-          eventDesc="Charity match in aid of insert here. More description, this is a placeholder for now."
-          eventLocation="Shardlow, the Wharf"
+          eventTitle="Shardlow St James"
+          eventDate="03/12/2023"
+          eventDesc="League match against FC Erewash"
+          eventLocation="Shardlow, the Wharf. KO - 10:30"
         />
         <EventsContainer
-          eventTitle="Reserves"
-          eventDate="22/6/2023"
-          eventDesc="Charity match in aid of insert here. More description, this is a placeholder for now."
-          eventLocation="Shardlow, the Wharf"
+          eventTitle="SSJ U15's"
+          eventDate="02/12/2023"
+          eventDesc="League match against Breaston Park Black"
+          eventLocation="Shardlow, the Wharf. KO - 10:00"
         />
         <EventsContainer
-          eventTitle="U16"
-          eventDate="22/6/2023"
-          eventDesc="Charity match in aid of insert here. More description, this is a placeholder for now."
-          eventLocation="Shardlow, the Wharf"
-        />
-        <EventsContainer
-          eventTitle="Vets"
-          eventDate="22/6/2023"
-          eventDesc="Charity match in aid of insert here. More description, this is a placeholder for now."
-          eventLocation="Shardlow, the Wharf"
+          eventTitle="SSJ Veterans"
+          eventDate="03/12/2023"
+          eventDesc="League match against Punjab United Vets"
+          eventLocation="Punjab United Vets. KO - 14:00"
         />
       </animated.div>
     </div>
