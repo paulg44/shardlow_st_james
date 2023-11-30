@@ -31,15 +31,6 @@ function App() {
       nextFixture: "FC Erewash (H)",
     },
     {
-      teamName: "SSJ Veterans",
-      lrcode: "865423176",
-      homeScore: "2",
-      awayScore: "4",
-      awayTeam: "Kilburn FC Vets",
-      resultDate: "15/10/23",
-      nextFixture: "Punjab United Vets (A)",
-    },
-    {
       teamName: "SSJ U15's",
       lrcode: "755308119",
       homeScore: "2",
@@ -47,6 +38,15 @@ function App() {
       awayTeam: "The Rossonerri U15's",
       resultDate: "29/11/23",
       nextFixture: "Breaston Park Black U15's (H)",
+    },
+    {
+      teamName: "SSJ Veterans",
+      lrcode: "865423176",
+      homeScore: "2",
+      awayScore: "4",
+      awayTeam: "Kilburn FC Vets",
+      resultDate: "15/10/23",
+      nextFixture: "Punjab United Vets (A)",
     },
   ];
 

@@ -42,13 +42,20 @@
 .dropdownList {
   visibility: hidden;
   position: absolute;
-  /* top: 55px; */
-  height: 500px;
-  background: linear-gradient(to bottom, var(--dark-blue), transparent);
-  border-left: 1px solid var(--yellow);
-  border-right: 1px solid var(--yellow);
+  /* left: 60%; */
+  /* width: 400px; */
+  /* background: linear-gradient(
+    to bottom,
+    var(--light-blue) 27%,
+    var(--dark-blue) 27% 100%
+  ); */
+  background: var(--dark-blue);
+  /* border-left: 1px solid var(--yellow);
+  border-right: 1px solid var(--yellow); */
+  border-radius: 0 0 10px 10px;
   display: flex;
-  flex-direction: column;
+  justify-content: space-around;
+  /* flex-direction: column; */
 }
 
 .dropdownList Link {
