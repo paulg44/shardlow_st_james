@@ -22,30 +22,31 @@ function App() {
   // Data will be pulled from fa, for now using dummy data
   const teamsData = [
     {
-      teamName: "First Team",
+      teamName: "SSJ Sunday",
       lrcode: "25025117",
+      homeScore: "3",
+      awayScore: "1",
+      awayTeam: "Lonely Boys",
+      resultDate: "29/11/23",
+      nextFixture: "FC Erewash (H)",
+    },
+    {
+      teamName: "SSJ Veterans",
+      lrcode: "865423176",
+      homeScore: "2",
+      awayScore: "4",
+      awayTeam: "Kilburn FC Vets",
+      resultDate: "15/10/23",
+      nextFixture: "Punjab United Vets (A)",
+    },
+    {
+      teamName: "SSJ U15's",
+      lrcode: "755308119",
       homeScore: "2",
       awayScore: "0",
-      awayTeam: "Aston FC",
-      nextFixture: "Aston FC (A)",
-    },
-    {
-      teamName: "Reserves",
-      latestResult: "6-2",
-      awayTeam: "Aston FC",
-      nextFixture: "Weston FC (H)",
-    },
-    {
-      teamName: "Veterans",
-      latestResult: "100-0",
-      awayTeam: "Aston FC",
-      nextFixture: "Derby County (A)",
-    },
-    {
-      teamName: "U15",
-      latestResult: "7-1",
-      awayTeam: "Aston FC",
-      nextFixture: "Alvaston U15 (H)",
+      awayTeam: "The Rossonerri U15's",
+      resultDate: "29/11/23",
+      nextFixture: "Breaston Park Black U15's (H)",
     },
   ];
 

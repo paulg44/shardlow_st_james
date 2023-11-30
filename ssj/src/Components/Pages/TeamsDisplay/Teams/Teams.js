@@ -14,6 +14,7 @@ function Teams({
   nextFixture,
   isActive,
   lrcode,
+  resultDate,
 }) {
   useEffect(() => {
     // This code will be executed after the component is mounted
@@ -46,7 +47,7 @@ function Teams({
         </div>
       </div>
       <div className="resultFixtures">
-        <p className="fullTime">Full Time</p>
+        <p className="fullTime">Latest Result {resultDate}</p>
         <div className="resultsCard">
           <div
             className="backgroundImage teamBackground"
