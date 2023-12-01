@@ -11,14 +11,15 @@
 .contact h3 {
   font-size: 2.5rem;
   margin-bottom: 5%;
-  margin-left: 7%;
+  margin-left: 5.5%;
   border-bottom: 5px solid var(--dark-blue);
   width: 500px;
 }
 
 .contactPersonsList {
-  display: grid;
-  grid-template-columns: 300px 300px 300px;
+  width: 60vw;
+  display: flex;
+  align-items: center;
   justify-content: space-evenly;
 }
 
@@ -55,13 +56,11 @@
   }
 
   .contactPersonsList {
+    width: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
     margin-bottom: 100px;
-  }
-
-  .contactObject {
   }
 }
