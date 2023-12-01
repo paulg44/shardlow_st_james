@@ -24,11 +24,11 @@ h6 {
   opacity: 0.4;
   margin-right: 10px;
   font-size: 1.75rem;
-  color: var(--light-blue);
+  color: var(--dark-blue);
 }
 
 @media (max-width: 1000px) {
-  .contactPerson h6 {
+  .contactInfo .contactPerson h6 {
     margin-top: 20px;
   }
 }

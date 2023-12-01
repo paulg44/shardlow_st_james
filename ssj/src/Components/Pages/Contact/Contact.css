@@ -22,7 +22,8 @@
   justify-content: space-evenly;
 }
 
-.contactInfo {
+.contactInfoPage {
+  font-size: 1.5rem;
   width: 350px;
 }
 
@@ -38,7 +39,8 @@
   .contact {
     position: relative;
     display: block;
-    overflow-y: scroll;
+    overflow-y: hidden;
+    /* width: fit-content; */
   }
 
   .contact h3 {
@@ -47,15 +49,19 @@
     margin-top: 120px;
   }
 
+  .contactInfoPage {
+    text-align: center;
+    margin: 20px 0 30px;
+  }
+
   .contactPersonsList {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     margin-bottom: 100px;
   }
 
   .contactObject {
-    display: none;
   }
 }

@@ -38,7 +38,7 @@ function Contact() {
       ></animated.div>
       <animated.h3 style={{ ...header }}>Contact</animated.h3>
       <animated.div className="contactPersonsList" style={{ ...info }}>
-        <animated.div className="contactInfo">
+        <animated.div className="contactInfoPage">
           <p>
             For opportunity's to get involved coaching, new teams, matchday
             information, sponsorship and more please contact me.
