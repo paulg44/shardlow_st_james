@@ -4,6 +4,7 @@ import "./Teams.css";
 // import Table from "./Table";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
+import { useSpring, animated } from "react-spring";
 import homepageImg from "../../../../IMG/ssj_1.jpg";
 
 function Teams({
@@ -31,8 +32,20 @@ function Teams({
     document.getElementById(`lrep${lrcode}`).appendChild(script);
     document.body.appendChild(csScript);
   }, [lrcode]);
+
+  // Animation
+  const fadeIn = useSpring({
+    from: { opacity: 0 },
+    to: { opacity: 1 },
+    config: { duration: "1500" },
+    delay: 250,
+  });
+
   return (
-    <div className={`team ${isActive ? "active" : ""}`}>
+    <animated.div
+      className={`team ${isActive ? "active" : ""}`}
+      style={{ ...fadeIn }}
+    >
       <div className="table">
         <h3>Shardlow {teamName}</h3>
         {/* Table */}
@@ -70,7 +83,7 @@ function Teams({
           Next <Link to={"/events"}>Fixture</Link>: {nextFixture}
         </p>
       </div>
-    </div>
+    </animated.div>
   );
 }
 
