@@ -74,14 +74,33 @@
 
 @media (max-width: 1000px) {
   .active {
+    position: relative;
     flex-direction: column;
+    overflow-y: scroll;
+  }
+
+  .table h3 {
+    text-align: right;
+  }
+
+  .resultFixtures {
+    padding-top: 10px;
+    width: fit-content;
+    text-align: center;
   }
 
   .resultsCard {
-    width: fit-content;
+    width: auto;
+    margin: 5px 10px;
   }
 
   .backgroundImage {
     display: none;
+  }
+}
+
+@media (max-width: 385px) {
+  .table {
+    margin-top: 200px;
   }
 }
