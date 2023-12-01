@@ -1,6 +1,6 @@
 // Contact Person's Component
 
-import { FaRegBell, FaRegEnvelope, FaRegUser } from "react-icons/fa";
+import { FaRegBell, FaRegUser } from "react-icons/fa";
 import "./ContactPerson.css";
 
 function ContactPerson(props) {
@@ -15,10 +15,10 @@ function ContactPerson(props) {
         <FaRegBell className="icon" />
         <p className="phone">{props.contactNumber}</p>
       </div>
-      <div className="contactInfo">
+      {/* <div className="contactInfo">
         <FaRegEnvelope className="icon" />
         <p className="email">{props.contactEmail}</p>
-      </div>
+      </div> */}
     </div>
   );
 }

@@ -15,7 +15,8 @@ h6 {
   font-size: 1.5rem;
 }
 
-.contactInfo:nth-child(4) {
+.contactInfo:nth-child(3) {
+  padding-bottom: 5px;
   border-bottom: 2px solid var(--light-blue);
 }
 
