@@ -24,8 +24,8 @@ function App() {
     {
       teamName: "SSJ Sunday",
       lrcode: "25025117",
-      homeScore: "3",
-      awayScore: "1",
+      homeScore: 3,
+      awayScore: 1,
       awayTeam: "Lonely Boys",
       resultDate: "29/11/23",
       nextFixture: "FC Erewash (H)",
@@ -33,8 +33,8 @@ function App() {
     {
       teamName: "SSJ U15's",
       lrcode: "755308119",
-      homeScore: "2",
-      awayScore: "0",
+      homeScore: 2,
+      awayScore: 0,
       awayTeam: "The Rossonerri U15's",
       resultDate: "29/11/23",
       nextFixture: "Breaston Park Black U15's (H)",
@@ -42,13 +42,15 @@ function App() {
     {
       teamName: "SSJ Veterans",
       lrcode: "865423176",
-      homeScore: "2",
-      awayScore: "4",
+      homeScore: 2,
+      awayScore: 4,
       awayTeam: "Kilburn FC Vets",
       resultDate: "15/10/23",
       nextFixture: "Punjab United Vets (A)",
     },
   ];
+
+  // Fireworks function
 
   // Possibly use this with the api?
   const [activeTeam, setActiveTeam] = useState(null);

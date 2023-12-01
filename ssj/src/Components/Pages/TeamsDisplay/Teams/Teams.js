@@ -41,6 +41,14 @@ function Teams({
     delay: 250,
   });
 
+  // Fireworks
+  useEffect(() => {
+    if (homeScore > awayScore) {
+      // return runFireworks()
+      console.log("home wins!! fireworks will run here");
+    }
+  });
+
   return (
     <animated.div
       className={`team ${isActive ? "active" : ""}`}
