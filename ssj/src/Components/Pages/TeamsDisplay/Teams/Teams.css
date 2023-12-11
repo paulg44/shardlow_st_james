@@ -103,7 +103,10 @@
 }
 
 @media (max-width: 385px) {
+  .active {
+    /* width: fit-content; */
+  }
   .table {
-    margin-top: 200px;
+    margin-top: 150px;
   }
 }
