@@ -1,0 +1,23 @@
+# My GitHub Actions file
+
+name: Run my Tests
+
+on:
+  push:
+    branches: [master, main]
+  pull_request:
+    branches: [master, main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+
+      - name: Install dependencies
+        uses: npm install
+
+      - name: Run Tests
+        uses: npm test
