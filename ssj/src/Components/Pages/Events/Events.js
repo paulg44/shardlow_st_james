@@ -57,7 +57,7 @@ function Events({ id }) {
           eventTitle="SSJ U15's"
           eventDate="02/12/2023"
           eventDesc="League match against Breaston Park Black"
-          eventLocation="Shardlow, the Wharf. KO - 10:00"
+          eventLocation="Shardlow, the Wharf. KO - 10:30"
         />
         <EventsContainer
           eventTitle="SSJ Veterans"
