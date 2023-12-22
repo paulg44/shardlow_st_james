@@ -13,7 +13,9 @@ function ContactPerson(props) {
       </div>
       <div className="contactInfo">
         <FaRegBell className="icon" />
-        <p className="phone">{props.contactNumber}</p>
+        <p className="phone" data-testid="phone">
+          {props.contactNumber}
+        </p>
       </div>
       {/* <div className="contactInfo">
         <FaRegEnvelope className="icon" />

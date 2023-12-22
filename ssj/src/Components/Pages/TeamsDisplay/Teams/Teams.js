@@ -84,7 +84,7 @@ function Teams({
           <p className="away teamNames">
             {awayTeam}
             <br />
-            {awayScore}
+            <span data-testid="away-score">{awayScore}</span>
           </p>
         </div>
         <p className="fixture">
