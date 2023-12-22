@@ -23,5 +23,5 @@ jobs:
 
       - name: Run Tests
         run: |
-           cdssj
+           cd ssj
            npm test
