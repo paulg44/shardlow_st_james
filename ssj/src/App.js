@@ -33,20 +33,20 @@ function App() {
     {
       teamName: "SSJ U15's",
       lrcode: "755308119",
-      homeScore: 2,
-      awayScore: 0,
-      awayTeam: "The Rossonerri U15's",
-      resultDate: "29/11/23",
+      homeScore: 8,
+      awayScore: 2,
+      awayTeam: "Ilkeston Town Reds U15's",
+      resultDate: "04/02/24",
       nextFixture: "Breaston Park Black U15's (H)",
     },
     {
       teamName: "SSJ Veterans",
       lrcode: "865423176",
-      homeScore: 2,
+      homeScore: 0,
       awayScore: 4,
-      awayTeam: "Kilburn FC Vets",
+      awayTeam: "Etwall Vets",
       resultDate: "15/10/23",
-      nextFixture: "Punjab United Vets (A)",
+      nextFixture: "Cromford Vets(H)",
     },
   ];
 
