@@ -55,15 +55,15 @@ function Events({ id }) {
         />
         <EventsContainer
           eventTitle="SSJ U15's"
-          eventDate="02/12/2023"
-          eventDesc="League match against Breaston Park Black"
+          eventDate="10/2/2023"
+          eventDesc="League match against Collingham Cougars U15"
           eventLocation="Shardlow, the Wharf. KO - 10:30"
         />
         <EventsContainer
           eventTitle="SSJ Veterans"
-          eventDate="03/12/2023"
-          eventDesc="League match against Punjab United Vets"
-          eventLocation="Punjab United Vets. KO - 14:00"
+          eventDate="11/2/2023"
+          eventDesc="League match against Cromford Vets Vets"
+          eventLocation="Shardlow, the Wharf KO - 14:00"
         />
       </animated.div>
     </div>
