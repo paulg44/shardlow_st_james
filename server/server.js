@@ -4,6 +4,7 @@ import express from "express";
 import pkg from "pg";
 import dotenv from "dotenv";
 import cors from "cors";
+import { latestResult } from "./routes/latestResult.js";
 
 dotenv.config();
 
@@ -22,6 +23,8 @@ export const pool = new Pool({
 
 app.use(express.json());
 app.use(cors());
+
+app.use("/api/latestResult", latestResult);
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
