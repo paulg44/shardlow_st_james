@@ -17,6 +17,7 @@ import Shop from "./Components/Pages/Shop/Shop";
 import TeamsDisplay from "./Components/Pages/TeamsDisplay/TeamsDisplay";
 import Sponsors from "./Components/Pages/Sponsors/Sponsors";
 import Contact from "./Components/Pages/Contact/Contact";
+import DatabaseTest from "./Components/Pages/DatabaseTest";
 
 function App() {
   // Data will be pulled from fa, for now using dummy data
@@ -81,6 +82,7 @@ function App() {
         />
         <Route path="/sponsors" element={<Sponsors />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/test" element={<DatabaseTest />} />
       </Routes>
       <Footer />
     </BrowserRouter>
