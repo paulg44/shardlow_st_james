@@ -51,26 +51,27 @@ function DatabaseTest() {
       </Table> */}
       <div className="resultFixtures">
         <p className="fullTime">Latest Result</p>
-        {latestResult.map((result) => (
-          <div className="resultsCard">
-            <div
-              className="backgroundImage teamBackground"
-              style={{
-                background: `url(${homepageImg}) no-repeat center center/cover`,
-              }}
-            ></div>
-            <p className="home teamNames">
-              {result.home_team} <br />
-              {result.home_score}
-            </p>
-            <p className="vs">VS</p>
-            <p className="away teamNames">
-              {result.away_team}
-              <br />
-              <span data-testid="away-score">{result.away_score}</span>
-            </p>
-          </div>
-        ))}
+        {Array.isArray(latestResult) &&
+          latestResult.map((result) => (
+            <div className="resultsCard" key={result.id}>
+              <div
+                className="backgroundImage teamBackground"
+                style={{
+                  background: `url(${homepageImg}) no-repeat center center/cover`,
+                }}
+              ></div>
+              <p className="home teamNames">
+                {result.home_team} <br />
+                {result.home_score}
+              </p>
+              <p className="vs">VS</p>
+              <p className="away teamNames">
+                {result.away_team}
+                <br />
+                <span data-testid="away-score">{result.away_score}</span>
+              </p>
+            </div>
+          ))}
       </div>
     </div>
   );
