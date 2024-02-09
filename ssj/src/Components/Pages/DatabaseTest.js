@@ -1,12 +1,14 @@
 // A small component for testing my database
 
 import { useEffect, useState } from "react";
-import { Table } from "react-bootstrap";
+// import { Table } from "react-bootstrap";
 import "./DatabaseTest.css";
+import homepageImg from "../../IMG/ShardlowHome.webp";
 
 function DatabaseTest() {
   // State
   const [latestResult, setLatestResult] = useState("");
+  //   const [homeTeam, setHomeTeam] = useState("");
 
   // Retrieve latest result
   useEffect(() => {
@@ -26,7 +28,7 @@ function DatabaseTest() {
     <div className="test">
       <h1>Test data</h1>
 
-      <Table className="table">
+      {/* <Table className="table">
         <thead>
           <tr>
             <th>Home Team</th>
@@ -46,7 +48,30 @@ function DatabaseTest() {
               </tr>
             ))}
         </tbody>
-      </Table>
+      </Table> */}
+      <div className="resultFixtures">
+        <p className="fullTime">Latest Result</p>
+        {latestResult.map((result) => (
+          <div className="resultsCard">
+            <div
+              className="backgroundImage teamBackground"
+              style={{
+                background: `url(${homepageImg}) no-repeat center center/cover`,
+              }}
+            ></div>
+            <p className="home teamNames">
+              {result.home_team} <br />
+              {result.home_score}
+            </p>
+            <p className="vs">VS</p>
+            <p className="away teamNames">
+              {result.away_team}
+              <br />
+              <span data-testid="away-score">{result.away_score}</span>
+            </p>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
