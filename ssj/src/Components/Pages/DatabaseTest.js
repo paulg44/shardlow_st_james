@@ -1,13 +1,14 @@
 // A small component for testing my database
 
 import { useEffect, useState } from "react";
-// import { Table } from "react-bootstrap";
+import { Table } from "react-bootstrap";
 import "./DatabaseTest.css";
 import homepageImg from "../../IMG/ShardlowHome.webp";
 
 function DatabaseTest() {
   // State
   const [latestResult, setLatestResult] = useState("");
+  const [allResults, setAllResults] = useState("");
   //   const [homeTeam, setHomeTeam] = useState("");
 
   // Retrieve latest result
@@ -17,6 +18,20 @@ function DatabaseTest() {
         const resultResponse = await fetch("/api/latestResult");
         const latestResult = await resultResponse.json();
         setLatestResult(latestResult);
+      } catch (error) {
+        console.error("Error fetching data", error);
+      }
+    };
+    fetchLatest();
+  }, []);
+
+  // Retrieve all results
+  useEffect(() => {
+    const fetchLatest = async () => {
+      try {
+        const resultResponse = await fetch("/api/all");
+        const allResults = await resultResponse.json();
+        setAllResults(allResults);
       } catch (error) {
         console.error("Error fetching data", error);
       }
@@ -73,6 +88,29 @@ function DatabaseTest() {
             </div>
           ))}
       </div>
+
+      {/* List of all results */}
+      <Table className="table">
+        <thead>
+          <tr>
+            <th>Home Team</th>
+            <th>Away Team</th>
+            <th>Home Score</th>
+            <th>Away Score</th>
+          </tr>
+        </thead>
+        <tbody>
+          {Array.isArray(allResults) &&
+            allResults.map((result) => (
+              <tr key={result.id}>
+                <td>{result.home_team}</td>
+                <td>{result.away_team}</td>
+                <td>{result.home_score}</td>
+                <td>{result.away_score}</td>
+              </tr>
+            ))}
+        </tbody>
+      </Table>
     </div>
   );
 }
