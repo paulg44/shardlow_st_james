@@ -2,6 +2,6 @@ import express from "express";
 
 import * as latestResultController from "../controllers/latestResult.js";
 
-export const latestResult = express.Router();
+export const resultsRoutes = express.Router();
 
-latestResult.get("/", latestResultController.getLatestResult);
+resultsRoutes.get("/", latestResultController.getLatestResult);
