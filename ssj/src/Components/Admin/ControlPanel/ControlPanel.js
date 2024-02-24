@@ -5,9 +5,10 @@ import { useState } from "react";
 
 function AdminControlPanel() {
   /* TODO
-     - add use states for each option to enter result
-     - add a change event function for each one
-     - create function for adding to database
+     - add use states for each option to enter result (DONE)
+     - add a change event function for each one (DONE)
+     - create function for adding to database (DONE)
+     - add a function that adds the result to the database depending on which team is picked
   */
 
   const selectATeam = [
