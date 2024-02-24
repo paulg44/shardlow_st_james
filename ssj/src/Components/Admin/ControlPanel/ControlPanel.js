@@ -4,6 +4,12 @@ import { Form } from "react-bootstrap";
 import { useState } from "react";
 
 function AdminControlPanel() {
+  /* TODO
+     - add use states for each option to enter result
+     - add a change event function for each one
+     - create function for adding to database
+  */
+
   // Teams Arrays
   const firstTeams = ["shardlow", "derby", "milan"];
   const U15sTeams = ["shardlow", "forest", "leeds"];

@@ -6,6 +6,7 @@ import dotenv from "dotenv";
 import cors from "cors";
 import { resultsRoutes } from "./routes/latestResult.js";
 import { allResultsRoutes } from "./routes/allResults.js";
+import { adminResultsRoutes } from "./AdminServer/AdminRoutes/adminRoute.js";
 
 dotenv.config();
 
@@ -27,6 +28,9 @@ app.use(cors());
 
 app.use("/api/latestResult", resultsRoutes);
 app.use("/api/all", allResultsRoutes);
+
+// Admin
+app.use("/api/admin");
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
