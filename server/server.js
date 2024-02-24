@@ -30,7 +30,7 @@ app.use("/api/latestResult", resultsRoutes);
 app.use("/api/all", allResultsRoutes);
 
 // Admin
-app.use("/api/admin");
+app.use("/api/admin", adminResultsRoutes);
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);

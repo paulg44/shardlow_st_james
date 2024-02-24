@@ -4,7 +4,7 @@ import * as addResultModel from "../AdminModel/adminModel.js";
 export async function addResultController(req, res) {
   try {
     const data = req.body;
-    const results = await addResultModel.addResultController(data);
+    const results = await addResultModel.addResultModel(data);
     console.log(`Success, payload ${results.row}`);
     res.status(200).json(results.rows);
   } catch (error) {

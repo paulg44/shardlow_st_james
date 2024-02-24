@@ -11,9 +11,9 @@ function AdminControlPanel() {
   */
 
   const selectATeam = [
-    { id: 1, name: "Shardlow St James" },
-    { id: 2, name: "Shardlow U15's" },
-    { id: 3, name: "Shardlow Vets" },
+    { id: 4, name: "Shardlow St James" },
+    { id: 5, name: "Shardlow U15's" },
+    { id: 6, name: "Shardlow Vets" },
   ];
 
   // Teams Arrays
@@ -36,6 +36,10 @@ function AdminControlPanel() {
   // States
   const [selectedTeam, setSelectedTeam] = useState("");
   const [teamList, setTeamList] = useState([]);
+  const [homeTeam, setHomeTeam] = useState("");
+  const [awayTeam, setAwayTeam] = useState("");
+  const [homeScore, setHomeScore] = useState(0);
+  const [awayScore, setAwayScore] = useState(0);
 
   // Function for which team is picked
   function selectTeam(e) {
@@ -51,6 +55,52 @@ function AdminControlPanel() {
     }
   }
 
+  // Handle Home Team
+  function handleHomeTeam(e) {
+    e.preventDefault();
+    setHomeTeam(e.target.value);
+    console.log(homeTeam);
+  }
+
+  // Handle Away Team
+  function handleAwayTeam(e) {
+    e.preventDefault();
+    setAwayTeam(e.target.value);
+    console.log(awayTeam);
+  }
+
+  // Handle Home Goals
+  function handleHomeScore(e) {
+    e.preventDefault();
+    setHomeScore(e.target.value);
+    console.log(homeScore);
+  }
+
+  // Handle Away Goals
+  function handleAwayScore(e) {
+    e.preventDefault();
+    setAwayScore(e.target.value);
+    console.log(awayScore);
+  }
+
+  // Handle add result to database
+  async function handleAddResult(e) {
+    e.preventDefault();
+
+    await fetch("/api/admin", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        home_team: homeTeam,
+        away_team: awayTeam,
+        home_score: homeScore,
+        away_score: awayScore,
+      }),
+    });
+  }
+
   // Add result btn function
   function handleAddResultBtn() {
     console.log("add result btn clicked");
@@ -61,7 +111,7 @@ function AdminControlPanel() {
       <h1>Admin Panel</h1>
       {/* Add Result to Database */}
       <div className="addResult">
-        <Form>
+        <Form onSubmit={handleAddResult}>
           <Form.Group controlId="pickTeam">
             <Form.Label>Pick Team</Form.Label>
             <Form.Select
@@ -81,7 +131,7 @@ function AdminControlPanel() {
           {/* Home Team */}
           <Form.Group controlId="homeTeam">
             <Form.Label>Home Team</Form.Label>
-            <Form.Select aria-label="Home Team">
+            <Form.Select aria-label="Home Team" onChange={handleHomeTeam}>
               {teamList.map((team) => (
                 <option key={team.id}>{team.name}</option>
               ))}
@@ -91,7 +141,7 @@ function AdminControlPanel() {
           {/* Away Team */}
           <Form.Group controlId="awayTeam">
             <Form.Label>Away Team</Form.Label>
-            <Form.Select aria-label="Away Team">
+            <Form.Select aria-label="Away Team" onChange={handleAwayTeam}>
               {teamList.map((team) => (
                 <option key={team.id}>{team.name}</option>
               ))}
@@ -103,6 +153,7 @@ function AdminControlPanel() {
             <Form.Label>Home Goals</Form.Label>
 
             <Form.Control
+              onChange={handleHomeScore}
               type="number"
               // id="homeGoals"
               name="homeGoals"
@@ -114,6 +165,7 @@ function AdminControlPanel() {
           <Form.Group controlId="awayGoals">
             <Form.Label>Away Goals</Form.Label>
             <Form.Control
+              onChange={handleAwayScore}
               type="number"
               // id="awayGoals"
               name="awayGoals"
