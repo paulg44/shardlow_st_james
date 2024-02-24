@@ -10,10 +10,28 @@ function AdminControlPanel() {
      - create function for adding to database
   */
 
+  const selectATeam = [
+    { id: 1, name: "Shardlow St James" },
+    { id: 2, name: "Shardlow U15's" },
+    { id: 3, name: "Shardlow Vets" },
+  ];
+
   // Teams Arrays
-  const firstTeams = ["shardlow", "derby", "milan"];
-  const U15sTeams = ["shardlow", "forest", "leeds"];
-  const vetsTeams = ["shardlow", "donnington", "magpies"];
+  const firstTeams = [
+    { id: 1, name: "Shardlow St James" },
+    { id: 2, name: "Derby County" },
+    { id: 3, name: "Aresnal" },
+  ];
+  const U15sTeams = [
+    { id: 1, name: "Shardlow U15's" },
+    { id: 2, name: "Inter Milan" },
+    { id: 3, name: "Real Madrid" },
+  ];
+  const vetsTeams = [
+    { id: 1, name: "Shardlow Vets" },
+    { id: 2, name: "Barcelona" },
+    { id: 3, name: "PSG" },
+  ];
 
   // States
   const [selectedTeam, setSelectedTeam] = useState("");
@@ -53,10 +71,9 @@ function AdminControlPanel() {
               onChange={selectTeam}
             >
               {/* Once I've picked a team can I then pick the home and away teams from a specific array? */}
-              <option></option>
-              <option value="Shardlow St James">Shardlow St James</option>
-              <option value="Shardlow U15's">Shardlow U15's</option>
-              <option value="Shardlow Vets">Shardlow Vets</option>
+              {selectATeam.map((team) => (
+                <option key={team.id}>{team.name}</option>
+              ))}
             </Form.Select>
           </Form.Group>
           <p>Add a result to database</p>
@@ -66,7 +83,7 @@ function AdminControlPanel() {
             <Form.Label>Home Team</Form.Label>
             <Form.Select aria-label="Home Team">
               {teamList.map((team) => (
-                <option key={team.id}>{team}</option>
+                <option key={team.id}>{team.name}</option>
               ))}
             </Form.Select>
           </Form.Group>
@@ -76,7 +93,7 @@ function AdminControlPanel() {
             <Form.Label>Away Team</Form.Label>
             <Form.Select aria-label="Away Team">
               {teamList.map((team) => (
-                <option key={team.id}>{team}</option>
+                <option key={team.id}>{team.name}</option>
               ))}
             </Form.Select>
           </Form.Group>
