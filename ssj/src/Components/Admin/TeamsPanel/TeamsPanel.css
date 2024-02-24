@@ -1,0 +1,8 @@
+/* CSS file for teams control panel */
+
+.teamsControlPanel {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

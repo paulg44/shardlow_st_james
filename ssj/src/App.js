@@ -21,7 +21,7 @@ import DatabaseTest from "./Components/Pages/DatabaseTest";
 import AdminControlPanel from "./Components/Admin/ControlPanel/ControlPanel";
 
 function App() {
-  // Data will be pulled from fa, for now using dummy data
+  // Data will be pulled from database according to date, for now using dummy data
   const teamsData = [
     {
       teamName: "SSJ Sunday",
