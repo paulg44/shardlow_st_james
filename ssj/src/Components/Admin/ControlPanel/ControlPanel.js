@@ -27,16 +27,22 @@ function AdminControlPanel() {
     }
   }
 
+  // Add result btn function
+  function handleAddResultBtn() {
+    console.log("add result btn clicked");
+  }
+
   return (
     <div className="controlPanel">
       <h1>Admin Panel</h1>
+      {/* Add Result to Database */}
       <div className="addResult">
         <Form>
           <Form.Group controlId="pickTeam">
             <Form.Label>Pick Team</Form.Label>
             <Form.Select
               aria-label="Select Team"
-              id="firstSelect"
+              // id="firstSelect"
               value={selectedTeam}
               onChange={selectTeam}
             >
@@ -75,7 +81,7 @@ function AdminControlPanel() {
 
             <Form.Control
               type="number"
-              id="homeGoals"
+              // id="homeGoals"
               name="homeGoals"
               min="0"
               max="99"
@@ -86,17 +92,26 @@ function AdminControlPanel() {
             <Form.Label>Away Goals</Form.Label>
             <Form.Control
               type="number"
-              id="awayGoals"
+              // id="awayGoals"
               name="awayGoals"
               min="0"
               max="99"
             />
           </Form.Group>
+          <button type="submit" onClick={handleAddResultBtn}>
+            Add Result
+          </button>
         </Form>
       </div>
-      {/* <button type="button">Shardlow St James</button>
-      <button type="button">Shardlow U15's</button>
-      <button type="button">Shardlow Vets</button> */}
+
+      {/* Add News */}
+      <div className="addNews">
+        <p>Add new article to news section. Placeholders:</p>
+        <p>Title:</p>
+        <p>IMG:</p>
+        <p>Description:</p>
+        <p>Date:</p>
+      </div>
     </div>
   );
 }
