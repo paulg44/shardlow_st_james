@@ -41,7 +41,7 @@ function AdminControlPanel() {
 
           {/* Away Team */}
           <Form.Group controlId="awayTeam">
-            <Form.Label>Home Team</Form.Label>
+            <Form.Label>Away Team</Form.Label>
             <Form.Select aria-label="Away Team">
               {firstTeams.map((team) => (
                 <option key={team.id}>{team}</option>
@@ -52,24 +52,25 @@ function AdminControlPanel() {
           {/* Home Goals */}
           <Form.Group controlId="homeGoals">
             <Form.Label>Home Goals</Form.Label>
-            <Form.Select aria-label="Home Goals">
-              <Form.Control
-                type="input"
-                id="homeGoals"
-                name="homeGoals"
-                min="0"
-                max="99"
-              />
-            </Form.Select>
+
+            <Form.Control
+              type="number"
+              id="homeGoals"
+              name="homeGoals"
+              min="0"
+              max="99"
+            />
           </Form.Group>
           {/* Away Team */}
-          <Form.Group controlId="awayTeam">
-            <Form.Label>Home Team</Form.Label>
-            <Form.Select aria-label="Away Team">
-              {firstTeams.map((team) => (
-                <option key={team.id}>{team}</option>
-              ))}
-            </Form.Select>
+          <Form.Group controlId="awayGoals">
+            <Form.Label>Away Goals</Form.Label>
+            <Form.Control
+              type="number"
+              id="awayGoals"
+              name="awayGoals"
+              min="0"
+              max="99"
+            />
           </Form.Group>
         </Form>
       </div>
