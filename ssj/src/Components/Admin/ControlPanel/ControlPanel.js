@@ -116,7 +116,7 @@ function AdminControlPanel() {
       <h1>Admin Panel</h1>
       {/* Add Result to Database */}
       <div className="addResult">
-        <Form onSubmit={handleAddResult}>
+        <Form onSubmit={handleAddResult} role="form">
           <Form.Group controlId="pickTeam">
             <Form.Label>Pick Team</Form.Label>
             <Form.Select
