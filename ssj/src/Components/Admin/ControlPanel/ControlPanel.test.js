@@ -3,14 +3,7 @@
 import React from "react";
 import nock from "nock";
 import "@testing-library/jest-dom";
-import {
-  screen,
-  render,
-  fireEvent,
-  waitFor,
-  getByLabelText,
-  getAllByRole,
-} from "@testing-library/react";
+import { screen, render, fireEvent, waitFor } from "@testing-library/react";
 import AdminControlPanel from "./controlPanel";
 
 test("admin panel loads and has form", () => {
