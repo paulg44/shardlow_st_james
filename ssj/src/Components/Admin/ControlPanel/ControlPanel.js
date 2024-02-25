@@ -88,17 +88,20 @@ function AdminControlPanel() {
   async function handleAddResult(e) {
     e.preventDefault();
 
+    const teamData = {
+      selectedTeam: selectedTeam,
+      home_team: homeTeam,
+      away_team: awayTeam,
+      home_score: homeScore,
+      away_score: awayScore,
+    };
+
     await fetch("/api/admin", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({
-        home_team: homeTeam,
-        away_team: awayTeam,
-        home_score: homeScore,
-        away_score: awayScore,
-      }),
+      body: JSON.stringify(teamData),
     });
   }
 
@@ -122,6 +125,7 @@ function AdminControlPanel() {
               onChange={selectTeam}
             >
               {/* Once I've picked a team can I then pick the home and away teams from a specific array? */}
+              <option></option>
               {selectATeam.map((team) => (
                 <option key={team.id}>{team.name}</option>
               ))}
