@@ -137,6 +137,7 @@ function AdminControlPanel() {
           <Form.Group controlId="homeTeam">
             <Form.Label>Home Team</Form.Label>
             <Form.Select aria-label="Home Team" onChange={handleHomeTeam}>
+              <option></option>
               {teamList.map((team) => (
                 <option key={team.id}>{team.name}</option>
               ))}
@@ -147,6 +148,7 @@ function AdminControlPanel() {
           <Form.Group controlId="awayTeam">
             <Form.Label>Away Team</Form.Label>
             <Form.Select aria-label="Away Team" onChange={handleAwayTeam}>
+              <option></option>
               {teamList.map((team) => (
                 <option key={team.id}>{team.name}</option>
               ))}
