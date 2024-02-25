@@ -4,7 +4,7 @@ import React from "react";
 import nock from "nock";
 import "@testing-library/jest-dom";
 import { screen, render, fireEvent, waitFor } from "@testing-library/react";
-import AdminControlPanel from "./controlPanel";
+import AdminControlPanel from "../ControlPanel/ControlPanel.js";
 
 test("admin panel loads and has form", () => {
   render(<AdminControlPanel />);
