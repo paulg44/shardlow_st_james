@@ -88,6 +88,7 @@ function AdminControlPanel() {
   async function handleAddResult(e) {
     e.preventDefault();
 
+    // This variable makes the team selection data dynamic so I can add to different tables
     const teamData = {
       selectedTeam: selectedTeam,
       home_team: homeTeam,
