@@ -5,7 +5,7 @@ import Homepage from "./Homepage";
 
 test("homepage render", () => {
   render(<Homepage />);
-  const header = screen.getByRole("heading");
+  const header = screen.getByText("Shardlow St James FC");
 
   expect(header).toBeInTheDocument();
 });
