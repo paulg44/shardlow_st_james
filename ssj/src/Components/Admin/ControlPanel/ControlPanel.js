@@ -17,7 +17,7 @@ function AdminControlPanel() {
     { id: 6, name: "Shardlow Vets" },
   ];
 
-  // Teams Arrays
+  // Teams Objects
   const firstTeams = [
     { id: 1, name: "Shardlow St James" },
     { id: 2, name: "Derby County" },
