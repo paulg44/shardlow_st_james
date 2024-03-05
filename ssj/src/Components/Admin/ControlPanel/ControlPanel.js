@@ -3,6 +3,7 @@ import "./ControlPanel.css";
 import { Form } from "react-bootstrap";
 import { useState } from "react";
 import AddResultAdmin from "./AddResults/AddResults";
+import AddNewsAdmin from "./AddNews/AddNews";
 
 function AdminControlPanel() {
   /* TODO
@@ -13,16 +14,9 @@ function AdminControlPanel() {
   */
 
   return (
-    <div>
+    <div className="controlPanel">
       <AddResultAdmin />
-      {/* Add News */}
-      <div className="addNews">
-        <p>Add new article to news section. Placeholders:</p>
-        <p>Title:</p>
-        <p>IMG:</p>
-        <p>Description:</p>
-        <p>Date:</p>
-      </div>
+      <AddNewsAdmin />
     </div>
   );
 }
