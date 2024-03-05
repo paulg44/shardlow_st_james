@@ -7,7 +7,6 @@ import { useSpring, animated } from "react-spring";
 
 function News({ id }) {
   // Animations
-
   // Header
   const header = useSpring({
     from: { x: 1500 },

@@ -1,7 +1,5 @@
 // Main Admin Control Panel Page
 import "./ControlPanel.css";
-import { Form } from "react-bootstrap";
-import { useState } from "react";
 import AddResultAdmin from "./AddResults/AddResults";
 import AddNewsAdmin from "./AddNews/AddNews";
 

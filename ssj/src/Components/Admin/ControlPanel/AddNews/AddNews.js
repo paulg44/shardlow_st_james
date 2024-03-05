@@ -3,15 +3,56 @@ import { Form } from "react-bootstrap";
 import { useState } from "react";
 
 function AddNewsAdmin() {
+  // States
+  const [title, setTitle] = useState("");
+  const [img, setImg] = useState();
+  const [imgDesc, setImgDesc] = useState("");
+  const [desc, setDesc] = useState("");
+  const [date, setDate] = useState("");
+
+  //   Functions
+  function handleTitle(e) {
+    e.preventDefault();
+    setTitle(e.target.value);
+    console.log(title);
+  }
+
+  function handleAddNewsItem() {}
+
   return (
     <div>
       {/* Add News */}
       <div className="addNews">
-        <p>Add new article to news section. Placeholders:</p>
-        <p>Title:</p>
-        <p>IMG:</p>
-        <p>Description:</p>
-        <p>Date:</p>
+        <p>Add new article to news section.</p>
+        <Form role="form" onSubmit={handleAddNewsItem}>
+          <Form.Group controlId="title">
+            <Form.Label>Title:</Form.Label>
+            <Form.Control onChange={handleTitle}></Form.Control>
+          </Form.Group>
+
+          {/* Need to research uploading a file */}
+          <Form.Group controlId="img">
+            <Form.Label>Image File:</Form.Label>
+            <Form.Control></Form.Control>
+          </Form.Group>
+
+          <Form.Group controlId="imgDescription">
+            <Form.Label>Image Description:</Form.Label>
+            <Form.Control></Form.Control>
+          </Form.Group>
+
+          <Form.Group controlId="description">
+            <Form.Label>Description:</Form.Label>
+            <Form.Control></Form.Control>
+          </Form.Group>
+          <Form.Group controlId="date">
+            <Form.Label>Date:</Form.Label>
+            <Form.Control></Form.Control>
+          </Form.Group>
+          <button type="submit" onClick={handleAddNewsItem}>
+            Add Result
+          </button>
+        </Form>
       </div>
     </div>
   );
