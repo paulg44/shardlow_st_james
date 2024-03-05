@@ -1,13 +1,11 @@
-// Control Panel Unit tests
-
 import React from "react";
 import nock from "nock";
 import "@testing-library/jest-dom";
 import { screen, render, fireEvent, waitFor } from "@testing-library/react";
-import AdminControlPanel from "../ControlPanel/ControlPanel.js";
+import AddResultsAdmin from "./AddResults";
 
 test("admin panel loads and has form", () => {
-  render(<AdminControlPanel />);
+  render(<AddResultsAdmin />);
 
   const form = screen.getByRole("form");
 
@@ -15,7 +13,7 @@ test("admin panel loads and has form", () => {
 });
 
 test("can pick a specific team", () => {
-  render(<AdminControlPanel />);
+  render(<AddResultsAdmin />);
 
   const teamChoice = screen.getByRole("combobox", { name: "Select Team" });
   fireEvent.change(teamChoice, {
@@ -41,7 +39,7 @@ describe("Team selection test", () => {
     nock("http://example.com").get("/api./admin").reply(200, teams);
 
     // Render Component
-    render(<AdminControlPanel />);
+    render(<AddResultsAdmin />);
 
     // Simulate selecting a team
     const teamSelect = screen.getByLabelText("Select Team");
