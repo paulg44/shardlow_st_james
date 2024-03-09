@@ -11,10 +11,39 @@ function AddNewsAdmin() {
   const [date, setDate] = useState("");
 
   //   Functions
+  //   Title
   function handleTitle(e) {
     e.preventDefault();
     setTitle(e.target.value);
     console.log(title);
+  }
+
+  //   Image
+  function handleImageUpload(e) {
+    e.preventDefault();
+    setImg(e.target.value);
+    console.log(img);
+  }
+
+  //   Image Description
+  function handleImageDesc(e) {
+    e.preventDefault();
+    setImgDesc(e.target.value);
+    console.log(imgDesc);
+  }
+
+  //   Description
+  function handleDescription(e) {
+    e.preventDefault();
+    setDesc(e.target.value);
+    console.log(desc);
+  }
+
+  //   Date
+  function handleDate(e) {
+    e.preventDefault();
+    setDate(e.target.value);
+    console.log(date);
   }
 
   function handleAddNewsItem() {}
