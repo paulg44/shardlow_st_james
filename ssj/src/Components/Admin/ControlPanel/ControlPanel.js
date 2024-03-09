@@ -2,6 +2,7 @@
 import "./ControlPanel.css";
 import AddResultAdmin from "./AddResults/AddResults";
 import AddNewsAdmin from "./AddNews/AddNews";
+import UpdateFixturesAdmin from "./UpdateFixtures/UpdateFixtures";
 
 function AdminControlPanel() {
   /* TODO
@@ -14,7 +15,8 @@ function AdminControlPanel() {
   return (
     <div className="controlPanel">
       <AddResultAdmin />
-      <AddNewsAdmin />
+      <UpdateFixturesAdmin />
+      {/* <AddNewsAdmin /> */}
     </div>
   );
 }

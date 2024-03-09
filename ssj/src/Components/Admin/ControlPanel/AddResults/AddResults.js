@@ -101,6 +101,12 @@ function AddResultAdmin() {
 
     // Make pop up visible
     setShow(true);
+    // Rest values
+    setSelectedTeam("");
+    setHomeTeam("");
+    setAwayScore("");
+    setHomeScore(0);
+    setAwayScore(0);
   }
 
   function handleModalClose() {
