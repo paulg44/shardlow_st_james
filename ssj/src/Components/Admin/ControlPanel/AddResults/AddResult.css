@@ -1,13 +1,1 @@
 /* CSS file for Admin add result */
-
-.confirmationPopup {
-  visibility: hidden;
-  width: 200px;
-  height: 100px;
-  border: 2px solid blue;
-  position: absolute;
-  background-color: beige;
-  text-align: center;
-  display: flex;
-  align-items: center;
-}

@@ -180,7 +180,7 @@ function AddResultAdmin() {
           <button type="submit">Add Result</button>
         </Form>
       </div>
-      <div className="confirmationPopup">
+      <div>
         <Modal
           show={show}
           onHide={handleModalClose}
