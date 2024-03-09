@@ -48,6 +48,13 @@ function AddNewsAdmin() {
 
   function handleAddNewsItem() {}
 
+  //   Test object
+  // let testObj = [{
+  //     id: 1,
+  //     title: "winners",
+  //     img
+  // }]
+
   return (
     <div>
       {/* Add News */}
@@ -62,21 +69,21 @@ function AddNewsAdmin() {
           {/* Need to research uploading a file */}
           <Form.Group controlId="img">
             <Form.Label>Image File:</Form.Label>
-            <Form.Control></Form.Control>
+            <Form.Control onChange={handleImageUpload}></Form.Control>
           </Form.Group>
 
           <Form.Group controlId="imgDescription">
             <Form.Label>Image Description:</Form.Label>
-            <Form.Control></Form.Control>
+            <Form.Control onChange={handleImageDesc}></Form.Control>
           </Form.Group>
 
           <Form.Group controlId="description">
             <Form.Label>Description:</Form.Label>
-            <Form.Control></Form.Control>
+            <Form.Control onChange={handleDescription}></Form.Control>
           </Form.Group>
           <Form.Group controlId="date">
             <Form.Label>Date:</Form.Label>
-            <Form.Control></Form.Control>
+            <Form.Control onChange={handleDate}></Form.Control>
           </Form.Group>
           <button type="submit" onClick={handleAddNewsItem}>
             Add Result
