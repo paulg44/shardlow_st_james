@@ -69,7 +69,10 @@ function AddNewsAdmin() {
           {/* Need to research uploading a file */}
           <Form.Group controlId="img">
             <Form.Label>Image File:</Form.Label>
-            <Form.Control onChange={handleImageUpload}></Form.Control>
+            <Form.Control
+              onChange={handleImageUpload}
+              type="file"
+            ></Form.Control>
           </Form.Group>
 
           <Form.Group controlId="imgDescription">

@@ -1,6 +1,7 @@
 // Component to add results on admin panel
-import { Form } from "react-bootstrap";
+import { Form, Modal, Button } from "react-bootstrap";
 import { useState } from "react";
+import "./AddResult.css";
 
 function AddResultAdmin() {
   const selectATeam = [
@@ -33,6 +34,7 @@ function AddResultAdmin() {
   const [awayTeam, setAwayTeam] = useState("");
   const [homeScore, setHomeScore] = useState(0);
   const [awayScore, setAwayScore] = useState(0);
+  const [show, setShow] = useState(false);
 
   // Function for which team is picked
   function selectTeam(e) {
@@ -96,11 +98,13 @@ function AddResultAdmin() {
       },
       body: JSON.stringify(teamData),
     });
+
+    // Make pop up visible
+    setShow(true);
   }
 
-  // Add result btn function
-  function handleAddResultBtn() {
-    console.log("add result btn clicked");
+  function handleModalClose() {
+    setShow(false);
   }
 
   return (
@@ -173,10 +177,29 @@ function AddResultAdmin() {
               max="99"
             />
           </Form.Group>
-          <button type="submit" onClick={handleAddResultBtn}>
-            Add Result
-          </button>
+          <button type="submit">Add Result</button>
         </Form>
+      </div>
+      <div className="confirmationPopup">
+        <Modal
+          show={show}
+          onHide={handleModalClose}
+          style={{ position: "absolute", top: "150px", left: "100px" }}
+        >
+          <Modal.Header closeButton>
+            <Modal.Title>Confirmation</Modal.Title>
+          </Modal.Header>
+
+          <Modal.Body>
+            <p>Result added to {selectedTeam} Database</p>
+          </Modal.Body>
+
+          <Modal.Footer>
+            <Button variant="secondary" onClick={handleModalClose}>
+              Close
+            </Button>
+          </Modal.Footer>
+        </Modal>
       </div>
     </div>
   );
