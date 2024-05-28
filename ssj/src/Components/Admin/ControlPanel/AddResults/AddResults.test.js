@@ -36,7 +36,7 @@ describe("Team selection test", () => {
       { id: 5, name: "Shardlow U15's" },
       { id: 6, name: "Shardlow Vets" },
     ];
-    nock("http://example.com").get("/api./admin").reply(200, teams);
+    nock("http://localhost:3200").post("/api/admin").reply(200, teams);
 
     // Render Component
     render(<AddResultsAdmin />);

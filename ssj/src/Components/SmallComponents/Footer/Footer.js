@@ -3,6 +3,7 @@
 import "./Footer.css";
 import { FaFacebook } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
 
 function Footer() {
   return (
@@ -21,6 +22,13 @@ function Footer() {
           rel="noreferrer"
         >
           <FaTwitter />
+        </a>
+        <a
+          href="https://www.instagram.com/shardlowstjamesfc/?hl=pa"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <FaInstagram />
         </a>
       </div>
       <div className="footerInfo">
