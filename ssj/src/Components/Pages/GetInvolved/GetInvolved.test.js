@@ -3,7 +3,7 @@
 import React from "react";
 import "@testing-library/react";
 import { screen, render } from "@testing-library/react";
-import Events from "../Events/Events";
+import Events from "./GetInvolved";
 
 test("page loads and has content", () => {
   render(<Events />);

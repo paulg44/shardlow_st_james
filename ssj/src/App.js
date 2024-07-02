@@ -11,7 +11,7 @@ import homepageImg from "./IMG/ssj_1.jpg";
 import NavBar from "./Components/SmallComponents/NavBar/NavBar";
 import Footer from "./Components/SmallComponents/Footer/Footer";
 import Homepage from "./Components/Pages/Homepage/Homepage";
-import Event from "./Components/Pages/Events/Events";
+import GetInvolved from "./Components/Pages/GetInvolved/GetInvolved";
 import News from "./Components/Pages/News/News";
 import Shop from "./Components/Pages/Shop/Shop";
 import TeamsDisplay from "./Components/Pages/TeamsDisplay/TeamsDisplay";
@@ -72,7 +72,7 @@ function App() {
       <NavBar handleTeamClick={handleTeamClick} teamsData={teamsData} />
       <Routes>
         <Route path="/" element={<Homepage homepageImg={homepageImg} />} />
-        <Route path="/events" element={<Event />} />
+        <Route path="/events" element={<GetInvolved />} />
         <Route path="/news" element={<News />} />
         <Route path="/shop" element={<Shop />} />
         <Route

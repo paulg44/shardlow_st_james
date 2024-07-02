@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../../../IMG/ssj_badge-removebg-preview.png";
 import "./NavBar.css";
-import { FaTshirt } from "react-icons/fa";
+import { FaBars } from "react-icons/fa";
 
 function NavBar({ handleTeamClick, teamsData }) {
   const [burgerMenuOpen, setBurgerMenuOpen] = useState(false);
@@ -27,14 +27,14 @@ function NavBar({ handleTeamClick, teamsData }) {
 
         {/* Burger Menu */}
         <div className="burgerMenuBtn" onClick={openBurgerMenu}>
-          <FaTshirt />
+          <FaBars />
         </div>
 
         <div className={`navLinks ${burgerMenuOpen ? "open" : ""}`}>
           <ul className="list">
             <li className="listItem">
               <Link to={"/events"} onClick={closeBurgerMenu}>
-                Events
+                Get Involved
               </Link>
             </li>
             <li className="listItem">
