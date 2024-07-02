@@ -2,7 +2,7 @@
 
 import "./GetInvolved.css";
 import { useSpring, animated } from "react-spring";
-import EventsContainer from "../../SmallComponents/EventsContainer/EventsContainer";
+// import EventsContainer from "../../SmallComponents/EventsContainer/EventsContainer";
 
 function Events({ id }) {
   // Animations
@@ -15,11 +15,11 @@ function Events({ id }) {
   });
 
   // Fixture
-  const fixture = useSpring({
-    from: { x: -1500 },
-    to: { x: 0 },
-    delay: 300,
-  });
+  // const fixture = useSpring({
+  //   from: { x: -1500 },
+  //   to: { x: 0 },
+  //   delay: 300,
+  // });
 
   // Object
   const object = useSpring({

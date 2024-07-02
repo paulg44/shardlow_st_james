@@ -25,7 +25,8 @@ function App() {
   const teamsData = [
     {
       teamName: "SSJ Sunday",
-      lrcode: "25025117",
+      lrcodeTable: "25025117",
+      lrcodeResults: "441578546",
       homeScore: 3,
       awayScore: 1,
       awayTeam: "Lonely Boys",
