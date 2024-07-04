@@ -9,8 +9,9 @@
 */
 
 import { useEffect } from "react";
-import Teams from "./Teams/Teams.js";
+import ResultsFixtures from "./Results/Fixtures/ResultsFixtures.js";
 import "./TeamsDisplay.css";
+import Table from "./Table/Table.js";
 
 function TeamsDisplay({ teamsData, activeTeam }) {
   useEffect(() => {
@@ -23,8 +24,9 @@ function TeamsDisplay({ teamsData, activeTeam }) {
         {teamsData.map((team, index) => (
           <div key={index}>
             {activeTeam && team.teamName === activeTeam.teamName ? (
-              <Teams {...team} isActive={true} />
+              <Table {...team} isActive={true} />
             ) : (
+              // <ResultsFixtures {...team} isActive={true} />
               ""
             )}
           </div>

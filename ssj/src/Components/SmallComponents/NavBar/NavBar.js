@@ -76,8 +76,10 @@ function NavBar({ handleTeamClick, teamsData }) {
                   <option key={id}>{teamsData.teamName}</option>
                 ))}
               </select>
-              <Link to={`/teams/${navSelectedTeam}`}>Table</Link>
-              <Link>Results/Fixtures</Link>
+              <Link to={`/teams/${navSelectedTeam}/table`}>Table</Link>
+              <Link to={`/teams/${navSelectedTeam}/results`}>
+                Results/Fixtures
+              </Link>
               <Link>Players</Link>
             </li>
           </ul>
