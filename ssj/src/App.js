@@ -24,6 +24,7 @@ function App() {
   // Data will be pulled from database according to date, for now using dummy data
   const teamsData = [
     {
+      id: 1,
       teamName: "SSJ Sunday",
       lrcodeTable: "25025117",
       lrcodeResults: "441578546",
@@ -34,6 +35,7 @@ function App() {
       nextFixture: "FC Erewash (H)",
     },
     {
+      id: 2,
       teamName: "SSJ U15's",
       lrcode: "755308119",
       homeScore: 8,
@@ -43,6 +45,7 @@ function App() {
       nextFixture: "Breaston Park Black U15's (H)",
     },
     {
+      id: 3,
       teamName: "SSJ Veterans",
       lrcode: "865423176",
       homeScore: 0,

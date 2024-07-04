@@ -7,6 +7,7 @@ import { FaBars } from "react-icons/fa";
 
 function NavBar({ handleTeamClick, teamsData }) {
   const [burgerMenuOpen, setBurgerMenuOpen] = useState(false);
+  const [navSelectedTeam, setNavSelectedTeam] = useState("");
 
   // Open Menu
   const openBurgerMenu = () => {
@@ -17,6 +18,11 @@ function NavBar({ handleTeamClick, teamsData }) {
   const closeBurgerMenu = () => {
     setBurgerMenuOpen(false);
   };
+
+  function navSelectTeam(e) {
+    const navSelectedValue = e.target.value;
+    setNavSelectedTeam(navSelectedValue);
+  }
 
   return (
     <nav className="navbar">
@@ -47,24 +53,6 @@ function NavBar({ handleTeamClick, teamsData }) {
                 Shop
               </Link>
             </li>
-            <li className="listItem dropdown">
-              <Link to={"/teams"}>Teams</Link>
-              <ul className="dropdownList">
-                {teamsData.map((team, index) => (
-                  <li
-                    key={index}
-                    onClick={() => handleTeamClick(team.teamName)}
-                  >
-                    <Link
-                      to={`/teams/${team.teamName}`}
-                      onClick={closeBurgerMenu}
-                    >
-                      {team.teamName}{" "}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </li>
             <li className="listItem">
               <Link to={"/sponsors"} onClick={closeBurgerMenu}>
                 Sponsors
@@ -74,6 +62,23 @@ function NavBar({ handleTeamClick, teamsData }) {
               <Link to={"/contact"} onClick={closeBurgerMenu}>
                 Contact
               </Link>
+            </li>
+            <li className="listItem dropdown">
+              <label htmlFor="teams">Select a Team</label>
+              <select
+                name="teams"
+                value={navSelectedTeam}
+                onChange={navSelectTeam}
+                onClick={() => handleTeamClick(navSelectedTeam)}
+              >
+                <option></option>{" "}
+                {teamsData.map((teamsData, id) => (
+                  <option key={id}>{teamsData.teamName}</option>
+                ))}
+              </select>
+              <Link to={`/teams/${navSelectedTeam}`}>Table</Link>
+              <Link>Results/Fixtures</Link>
+              <Link>Players</Link>
             </li>
           </ul>
         </div>
