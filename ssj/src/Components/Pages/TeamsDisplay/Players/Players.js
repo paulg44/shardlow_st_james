@@ -11,8 +11,12 @@ function Players({ activeTeam }) {
   return (
     <div className="players">
       {playerData.players[activeTeam.teamName]?.map((player) => (
-        <div key={player.id}>
+        <div key={player.id} className="playerCard">
           <h2>{player.name}</h2>
+          <img src={player.image} alt="player" />
+          <p>{player.age}</p>
+          <p>{player.position}</p>
+          <p>{player.random}</p>
         </div>
       ))}
     </div>
