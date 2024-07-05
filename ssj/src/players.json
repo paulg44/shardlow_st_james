@@ -1,0 +1,53 @@
+{
+  "players": {
+    "SSJ Sunday": [
+      {
+        "id": 1,
+        "name": "Dave",
+        "age": 22,
+        "position": "Midfield",
+        "random": "Random Quote"
+      },
+      {
+        "id": 2,
+        "name": "Paul",
+        "age": 31,
+        "position": "Attacker",
+        "random": "Random Quote"
+      }
+    ],
+    "SSJ U15's": [
+      {
+        "id": 1,
+        "name": "Pete",
+        "age": 27,
+        "position": "Defender",
+        "random": "Random Quote"
+      },
+      {
+        "id": 2,
+        "name": "Ted",
+        "age": 19,
+        "position": "Goalkeeper",
+        "random": "Random Quote"
+      }
+    ],
+
+    "SSJ Veterans": [
+      {
+        "id": 1,
+        "name": "Keith",
+        "age": 39,
+        "position": "Attack",
+        "random": "Random Quote"
+      },
+      {
+        "id": 2,
+        "name": "Geoff",
+        "age": 46,
+        "position": "Defender",
+        "random": "Random Quote"
+      }
+    ]
+  }
+}

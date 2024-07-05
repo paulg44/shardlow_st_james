@@ -80,7 +80,7 @@ function NavBar({ handleTeamClick, teamsData }) {
               <Link to={`/teams/${navSelectedTeam}/results`}>
                 Results/Fixtures
               </Link>
-              <Link>Players</Link>
+              <Link to={`/teams/${navSelectedTeam}/players`}>Players</Link>
             </li>
           </ul>
         </div>

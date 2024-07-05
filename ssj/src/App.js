@@ -21,6 +21,7 @@ import DatabaseTest from "./Components/Pages/DatabaseTest";
 import AdminControlPanel from "./Components/Admin/ControlPanel/ControlPanel";
 import Table from "./Components/Pages/TeamsDisplay/Table/Table";
 import ResultsFixtures from "./Components/Pages/TeamsDisplay/Results/Fixtures/ResultsFixtures";
+import Players from "./Components/Pages/TeamsDisplay/Players/Players";
 
 function App() {
   // Data will be pulled from database according to date, for now using dummy data
@@ -61,7 +62,7 @@ function App() {
   // Fireworks function
 
   // Possibly use this with the api?
-  const [activeTeam, setActiveTeam] = useState(null);
+  const [activeTeam, setActiveTeam] = useState("");
 
   const handleTeamClick = (teamName) => {
     const selectedTeam = teamsData.find((team) => team.teamName === teamName);
@@ -96,6 +97,10 @@ function App() {
           element={
             <ResultsFixtures teamsData={teamsData} activeTeam={activeTeam} />
           }
+        />
+        <Route
+          path="/teams/:teamName/players"
+          element={<Players activeTeam={activeTeam} />}
         />
         <Route path="/sponsors" element={<Sponsors />} />
         <Route path="/contact" element={<Contact />} />
