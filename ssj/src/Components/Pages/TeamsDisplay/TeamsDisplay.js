@@ -45,6 +45,8 @@ function TeamsDisplay({ teamsData, handleTeamClick }) {
           <Link to={`/teams/${displaySelectedTeam}/players`}>Players</Link>
         </li>
       </ul>
+
+      {/* HOW TO DISPLAY THIS DYNAMICALLY???? */}
       <div className="teamContentContainer">
         {/* <Table />
         <ResultsFixtures />
