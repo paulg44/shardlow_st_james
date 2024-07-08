@@ -63,7 +63,12 @@ function NavBar({ handleTeamClick, teamsData }) {
                 Contact
               </Link>
             </li>
-            <li className="listItem dropdown">
+            <li className="listItem">
+              <Link to={"/teamDisplay"} onClick={closeBurgerMenu}>
+                Team Info
+              </Link>
+            </li>
+            {/* <li className="listItem dropdown">
               <label htmlFor="teams">Select a Team</label>
               <select
                 name="teams"
@@ -81,7 +86,7 @@ function NavBar({ handleTeamClick, teamsData }) {
                 Results/Fixtures
               </Link>
               <Link to={`/teams/${navSelectedTeam}/players`}>Players</Link>
-            </li>
+            </li> */}
           </ul>
         </div>
       </div>

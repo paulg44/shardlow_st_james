@@ -8,18 +8,50 @@
 
 */
 
-import { useEffect } from "react";
+import { useState } from "react";
 import ResultsFixtures from "./Results/Fixtures/ResultsFixtures.js";
 import "./TeamsDisplay.css";
 import Table from "./Table/Table.js";
+import { Link } from "react-router-dom";
+import Players from "./Players/Players.js";
 
-function TeamsDisplay({ teamsData, activeTeam }) {
-  useEffect(() => {
-    console.log("Active Team:", activeTeam);
-  }, [activeTeam]);
+function TeamsDisplay({ teamsData, handleTeamClick }) {
+  const [displaySelectedTeam, setDisplaySelectedTeam] = useState("");
+
+  function displayTeam(e) {
+    const displaySelectedValue = e.target.value;
+    setDisplaySelectedTeam(displaySelectedValue);
+    handleTeamClick(displaySelectedValue);
+  }
 
   // Could I move the team select into here and add a link in the Nav for team information or TEAMS??? Better UI/UX needed
-  return <div className="teamsDisplay"></div>;
+  return (
+    <div className="teamsDisplay">
+      <label htmlFor="teams">Select a Team</label>
+      <select name="teams" value={displaySelectedTeam} onChange={displayTeam}>
+        <option></option>{" "}
+        {teamsData.map((teamsData, id) => (
+          <option key={id}>{teamsData.teamName}</option>
+        ))}
+      </select>
+      <ul>
+        <li>
+          <Link to={`/teams/${displaySelectedTeam}/table`}>Table</Link>
+        </li>
+        <li>
+          <Link to={`/teams/${displaySelectedTeam}/results`}>Results</Link>
+        </li>
+        <li>
+          <Link to={`/teams/${displaySelectedTeam}/players`}>Players</Link>
+        </li>
+      </ul>
+      <div className="teamContentContainer">
+        {/* <Table />
+        <ResultsFixtures />
+        <Players /> */}
+      </div>
+    </div>
+  );
 }
 
 export default TeamsDisplay;

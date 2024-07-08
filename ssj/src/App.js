@@ -83,9 +83,13 @@ function App() {
         <Route path="/news" element={<News />} />
         <Route path="/shop" element={<Shop />} />
         <Route
-          path="/teams/:teamName"
+          path="/teamDisplay"
           element={
-            <TeamsDisplay teamsData={teamsData} activeTeam={activeTeam} />
+            <TeamsDisplay
+              teamsData={teamsData}
+              activeTeam={activeTeam}
+              handleTeamClick={handleTeamClick}
+            />
           }
         />
         <Route
