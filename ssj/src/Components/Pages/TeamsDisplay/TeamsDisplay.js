@@ -15,8 +15,9 @@ import Table from "./Table/Table.js";
 import { Link } from "react-router-dom";
 import Players from "./Players/Players.js";
 
-function TeamsDisplay({ teamsData, handleTeamClick }) {
+function TeamsDisplay({ teamsData, handleTeamClick, activeTeam }) {
   const [displaySelectedTeam, setDisplaySelectedTeam] = useState("");
+  const [selectedElementView, setSelectedElementView] = useState("table");
 
   function displayTeam(e) {
     const displaySelectedValue = e.target.value;
@@ -34,23 +35,30 @@ function TeamsDisplay({ teamsData, handleTeamClick }) {
           <option key={id}>{teamsData.teamName}</option>
         ))}
       </select>
-      <ul>
-        <li>
-          <Link to={`/teams/${displaySelectedTeam}/table`}>Table</Link>
-        </li>
-        <li>
-          <Link to={`/teams/${displaySelectedTeam}/results`}>Results</Link>
-        </li>
-        <li>
-          <Link to={`/teams/${displaySelectedTeam}/players`}>Players</Link>
-        </li>
-      </ul>
+
+      {activeTeam && (
+        <div>
+          <button onClick={() => setSelectedElementView("table")}>Table</button>
+          <button onClick={() => setSelectedElementView("results")}>
+            Results
+          </button>
+          <button onClick={() => setSelectedElementView("players")}>
+            Players
+          </button>
+        </div>
+      )}
 
       {/* HOW TO DISPLAY THIS DYNAMICALLY???? */}
       <div className="teamContentContainer">
-        {/* <Table />
-        <ResultsFixtures />
-        <Players /> */}
+        {activeTeam && selectedElementView === "table" && (
+          <Table activeTeam={activeTeam} />
+        )}
+        {activeTeam && selectedElementView === "results" && (
+          <ResultsFixtures activeTeam={activeTeam} />
+        )}
+        {activeTeam && selectedElementView === "players" && (
+          <Players activeTeam={activeTeam} />
+        )}
       </div>
     </div>
   );

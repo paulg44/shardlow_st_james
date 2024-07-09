@@ -93,17 +93,17 @@ function App() {
           }
         />
         <Route
-          path="/teams/:teamName/table"
+          path="/teamDisplay/:teamName/table"
           element={<Table teamsData={teamsData} activeTeam={activeTeam} />}
         />
         <Route
-          path="/teams/:teamName/results"
+          path="/teamDisplay/:teamName/results"
           element={
             <ResultsFixtures teamsData={teamsData} activeTeam={activeTeam} />
           }
         />
         <Route
-          path="/teams/:teamName/players"
+          path="/teamDisplay/:teamName/players"
           element={<Players activeTeam={activeTeam} />}
         />
         <Route path="/sponsors" element={<Sponsors />} />
