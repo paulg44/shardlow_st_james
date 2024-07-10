@@ -19,9 +19,6 @@ import Sponsors from "./Components/Pages/Sponsors/Sponsors";
 import Contact from "./Components/Pages/Contact/Contact";
 import DatabaseTest from "./Components/Pages/DatabaseTest";
 import AdminControlPanel from "./Components/Admin/ControlPanel/ControlPanel";
-import Table from "./Components/Pages/TeamsDisplay/Table/Table";
-import ResultsFixtures from "./Components/Pages/TeamsDisplay/Results/Fixtures/ResultsFixtures";
-import Players from "./Components/Pages/TeamsDisplay/Players/Players";
 
 function App() {
   // Data will be pulled from database according to date, for now using dummy data
@@ -31,35 +28,18 @@ function App() {
       teamName: "SSJ Sunday",
       lrcodeTable: "25025117",
       lrcodeResults: "441578546",
-      // homeScore: 3,
-      // awayScore: 1,
-      // awayTeam: "Lonely Boys",
-      // resultDate: "29/11/23",
-      // nextFixture: "FC Erewash (H)",
     },
     {
       id: 2,
       teamName: "SSJ U15's",
       lrcodeTable: "755308119",
-      // homeScore: 8,
-      // awayScore: 2,
-      // awayTeam: "Ilkeston Town Reds U15's",
-      // resultDate: "04/02/24",
-      // nextFixture: "Breaston Park Black U15's (H)",
     },
     {
       id: 3,
       teamName: "SSJ Veterans",
       lrcodeTable: "865423176",
-      // homeScore: 0,
-      // awayScore: 4,
-      // awayTeam: "Etwall Vets",
-      // resultDate: "15/10/23",
-      // nextFixture: "Cromford Vets(H)",
     },
   ];
-
-  // Fireworks function
 
   // Possibly use this with the api?
   const [activeTeam, setActiveTeam] = useState("");
@@ -91,20 +71,6 @@ function App() {
               handleTeamClick={handleTeamClick}
             />
           }
-        />
-        <Route
-          path="/teamDisplay/:teamName/table"
-          element={<Table teamsData={teamsData} activeTeam={activeTeam} />}
-        />
-        <Route
-          path="/teamDisplay/:teamName/results"
-          element={
-            <ResultsFixtures teamsData={teamsData} activeTeam={activeTeam} />
-          }
-        />
-        <Route
-          path="/teamDisplay/:teamName/players"
-          element={<Players activeTeam={activeTeam} />}
         />
         <Route path="/sponsors" element={<Sponsors />} />
         <Route path="/contact" element={<Contact />} />
