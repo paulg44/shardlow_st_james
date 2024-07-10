@@ -8,11 +8,13 @@
 
 */
 
+
 import { useState } from "react";
 import ResultsFixtures from "./Results/Fixtures/ResultsFixtures.js";
 import "./TeamsDisplay.css";
 import Table from "./Table/Table.js";
 import Players from "./Players/Players.js";
+
 
 function TeamsDisplay({ teamsData, handleTeamClick, activeTeam }) {
   const [displaySelectedTeam, setDisplaySelectedTeam] = useState("");
