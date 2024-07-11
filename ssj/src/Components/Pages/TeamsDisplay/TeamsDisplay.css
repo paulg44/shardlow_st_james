@@ -14,7 +14,7 @@
   flex-direction: column;
   align-items: center;
   top: 10%;
-  right: 0;
+  right: 5%;
 }
 
 .teamAndElementSelect label {
@@ -23,20 +23,21 @@
 
 .teamAndElementSelect select {
   border: none;
-  background-color: var(--dark-blue);
+  background-color: var(--light-blue);
   color: white;
   padding: 5px 10px;
   width: 200px;
   text-align: center;
+  border-radius: 20px;
 }
 
-/* .teamAndElementSelect select-options {
-  border-radius: 0;
-} */
+.teamAndElementSelect select:hover {
+  background-color: var(--dark-blue);
+}
 
 .displayResults {
   position: absolute;
-  top: 20%;
+  top: 25%;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -50,6 +51,7 @@
   padding: 5px 10px;
   font-family: "Oswald", sans-serif;
   box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.7);
+  z-index: 99;
 }
 
 .teamDisplayButtons > button:hover {
@@ -58,4 +60,17 @@
 
 .teamDisplayButtons > button:active {
   transform: scale(0.97);
+}
+
+@media (max-width: 1000px) {
+  .teamAndElementSelect {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+  }
+
+  .displayResults {
+    top: 25%;
+    width: 90%;
+  }
 }

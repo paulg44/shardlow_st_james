@@ -1,6 +1,15 @@
 import { useEffect } from "react";
+import { useSpring, animated } from "react-spring";
 
 function Table({ activeTeam }) {
+  // Animation
+  const fadeIn = useSpring({
+    from: { opacity: 0 },
+    to: { opacity: 1 },
+    config: { duration: "1000" },
+    delay: 150,
+  });
+
   // For Table
   useEffect(() => {
     // This code will be executed after the component is mounted
@@ -21,7 +30,7 @@ function Table({ activeTeam }) {
     document.body.appendChild(tableCsScript);
   }, [activeTeam.lrcodeTable]);
   return (
-    <div className="table">
+    <animated.div className="table" style={{ ...fadeIn }}>
       <h3>Shardlow {activeTeam.teamName}</h3>
       {/* Table */}
 
@@ -34,7 +43,7 @@ function Table({ activeTeam }) {
         <br />
         <a href="http://www.thefa.com/FULL-TIME">FULL-TIME Home</a>
       </div>
-    </div>
+    </animated.div>
   );
 }
 

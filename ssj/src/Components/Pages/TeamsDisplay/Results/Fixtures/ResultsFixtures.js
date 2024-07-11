@@ -10,6 +10,14 @@ import { useSpring, animated } from "react-spring";
 // import homepageImg from "../../../../IMG/ssj_1.jpg";
 
 function ResultsFixtures({ activeTeam }) {
+  // Animation
+  const fadeIn = useSpring({
+    from: { opacity: 0 },
+    to: { opacity: 1 },
+    config: { duration: "1000" },
+    delay: 150,
+  });
+
   // For Results
   useEffect(() => {
     // This code will be executed after the component is mounted
@@ -29,14 +37,6 @@ function ResultsFixtures({ activeTeam }) {
       .appendChild(resultsScript);
     document.body.appendChild(resultsCsScripts);
   }, [activeTeam.lrcodeResults]);
-
-  // Animation
-  const fadeIn = useSpring({
-    from: { opacity: 0 },
-    to: { opacity: 1 },
-    config: { duration: "1500" },
-    delay: 250,
-  });
 
   return (
     <animated.div
