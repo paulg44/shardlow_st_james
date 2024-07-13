@@ -1,22 +1,75 @@
 .players {
-  height: 100vh;
+  margin-top: 340px;
+  position: relative;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
 }
 
 .playerCard {
-  border: 2px solid red;
+  position: relative;
+  border: 6px solid var(--dark-blue);
+  background: linear-gradient(var(--dark-blue), var(--light-blue));
   margin: 20px;
-  width: 200px;
+  width: 240px;
   height: 300px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  border-radius: 50% 50% 50% 50% / 18% 18% 88% 88%;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.playerCard:nth-child(2n) {
+  border: 6px solid var(--yellow);
+  background: linear-gradient(var(--yellow), var(--off-white));
+}
+.playerCard:nth-child(2n) h2 {
+  color: black;
+}
+
+.playerCard h2 {
+  color: white;
 }
 
 .playerCard img {
   width: 60%;
   border-radius: 50%;
+  margin: 4px 0;
+}
+
+.shine {
+  position: absolute;
+  height: 250%;
+  width: 60px;
+  top: 0;
+  left: -60px;
+  background: linear-gradient(90deg, #ffffff00, #ffffff54, #ffffff00);
+  transform: rotate(45deg) translateY(-35%);
+  animation: shine 4s ease infinite;
+}
+
+@keyframes shine {
+  0% {
+    left: -400px;
+  }
+  70% {
+    left: 150px;
+  }
+  100% {
+    left: 150px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .players {
+    position: absolute;
+    top: -150px;
+    left: 50%;
+    transform: translateX(-50%);
+    flex-direction: column;
+  }
 }

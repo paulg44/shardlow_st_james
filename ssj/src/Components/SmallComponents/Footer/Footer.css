@@ -16,6 +16,10 @@
   color: var(--dark-blue);
 }
 
+.footerLinks a:hover {
+  color: var(--light-blue);
+}
+
 .footerInfo {
   text-align: right;
   margin-right: 20px;
