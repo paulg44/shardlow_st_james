@@ -1,7 +1,8 @@
 // News Component
 
 import "./News.css";
-
+import { TwitterTimelineEmbed } from "react-twitter-embed";
+// import InstagramEmbed from "react-instagram-embed";
 import { useSpring, animated } from "react-spring";
 
 function News({ id }) {
@@ -43,6 +44,23 @@ function News({ id }) {
         // allowfullscreen="true"
         allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
       ></iframe> */}
+      <a
+        class="twitter-timeline"
+        data-width="500"
+        data-height="500"
+        data-theme="dark"
+        href="https://twitter.com/FCShardlow?ref_src=twsrc%5Etfw"
+      >
+        Tweets by FCShardlow
+      </a>{" "}
+      <script
+        async
+        src="https://platform.twitter.com/widgets.js"
+        charset="utf-8"
+      ></script>
+      <div className="twitterContainer">
+        <TwitterTimelineEmbed sourceType="profile" screenName="FC Shardlow" />
+      </div>
     </animated.div>
   );
 }
