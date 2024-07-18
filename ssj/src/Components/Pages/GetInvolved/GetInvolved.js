@@ -3,9 +3,8 @@
 import { Link } from "react-router-dom";
 import "./GetInvolved.css";
 import { useSpring, animated } from "react-spring";
-// import EventsContainer from "../../SmallComponents/EventsContainer/EventsContainer";
 
-function Events({ id }) {
+function GetInvolved({ id }) {
   // Animations
 
   // Header
@@ -100,4 +99,4 @@ function Events({ id }) {
   );
 }
 
-export default Events;
+export default GetInvolved;

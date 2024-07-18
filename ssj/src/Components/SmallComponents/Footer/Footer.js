@@ -32,8 +32,8 @@ function Footer() {
         </a>
       </div>
       <div className="footerInfo">
-        <p>SSJ &copy; 2023</p>
-        <p>
+        <p>SSJ &copy; 2024</p>
+        {/* <p>
           Designed & Built by{" "}
           <a
             href="https://paulgarton.com"
@@ -43,7 +43,7 @@ function Footer() {
           >
             P.Garton
           </a>
-        </p>
+        </p> */}
       </div>
     </footer>
   );
