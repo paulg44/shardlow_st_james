@@ -1,6 +1,6 @@
 /* CSS file for events section */
 
-.events {
+.getInvolved {
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -10,7 +10,7 @@
   overflow: hidden;
 }
 
-.events h3 {
+.getInvolved h2 {
   text-align: right;
   margin-left: 20%;
   font-size: 2rem;
@@ -18,21 +18,16 @@
   border-bottom: 5px solid var(--dark-blue);
 }
 
-.eventsSubHeader {
-  width: 70%;
-  text-align: right;
-  font-size: large;
-}
-
-.eventList {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+.getInvolvedVolunteer,
+.getInvolvedSponsor {
+  width: 60%;
+  display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 
 /* Background Object */
-.eventsObject {
+.getInvolvedObject {
   top: -25px;
   left: 0;
   transform: rotate(-60deg);

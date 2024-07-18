@@ -24,36 +24,11 @@
   left: 25%;
 }
 
-.twitterContainer {
+.tweetContainer {
   border: "2px solid grey";
   border-radius: "10px";
-  width: "200px";
+  width: 400px;
   margin: "10px 0";
-}
-
-/* Article */
-.newsArticle {
-  display: flex;
-  align-items: center;
-  padding: 10px;
-  margin-left: 20px;
-}
-
-.newsInfo {
-  text-align: right;
-}
-
-.newsImg img {
-  border-radius: 10px;
-  margin: 10px;
-}
-
-.newsDate {
-  margin: 5px 0;
-}
-
-.newsDesc {
-  width: 300px;
 }
 
 /* Background Object */
@@ -78,31 +53,13 @@
   }
 
   .newsList {
-    margin-top: 180px;
+    margin-top: 130px;
     margin-bottom: 100px;
-  }
-
-  .newsArticle {
-    flex-direction: column;
-    justify-content: center;
-    /* width: 100%; */
-    margin: 0;
-  }
-
-  .newsInfo {
-    text-align: left;
-  }
-
-  .newsObject {
-    display: none;
-  }
-
-  .newsList {
     left: 50%;
     transform: translateX(-50%);
   }
 
-  .twitterContainer {
+  .tweetContainer {
     width: 80%;
   }
 }

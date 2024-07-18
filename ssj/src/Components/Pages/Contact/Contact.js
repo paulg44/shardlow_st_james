@@ -48,7 +48,8 @@ function Contact() {
           contactName="Tom Mitchell"
           contactPosition="Chairman"
           contactNumber="07772841404"
-          // contactEmail="mrChairman@ssj.com"
+          contactEmail="ssjfc.enquiries@outlook.com"
+          emailAddress="mailto: ssjfc.enquiries@outlook.com"
         />
         {/* <ContactPerson
           contactName="Tom Mitchell"

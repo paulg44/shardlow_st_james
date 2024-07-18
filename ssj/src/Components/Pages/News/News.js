@@ -37,16 +37,6 @@ function News({ id }) {
       ></animated.div>
       <animated.h3 style={{ ...header }}>Latest News</animated.h3>
       <animated.div className="newsList" style={{ ...news }}>
-        <div
-          className="twitterContainer"
-          style={{
-            border: "2px solid grey",
-            borderRadius: "10px",
-            width: "400px",
-          }}
-        >
-          <TwitterTimelineEmbed sourceType="profile" screenName="FCShardlow" />
-        </div>
         {/* Individual Tweets. Have to add manually */}
         <div className="tweetContainer">
           <TwitterTweetEmbed tweetId={"1812829124324442418"} />
