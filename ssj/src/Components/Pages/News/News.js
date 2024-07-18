@@ -1,7 +1,7 @@
 // News Component
 
 import "./News.css";
-import { TwitterTimelineEmbed, TwitterTweetEmbed } from "react-twitter-embed";
+import { TwitterTweetEmbed } from "react-twitter-embed";
 // import InstagramEmbed from "react-instagram-embed";
 import { useSpring, animated } from "react-spring";
 
