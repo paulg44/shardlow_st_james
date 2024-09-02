@@ -1,16 +1,14 @@
-// Unit test for Sponsors Page
+// Unit test for Contact Page
 
 import React from "react";
 import "@testing-library/react";
 import { screen, render } from "@testing-library/react";
-import Sponsors from "./Sponsors";
+import Contact from "../Components/Pages/Contact/Contact";
 
 test("page loads and has content", () => {
-  render(<Sponsors />);
+  render(<Contact />);
 
-  const heading = screen.getByRole("heading", {
-    name: "Proudly Sponsored By...",
-  });
+  const heading = screen.getByRole("heading", { name: "Contact" });
 
   expect(heading).toBeInTheDocument();
 });

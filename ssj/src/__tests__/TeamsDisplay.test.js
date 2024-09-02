@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import TeamsDisplay from "./TeamsDisplay";
+import TeamsDisplay from "../Components/Pages/TeamsDisplay/TeamsDisplay.js";
 
 test("buttons are visible", () => {
   const mockTeamData = [{ teamName: "Team 1" }, { teamName: "Team 1" }];

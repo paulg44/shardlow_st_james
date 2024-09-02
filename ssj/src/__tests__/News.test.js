@@ -3,7 +3,7 @@
 import React from "react";
 import "@testing-library/react";
 import { screen, render } from "@testing-library/react";
-import News from "./News";
+import News from "../Components/Pages/News/News";
 
 test("page loads and has content", () => {
   render(<News />);

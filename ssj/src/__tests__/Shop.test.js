@@ -3,7 +3,7 @@
 import React from "react";
 import "@testing-library/react";
 import { screen, render } from "@testing-library/react";
-import Shop from "./Shop";
+import Shop from "../Components/Pages/Shop/Shop";
 
 test("page loads and has content", () => {
   render(<Shop />);

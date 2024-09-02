@@ -1,7 +1,7 @@
 // Unit Test Homepage
 
 import { screen, render } from "@testing-library/react";
-import Homepage from "./Homepage";
+import Homepage from "../Components/Pages/Homepage/Homepage";
 
 test("homepage render", () => {
   render(<Homepage />);
