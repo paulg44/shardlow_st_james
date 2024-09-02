@@ -45,56 +45,57 @@ function GetInvolved({ id }) {
       <animated.h2 style={{ ...header }}>Get Involved</animated.h2>
       <div className="getInvolvedVolunteer">
         <h3>Volunteers Needed</h3>
-        <div className="opportunities">
-          <h4>Opportunities</h4>
-          <ul>
-            <li>Coaches</li>
-            <li>Players</li>
-            <li>Committee Members</li>
-            <li>Volunteers</li>
-            <li>Sponsors</li>
-          </ul>
-        </div>
-        <div className="Teams">
-          <h4>Teams</h4>
-          <ul>
-            <li>Mens 1st Team</li>
-            <li>Mens Reserve Team</li>
-            <li>Mens Vets Team</li>
-            <li>Under 16's Team</li>
-          </ul>
+        <div className="listsContainer">
+          <div className="opportunitiesContainer">
+            <h4>Opportunities</h4>
+            <ul>
+              <li>Coaches</li>
+              <li>Players</li>
+              <li>Committee Members</li>
+              <li>Volunteers</li>
+              <li>Sponsors</li>
+            </ul>
+          </div>
+          <div className="teamsContainer">
+            <h4>Teams</h4>
+            <ul>
+              <li>Mens 1st Team</li>
+              <li>Mens Reserve Team</li>
+              <li>Mens Vets Team</li>
+              <li>Under 16's Team</li>
+            </ul>
+          </div>
         </div>
       </div>
 
       <div className="getInvolvedSponsor">
         <h3>Advertise Your Business</h3>
         {/* Image Here */}
-        <div className="services">
-          <h4>Our Services</h4>
-          <ul>
-            <li>Billboard at every home game</li>
-            <li>Saturday Morning</li>
-            <li>Sunday Morning & Afternoon</li>
-            <li>Social Media Posts</li>
-            <li>40+ Home Games</li>
-          </ul>
-        </div>
-        <div className="Teams">
-          <h4>Costs</h4>
-          <ul>
-            <li>Double sided billboard</li>
-            <li>1 year - £350</li>
-            <li>2 years - £500</li>
-            <li>3 years - £600</li>
-            <li>
-              Sponsor player, kits, social media posts (contact for more
-              details)
-            </li>
-          </ul>
+        <div className="listsContainer">
+          <div className="services">
+            <h4>Our Services</h4>
+            <ul>
+              <li>Billboard at every home game</li>
+              <li>Saturday Morning</li>
+              <li>Sunday Morning & Afternoon</li>
+              <li>Social Media Posts</li>
+              <li>40+ Home Games</li>
+            </ul>
+          </div>
+          <div className="teamsContainer">
+            <h4>Costs</h4>
+            <ul>
+              <li>Double sided billboard</li>
+              <li>1 year - £350</li>
+              <li>2 years - £500</li>
+              <li>3 years - £600</li>
+              <li>Sponsor player, kits, social media posts</li>
+            </ul>
+          </div>
         </div>
       </div>
 
-      <Link to={"/contact"}>Contact</Link>
+      <Link to={"/contact"}>Contact for more details.</Link>
     </div>
   );
 }

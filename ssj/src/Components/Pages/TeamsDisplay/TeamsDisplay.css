@@ -28,7 +28,7 @@
   padding: 5px 10px;
   width: 200px;
   text-align: center;
-  border-radius: 20px;
+  border-radius: 5px;
 }
 
 .teamAndElementSelect select:hover {
@@ -45,10 +45,9 @@
 /* Buttons */
 .teamDisplayButtons > button {
   margin: 10px;
-  width: 100px;
-  border: 2px solid var(--dark-blue);
-  border-radius: 20px;
-  padding: 5px 10px;
+  width: 130px;
+  border: 3px solid var(--dark-blue);
+  padding: 5px;
   font-family: "Oswald", sans-serif;
   box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.7);
   z-index: 99;
