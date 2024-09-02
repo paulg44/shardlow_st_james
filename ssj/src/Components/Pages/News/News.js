@@ -2,7 +2,7 @@
 
 import "./News.css";
 import { TwitterTweetEmbed } from "react-twitter-embed";
-// import InstagramEmbed from "react-instagram-embed";
+import { InstagramEmbed } from "react-social-media-embed";
 import { useSpring, animated } from "react-spring";
 
 function News({ id }) {
@@ -43,6 +43,13 @@ function News({ id }) {
         </div>
         <div className="tweetContainer">
           <TwitterTweetEmbed tweetId={"1808785404729946183"} />
+        </div>
+
+        <div style={{ display: "flex", justifyContent: "center" }}>
+          <InstagramEmbed
+            url="https://www.instagram.com/reel/C_YtayuADYe/"
+            width={328}
+          />
         </div>
       </animated.div>
     </animated.div>
