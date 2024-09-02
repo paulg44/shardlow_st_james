@@ -25,19 +25,19 @@ function App() {
   const teamsData = [
     {
       id: 1,
-      teamName: "SSJ Sunday",
-      lrcodeTable: "25025117",
+      teamName: "SSJ First Team",
+      lrcodeTable: "344078633",
       lrcodeResults: "441578546",
     },
     {
       id: 2,
-      teamName: "SSJ U15's",
-      lrcodeTable: "755308119",
+      teamName: "SSJ Reserves",
+      lrcodeTable: "692613147",
     },
     {
       id: 3,
-      teamName: "SSJ Veterans",
-      lrcodeTable: "865423176",
+      teamName: "SSJ U16's",
+      lrcodeTable: "275862418",
     },
   ];
 

@@ -46,9 +46,9 @@ function TeamsDisplay({ teamsData, handleTeamClick, activeTeam }) {
           <button onClick={() => setSelectedElementView("results")}>
             Results
           </button>
-          <button onClick={() => setSelectedElementView("players")}>
+          {/* <button onClick={() => setSelectedElementView("players")}>
             Players
-          </button>
+          </button> */}
         </div>
       </div>
 
