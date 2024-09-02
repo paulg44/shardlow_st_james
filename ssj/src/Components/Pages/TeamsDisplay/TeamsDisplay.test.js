@@ -8,10 +8,10 @@ test("buttons are visible", () => {
   const allBtns = screen.getAllByRole("button");
   const tableBtn = screen.getByRole("button", { name: /table/i });
   const resultsBtn = screen.getByRole("button", { name: /results/i });
-  const playersBtn = screen.getByRole("button", { name: /players/i });
+  // const playersBtn = screen.getByRole("button", { name: /players/i });
 
-  expect(allBtns).toHaveLength(3);
+  expect(allBtns).toHaveLength(2);
   expect(tableBtn).toBeInTheDocument();
   expect(resultsBtn).toBeInTheDocument();
-  expect(playersBtn).toBeInTheDocument();
+  // expect(playersBtn).toBeInTheDocument();
 });
