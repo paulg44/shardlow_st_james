@@ -38,18 +38,44 @@ function News({ id }) {
       <animated.h3 style={{ ...header }}>Latest News</animated.h3>
       <animated.div className="newsList" style={{ ...news }}>
         {/* Individual Tweets. Have to add manually */}
-        <div className="tweetContainer">
+        {/* <div className="tweetContainer">
           <TwitterTweetEmbed tweetId={"1812829124324442418"} />
         </div>
-        <div className="tweetContainer">
-          <TwitterTweetEmbed tweetId={"1808785404729946183"} />
-        </div>
+         */}
 
-        <div style={{ display: "flex", justifyContent: "center" }}>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+          }}
+        >
           <InstagramEmbed
             url="https://www.instagram.com/reel/C_YtayuADYe/"
             width={328}
           />
+          <div className="tweetContainer">
+            <TwitterTweetEmbed tweetId={"1830704329721774267"} />
+          </div>
+          <InstagramEmbed
+            url="https://www.instagram.com/p/C-DOQOTNhki/"
+            width={328}
+          />
+          <div className="tweetContainer">
+            <TwitterTweetEmbed tweetId={"1830312352408887729"} />
+          </div>
+          {/* <InstagramEmbed
+            url="https://www.https://www.instagram.com/p/C-X6RJLtguC/"
+            width={328}
+          />
+          <InstagramEmbed
+            url="https://www.https://www.instagram.com/reel/C_SV8VnAcED/"
+            width={328}
+          />
+          <InstagramEmbed
+            url="https://www.https://www.instagram.com/reel/C_NjvVRA902/"
+            width={328}
+          /> */}
         </div>
       </animated.div>
     </animated.div>
