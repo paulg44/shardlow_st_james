@@ -8,7 +8,7 @@ import News from "../Components/Pages/News/News";
 test("page loads and has content", () => {
   render(<News />);
 
-  const heading = screen.getByRole("heading", { name: "Latest News" });
+  const heading = screen.getByRole("heading", { name: /latest news/i });
 
   expect(heading).toBeInTheDocument();
 });

@@ -12,3 +12,11 @@ test("page loads and has content", () => {
 
   expect(heading).toBeInTheDocument();
 });
+
+test("all items load", () => {
+  render(<Shop />);
+
+  const allItems = screen.getAllByRole("link");
+
+  expect(allItems).toHaveLength(18);
+});

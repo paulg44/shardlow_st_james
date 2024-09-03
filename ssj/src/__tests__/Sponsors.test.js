@@ -14,3 +14,11 @@ test("page loads and has content", () => {
 
   expect(heading).toBeInTheDocument();
 });
+
+test("the correct number of sponsors, currently 4", () => {
+  render(<Sponsors />);
+
+  const sponsors = screen.getAllByRole("link");
+
+  expect(sponsors).toHaveLength(4);
+});

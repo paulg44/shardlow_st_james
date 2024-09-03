@@ -39,6 +39,11 @@ function App() {
       teamName: "SSJ U16's",
       lrcodeTable: "275862418",
     },
+    {
+      id: 4,
+      teamName: "SSJ Veteran's",
+      lrcodeTable: "275862418",
+    },
   ];
 
   // Possibly use this with the api?
