@@ -52,7 +52,6 @@ function TeamsDisplay({ teamsData, handleTeamClick, activeTeam }) {
         </div>
       </div>
 
-      {/* HOW TO DISPLAY THIS DYNAMICALLY???? */}
       <div className="teamContentContainer">
         {activeTeam && selectedElementView === "table" && (
           <Table activeTeam={activeTeam} />

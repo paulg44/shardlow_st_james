@@ -27,22 +27,25 @@ function App() {
       id: 1,
       teamName: "SSJ First Team",
       lrcodeTable: "344078633",
-      lrcodeResults: "441578546",
+      lrcodeResults: "473831191",
     },
     {
       id: 2,
       teamName: "SSJ Reserves",
       lrcodeTable: "692613147",
+      lrcodeResults: "535835625",
     },
     {
       id: 3,
       teamName: "SSJ U16's",
       lrcodeTable: "275862418",
+      lrcodeResults: "782532645",
     },
     {
       id: 4,
       teamName: "SSJ Veteran's",
-      lrcodeTable: "275862418",
+      lrcodeTable: "930383279",
+      lrcodeResults: "814947177",
     },
   ];
 
