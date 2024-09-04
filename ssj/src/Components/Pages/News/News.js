@@ -37,16 +37,11 @@ function News({ id }) {
       ></animated.div>
       <animated.h3 style={{ ...header }}>Latest News</animated.h3>
       <animated.div className="newsList" style={{ ...news }}>
-        {/* Individual Tweets. Have to add manually */}
-        {/* <div className="tweetContainer">
-          <TwitterTweetEmbed tweetId={"1812829124324442418"} />
-        </div>
-         */}
-
         <div
           style={{
             display: "flex",
             flexDirection: "column",
+            alignItems: "center",
             justifyContent: "center",
           }}
         >

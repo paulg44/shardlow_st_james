@@ -28,7 +28,7 @@
   border: "2px solid grey";
   border-radius: "10px";
   width: 400px;
-  margin: "10px 0";
+  margin: 10px 0;
 }
 
 /* Background Object */
@@ -42,7 +42,7 @@
     position: relative;
     display: block;
     /* height: fit-content; */
-    align-items: center;
+    /* align-items: center; */
     overflow-y: scroll;
   }
 
@@ -60,6 +60,6 @@
   }
 
   .tweetContainer {
-    width: 80%;
+    width: 90%;
   }
 }
