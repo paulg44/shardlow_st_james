@@ -57,7 +57,7 @@ function News({ id }) {
             width={328}
           />
           <div className="tweetContainer">
-            <TwitterTweetEmbed tweetId={"1830312352408887729"} />
+            <TwitterTweetEmbed tweetId={"1831592588312207716"} />
           </div>
           {/* <InstagramEmbed
             url="https://www.https://www.instagram.com/p/C-X6RJLtguC/"
