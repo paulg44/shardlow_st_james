@@ -44,7 +44,7 @@ function Shop() {
       image: linceZip,
       description: "Shardlow Lince Jacket",
       price: "From £23.99",
-      link: "https://kelmeteamwear.co.uk/products/shardlow-lince-jacket",
+      link: "https://kelmeteamwear.co.uk/products/shardlow-lince-jacket?_pos=1&_sid=8e5076216&_ss=r",
     },
     {
       id: 4,
