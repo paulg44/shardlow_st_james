@@ -45,32 +45,32 @@ function News({ id }) {
             justifyContent: "center",
           }}
         >
+          {/* Latest */}
           <InstagramEmbed
-            url="https://www.instagram.com/reel/C_YtayuADYe/"
+            url="https://www.instagram.com/p/C_suOvLNhYB/"
             width={328}
           />
           <div className="tweetContainer">
-            <TwitterTweetEmbed tweetId={"1830704329721774267"} />
+            <TwitterTweetEmbed tweetId={"1833137866500641239"} />
           </div>
+
+          {/* Middle */}
           <InstagramEmbed
-            url="https://www.instagram.com/p/C-DOQOTNhki/"
+            url="https://www.instagram.com/p/C_ppnA1tNo0/"
             width={328}
           />
           <div className="tweetContainer">
             <TwitterTweetEmbed tweetId={"1831592588312207716"} />
           </div>
-          {/* <InstagramEmbed
-            url="https://www.https://www.instagram.com/p/C-X6RJLtguC/"
+
+          {/* Oldest */}
+          <InstagramEmbed
+            url="https://www.instagram.com/p/C_pn6OjtsO0/"
             width={328}
           />
-          <InstagramEmbed
-            url="https://www.https://www.instagram.com/reel/C_SV8VnAcED/"
-            width={328}
-          />
-          <InstagramEmbed
-            url="https://www.https://www.instagram.com/reel/C_NjvVRA902/"
-            width={328}
-          /> */}
+          <div className="tweetContainer">
+            <TwitterTweetEmbed tweetId={"1818566773764964861"} />
+          </div>
         </div>
       </animated.div>
     </animated.div>
