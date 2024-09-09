@@ -28,10 +28,16 @@ function TeamsDisplay({ teamsData, handleTeamClick, activeTeam }) {
   return (
     <div className="teamsDisplay">
       {/* Only show if active team is selected */}
-      <h2>
-        {activeTeam.teamName}
-        <button>{/* <FaRegHeart /> */}</button>
-      </h2>
+      {activeTeam && activeTeam.teamName ? (
+        <h2>
+          {activeTeam.teamName}
+          <button>
+            <FaRegHeart />
+          </button>
+        </h2>
+      ) : (
+        <h2>Shardlow St James FC</h2>
+      )}
       <div className="teamAndElementSelect">
         <label htmlFor="teams">Select a Team</label>
         <select
