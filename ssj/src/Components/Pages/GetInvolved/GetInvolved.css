@@ -39,7 +39,16 @@
   display: flex;
   flex-direction: column;
   align-items: left;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+}
+
+.getInvolvedKids,
+.getInvolvedVolunteer {
+  border-bottom: 2px solid var(--yellow);
+}
+
+.border {
+  padding-bottom: 30px;
 }
 
 .listsContainer {
@@ -65,9 +74,9 @@
 
 @media (max-width: 1000px) {
   .getInvolved {
-    height: auto;
+    height: fit-content;
     width: auto;
-    overflow-y: scroll;
+    overflow: scroll;
   }
 
   .getInvolved h2 {

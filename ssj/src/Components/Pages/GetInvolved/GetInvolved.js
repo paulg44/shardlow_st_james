@@ -51,7 +51,7 @@ function GetInvolved({ id }) {
           <div className="services">
             <h4>Fun football sessions on a Saturday morning</h4>
             <h5>Ran by Shardlow St James coaches</h5>
-            <ul>
+            <ul className="border">
               <li>Unisex Sessions</li>
               <li>Ages between 5 and 10</li>
               <li>Fun games with drills</li>
@@ -67,7 +67,7 @@ function GetInvolved({ id }) {
         <div className="listsContainer">
           <div className="opportunitiesContainer">
             <h4>Opportunities</h4>
-            <ul>
+            <ul className="border">
               <li>Coaches</li>
               <li>Players</li>
               <li>Committee Members</li>
