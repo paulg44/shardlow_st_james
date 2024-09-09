@@ -43,6 +43,25 @@ function GetInvolved({ id }) {
         style={{ ...object, transform: "rotate(-60deg)" }}
       ></animated.div>
       <animated.h2 style={{ ...header }}>Get Involved</animated.h2>
+
+      <div className="getInvolvedKids">
+        <h3>Kids Sessions</h3>
+        {/* Image Here */}
+        <div className="listsContainer">
+          <div className="services">
+            <h4>Fun football sessions on a Saturday morning</h4>
+            <h5>Ran by Shardlow St James coaches</h5>
+            <ul>
+              <li>Unisex Sessions</li>
+              <li>Ages between 5 and 10</li>
+              <li>Fun games with drills</li>
+              <li>Working on football skills and other skills</li>
+              <li>Sessions in a fun safe environment</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
       <div className="getInvolvedVolunteer">
         <h3>Volunteers Needed</h3>
         <div className="listsContainer">
