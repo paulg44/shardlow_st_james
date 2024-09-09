@@ -8,6 +8,12 @@
   overflow: scroll;
 }
 
+.teamsDisplay h2 {
+  position: absolute;
+  top: 100px;
+  left: 200px;
+}
+
 .teamAndElementSelect {
   position: absolute;
   display: flex;
@@ -68,8 +74,14 @@
     width: 100%;
   }
 
-  .displayResults {
+  .teamsDisplay h2 {
     top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .displayResults {
+    top: 30%;
     width: 90%;
   }
 }

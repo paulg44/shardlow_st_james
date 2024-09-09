@@ -44,8 +44,8 @@ function ResultsFixtures({ activeTeam }) {
       style={{ ...fadeIn }}
     >
       <div className="faResults">
-        <h3>Results for {activeTeam.teamName}</h3>
-        {/* Table */}~
+        {/* <h3>Results for {activeTeam.teamName}</h3> */}
+        {/* Table */}
         <div id={`lrep${activeTeam.lrcodeResults}`} style={{ width: "550px" }}>
           Data Loading....
           <a href="null">Click here for null</a>

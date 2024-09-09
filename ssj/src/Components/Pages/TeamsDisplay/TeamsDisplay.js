@@ -13,6 +13,7 @@ import ResultsFixtures from "./Results/Fixtures/ResultsFixtures.js";
 import "./TeamsDisplay.css";
 import Table from "./Table/Table.js";
 import Players from "./Players/Players.js";
+import { FaRegHeart } from "react-icons/fa";
 
 function TeamsDisplay({ teamsData, handleTeamClick, activeTeam }) {
   const [displaySelectedTeam, setDisplaySelectedTeam] = useState("");
@@ -26,6 +27,11 @@ function TeamsDisplay({ teamsData, handleTeamClick, activeTeam }) {
 
   return (
     <div className="teamsDisplay">
+      {/* Only show if active team is selected */}
+      <h2>
+        {activeTeam.teamName}
+        <button>{/* <FaRegHeart /> */}</button>
+      </h2>
       <div className="teamAndElementSelect">
         <label htmlFor="teams">Select a Team</label>
         <select
@@ -48,7 +54,7 @@ function TeamsDisplay({ teamsData, handleTeamClick, activeTeam }) {
           </button>
           {/* <button onClick={() => setSelectedElementView("players")}>
             Players
-          </button> */}
+            </button> */}
         </div>
       </div>
 

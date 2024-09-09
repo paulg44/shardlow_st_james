@@ -31,7 +31,7 @@ function Table({ activeTeam }) {
   }, [activeTeam.lrcodeTable]);
   return (
     <animated.div className="table" style={{ ...fadeIn }}>
-      <h3>Shardlow {activeTeam.teamName}</h3>
+      {/* <h3>Shardlow {activeTeam.teamName}</h3> */}
       {/* Table */}
 
       <div id={`lrep${activeTeam.lrcodeTable}`} style={{ width: "350px" }}>
