@@ -13,6 +13,7 @@ function Footer() {
           href="https://www.facebook.com/groups/819820298102783"
           target="_blank"
           rel="noreferrer"
+          aria-label="facebook link"
         >
           <FaFacebook />
         </a>
@@ -20,6 +21,7 @@ function Footer() {
           href="https://twitter.com/FCShardlow"
           target="_blank"
           rel="noreferrer"
+          aria-label="twitter link"
         >
           <FaTwitter />
         </a>
@@ -27,6 +29,7 @@ function Footer() {
           href="https://www.instagram.com/shardlowstjamesfc/?hl=pa"
           target="_blank"
           rel="noreferrer"
+          aria-label="Instagram link"
         >
           <FaInstagram />
         </a>
