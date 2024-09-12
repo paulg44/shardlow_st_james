@@ -14,27 +14,12 @@ function GetInvolved({ id }) {
     delay: 500,
   });
 
-  // Fixture
-  // const fixture = useSpring({
-  //   from: { x: -1500 },
-  //   to: { x: 0 },
-  //   delay: 300,
-  // });
-
   // Object
   const object = useSpring({
     from: { x: -1000 },
     to: { x: 0 },
     delay: 250,
   });
-
-  // Events
-  // const event = useSpring({
-  //   from: { opacity: 0 },
-  //   to: { opacity: 1 },
-  //   delay: 1000,
-  //   config: { duration: "1500" },
-  // });
 
   return (
     <div id={id} className="getInvolved">
@@ -112,9 +97,8 @@ function GetInvolved({ id }) {
             </ul>
           </div>
         </div>
+        <Link to={"/contact"}>Contact for more details.</Link>
       </div>
-
-      <Link to={"/contact"}>Contact for more details.</Link>
     </div>
   );
 }

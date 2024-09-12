@@ -1,6 +1,8 @@
 /* CSS file for events section */
 
 .getInvolved {
+  position: relative;
+  padding-top: 100px;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -60,6 +62,8 @@
 }
 
 .getInvolved a {
+  text-align: center;
+  width: 80%;
   border: 1px solid var(--light-blue);
   padding: 10px 30px;
   margin: 20px 0;
@@ -74,8 +78,9 @@
 
 @media (max-width: 1000px) {
   .getInvolved {
-    height: fit-content;
-    width: auto;
+    padding-top: 0;
+    display: block;
+    /* height: fit-content; */
     overflow: scroll;
   }
 
@@ -83,22 +88,30 @@
     width: 70%;
   }
 
+  .getInvolved h4 {
+    width: fit-content;
+  }
+
   .getInvolvedVolunteer,
   .getInvolvedSponsor {
-    width: auto;
+    width: fit-content;
     align-items: left;
+    padding-left: 15%;
   }
 
   .getInvolvedKids {
-    width: auto;
+    width: fit-content;
     margin-left: 50px;
   }
 
-  .getInvolvedSponsor {
-    margin-left: 15%;
+  .getInvolved a {
+    /* margin-left: 20%; */
+    margin-bottom: 100px;
+
+    /* transform: translateX(-50%); */
   }
 
-  .eventsObject {
-    height: 800px;
+  .getInvolvedObject {
+    height: 500px;
   }
 }
