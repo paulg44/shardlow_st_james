@@ -52,7 +52,7 @@ function GetInvolved({ id }) {
         <div className="listsContainer">
           <div className="opportunitiesContainer">
             <h4>Opportunities</h4>
-            <ul className="border">
+            <ul>
               <li>Coaches</li>
               <li>Players</li>
               <li>Committee Members</li>
@@ -62,7 +62,7 @@ function GetInvolved({ id }) {
           </div>
           <div className="teamsContainer">
             <h4>Teams</h4>
-            <ul>
+            <ul className="border">
               <li>Mens 1st Team</li>
               <li>Mens Reserve Team</li>
               <li>Mens Vets Team</li>

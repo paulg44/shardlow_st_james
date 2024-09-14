@@ -2,7 +2,7 @@
 
 .getInvolved {
   position: relative;
-  padding-top: 100px;
+  padding-top: 380px;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -49,16 +49,18 @@
   border-bottom: 2px solid var(--yellow);
 }
 
+.teamsContainer {
+  margin-top: 20px;
+}
+
 .border {
   padding-bottom: 30px;
 }
 
 .listsContainer {
   display: flex;
-}
-
-.teamsContainer {
-  margin-left: 50px;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .getInvolved a {
@@ -106,6 +108,8 @@
 
   .getInvolved a {
     /* margin-left: 20%; */
+    width: fit-content;
+    align-self: center;
     margin-bottom: 100px;
 
     /* transform: translateX(-50%); */
