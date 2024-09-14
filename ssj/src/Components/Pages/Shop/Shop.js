@@ -1,6 +1,6 @@
 // Shop Component
 
-import "./Shop.css";
+import "../../../assets/css/Shop.css";
 import ShopItem from "./ShopItem/ShopItem";
 import { useSpring, animated } from "react-spring";
 // Imported Images

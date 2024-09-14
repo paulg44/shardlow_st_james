@@ -86,7 +86,9 @@ function TeamsDisplay() {
             No team selected
           </option>
           {teamsData.map((teamsData, id) => (
-            <option key={id}>{teamsData.teamName}</option>
+            <option key={id} value={teamsData.teamName}>
+              {teamsData.teamName}
+            </option>
           ))}
         </select>
 
