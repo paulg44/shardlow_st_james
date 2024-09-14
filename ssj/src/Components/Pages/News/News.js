@@ -47,16 +47,16 @@ function News({ id }) {
         >
           {/* Latest */}
           <InstagramEmbed
-            url="https://www.instagram.com/p/C_suOvLNhYB/"
+            url="https://www.instagram.com/p/C_501EpNdc7/"
             width={328}
           />
           <div className="tweetContainer">
-            <TwitterTweetEmbed tweetId={"1833137866500641239"} />
+            <TwitterTweetEmbed tweetId={"1833418545213886724"} />
           </div>
 
           {/* Middle */}
           <InstagramEmbed
-            url="https://www.instagram.com/p/C_ppnA1tNo0/"
+            url="https://www.instagram.com/p/C_5jXMQN9zK/"
             width={328}
           />
           <div className="tweetContainer">
@@ -65,7 +65,7 @@ function News({ id }) {
 
           {/* Oldest */}
           <InstagramEmbed
-            url="https://www.instagram.com/p/C_pn6OjtsO0/"
+            url="https://www.instagram.com/p/C_46pt6gx4t/"
             width={328}
           />
           <div className="tweetContainer">

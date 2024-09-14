@@ -3,19 +3,22 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../../../IMG/ssj_badge-removebg-preview.png";
 import "./NavBar.css";
-import { FaBars } from "react-icons/fa";
+import { FaBars, FaChevronDown } from "react-icons/fa";
 
 function NavBar() {
   const [burgerMenuOpen, setBurgerMenuOpen] = useState(false);
+  const [burgerClass, setBurgerClass] = useState(<FaBars />);
 
   // Open Menu
   const openBurgerMenu = () => {
     setBurgerMenuOpen(!burgerMenuOpen);
+    setBurgerClass(<FaChevronDown />);
   };
 
   // Close Menu
   const closeBurgerMenu = () => {
     setBurgerMenuOpen(false);
+    setBurgerClass(<FaBars />);
   };
 
   return (
@@ -27,7 +30,7 @@ function NavBar() {
 
         {/* Burger Menu */}
         <div className="burgerMenuBtn" onClick={openBurgerMenu}>
-          <FaBars />
+          {burgerClass}
         </div>
 
         <div className={`navLinks ${burgerMenuOpen ? "open" : ""}`}>
