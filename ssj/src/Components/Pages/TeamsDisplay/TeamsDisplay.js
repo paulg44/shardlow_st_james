@@ -13,7 +13,7 @@ import ResultsFixtures from "./Results/Fixtures/ResultsFixtures.js";
 import "./TeamsDisplay.css";
 import Table from "./Table/Table.js";
 import Players from "./Players/Players.js";
-import { FaRegHeart } from "react-icons/fa";
+// import { FaRegHeart } from "react-icons/fa";
 
 function TeamsDisplay({ teamsData, handleTeamClick, activeTeam }) {
   const [displaySelectedTeam, setDisplaySelectedTeam] = useState("");
@@ -31,9 +31,7 @@ function TeamsDisplay({ teamsData, handleTeamClick, activeTeam }) {
       {activeTeam && activeTeam.teamName ? (
         <h2>
           {activeTeam.teamName}
-          <button>
-            <FaRegHeart />
-          </button>
+          {/* <button><FaRegHeart /></button> */}
         </h2>
       ) : (
         <h2>Shardlow St James FC</h2>
@@ -56,7 +54,7 @@ function TeamsDisplay({ teamsData, handleTeamClick, activeTeam }) {
         <div className="teamDisplayButtons">
           <button onClick={() => setSelectedElementView("table")}>Table</button>
           <button onClick={() => setSelectedElementView("results")}>
-            Results
+            Fixtures/Results
           </button>
           {/* <button onClick={() => setSelectedElementView("players")}>
             Players
