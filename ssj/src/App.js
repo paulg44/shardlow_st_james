@@ -2,7 +2,6 @@
       the background object on each page affects the media queries in a negative way when it overlaps the page
 */
 
-import { React, useEffect, useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 import homepageImg from "./IMG/ssj_1.jpg";
@@ -21,65 +20,15 @@ import DatabaseTest from "./Components/Pages/DatabaseTest";
 import AdminControlPanel from "./Components/Admin/ControlPanel/ControlPanel";
 
 function App() {
-  // Data will be pulled from database according to date, for now using dummy data
-  const teamsData = [
-    {
-      id: 1,
-      teamName: "SSJ First Team",
-      lrcodeTable: "344078633",
-      lrcodeResults: "473831191",
-    },
-    {
-      id: 2,
-      teamName: "SSJ Reserves",
-      lrcodeTable: "692613147",
-      lrcodeResults: "535835625",
-    },
-    {
-      id: 3,
-      teamName: "SSJ U16's",
-      lrcodeTable: "275862418",
-      lrcodeResults: "782532645",
-    },
-    {
-      id: 4,
-      teamName: "SSJ Veteran's",
-      lrcodeTable: "930383279",
-      lrcodeResults: "814947177",
-    },
-  ];
-
-  // Possibly use this with the api?
-  const [activeTeam, setActiveTeam] = useState("");
-
-  const handleTeamClick = (teamName) => {
-    const selectedTeam = teamsData.find((team) => team.teamName === teamName);
-    console.log("Selected Team:", selectedTeam);
-    setActiveTeam(selectedTeam);
-  };
-
-  useEffect(() => {
-    console.log("active team from app.js", activeTeam);
-  }, [activeTeam]);
-
   return (
     <BrowserRouter className="App">
-      <NavBar handleTeamClick={handleTeamClick} teamsData={teamsData} />
+      <NavBar />
       <Routes>
         <Route path="/" element={<Homepage homepageImg={homepageImg} />} />
         <Route path="/events" element={<GetInvolved />} />
         <Route path="/news" element={<News />} />
         <Route path="/shop" element={<Shop />} />
-        <Route
-          path="/teamDisplay"
-          element={
-            <TeamsDisplay
-              teamsData={teamsData}
-              activeTeam={activeTeam}
-              handleTeamClick={handleTeamClick}
-            />
-          }
-        />
+        <Route path="/teamDisplay" element={<TeamsDisplay />} />
         <Route path="/sponsors" element={<Sponsors />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/test" element={<DatabaseTest />} />
