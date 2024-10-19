@@ -3,8 +3,7 @@
 */
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import "./App.css";
-import homepageImg from "./IMG/ssj_1.jpg";
+import homepageImg from "./assets/IMG/ssj_1.jpg";
 
 // Imported Components
 import NavBar from "./Components/SmallComponents/NavBar/NavBar";
@@ -16,8 +15,6 @@ import Shop from "./Components/Pages/Shop/Shop";
 import TeamsDisplay from "./Components/Pages/TeamsDisplay/TeamsDisplay";
 import Sponsors from "./Components/Pages/Sponsors/Sponsors";
 import Contact from "./Components/Pages/Contact/Contact";
-import DatabaseTest from "./Components/Pages/DatabaseTest";
-import AdminControlPanel from "./Components/Admin/ControlPanel/ControlPanel";
 
 function App() {
   return (
@@ -31,8 +28,6 @@ function App() {
         <Route path="/teamDisplay" element={<TeamsDisplay />} />
         <Route path="/sponsors" element={<Sponsors />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/test" element={<DatabaseTest />} />
-        <Route path="/controlPanel" element={<AdminControlPanel />} />
       </Routes>
       <Footer />
     </BrowserRouter>

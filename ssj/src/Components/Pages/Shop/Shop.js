@@ -4,24 +4,24 @@ import "../../../assets/css/Shop.css";
 import ShopItem from "./ShopItem/ShopItem";
 import { useSpring, animated } from "react-spring";
 // Imported Images
-import parkaJacket from "../../../IMG/ShardlowParka.webp";
-import rainJacket from "../../../IMG/ShardlowRain.webp";
-import linceZip from "../../../IMG/ShardlowLinceZip_183aea43-8cef-4c27-a316-d30369755bd5.webp";
-import trainingTee from "../../../IMG/ShardlowLinceTee.webp";
-import trainingTop from "../../../IMG/ShardlowGlobal.webp";
-import polo from "../../../IMG/ShardlowNavyPolo.webp";
-import pants from "../../../IMG/ShardlowPant.webp";
-import homeKit from "../../../IMG/ShardlowHome.webp";
-import awayKit from "../../../IMG/ShardlowAway.webp";
-import shorts from "../../../IMG/ShardlowShort.webp";
-import jomaTee from "../../../IMG/ssj_joma_tee.jfif";
-import jomaHalfZip from "../../../IMG/ssj_joma_half_zip.jfif";
-import jomaHoodie from "../../../IMG/ssj_joma_hoodie.jfif";
-import jomaTracksuit from "../../../IMG/ssj_joma_tracksuit.jfif";
-import jomaPolo from "../../../IMG/ssj_joma_polo.jfif";
-import jomaBottoms from "../../../IMG/ssj_joma_bottoms.jfif";
-import jomaRainJacket from "../../../IMG/ssj_joma_rain_jacket.jfif";
-import jomaSoftShell from "../../../IMG/ssj_joma_softshell_jacket.jfif";
+import parkaJacket from "../../../assets/IMG/ShardlowParka.webp";
+import rainJacket from "../../../assets/IMG/ShardlowRain.webp";
+import linceZip from "../../../assets/IMG/ShardlowLinceZip_183aea43-8cef-4c27-a316-d30369755bd5.webp";
+import trainingTee from "../../../assets/IMG/ShardlowLinceTee.webp";
+import trainingTop from "../../../assets/IMG/ShardlowGlobal.webp";
+import polo from "../../../assets/IMG/ShardlowNavyPolo.webp";
+import pants from "../../../assets/IMG/ShardlowPant.webp";
+import homeKit from "../../../assets/IMG/ShardlowHome.webp";
+import awayKit from "../../../assets/IMG/ShardlowAway.webp";
+import shorts from "../../../assets/IMG/ShardlowShort.webp";
+import jomaTee from "../../../assets/IMG/ssj_joma_tee.jfif";
+import jomaHalfZip from "../../../assets/IMG/ssj_joma_half_zip.jfif";
+import jomaHoodie from "../../../assets/IMG/ssj_joma_hoodie.jfif";
+import jomaTracksuit from "../../../assets/IMG/ssj_joma_tracksuit.jfif";
+import jomaPolo from "../../../assets/IMG/ssj_joma_polo.jfif";
+import jomaBottoms from "../../../assets/IMG/ssj_joma_bottoms.jfif";
+import jomaRainJacket from "../../../assets/IMG/ssj_joma_rain_jacket.jfif";
+import jomaSoftShell from "../../../assets/IMG/ssj_joma_softshell_jacket.jfif";
 
 function Shop() {
   const shopItems = [

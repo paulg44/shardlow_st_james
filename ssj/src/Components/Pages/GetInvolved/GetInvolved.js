@@ -1,7 +1,7 @@
 // Events Component
 
 import { Link } from "react-router-dom";
-import "./GetInvolved.css";
+import "../../../assets/css/GetInvolved.css";
 import { useSpring, animated } from "react-spring";
 
 function GetInvolved({ id }) {

@@ -1,6 +1,6 @@
 // Shop Item Component
 
-import "./ShopItem.css";
+import "../../../../assets/css/ShopItem.css";
 
 function ShopItem(props) {
   return (

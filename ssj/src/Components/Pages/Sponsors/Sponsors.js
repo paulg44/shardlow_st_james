@@ -1,12 +1,12 @@
 // Sponsors Component
 
-import "./Sponsors.css";
+import "../../../assets/css/Sponsors.css";
 import { useSpring, animated } from "react-spring";
 // Imported Images
-import foremostImg from "../../../IMG/foremost-removebg-preview.png";
-import howdenImg from "../../../IMG/howdens_ssj.png";
-import electricImg from "../../../IMG/electric_center_ssj-removebg-preview.png";
-import clockImg from "../../../IMG/clock_ssj-removebg-preview.png";
+import foremostImg from "../../../assets/IMG/foremost-removebg-preview.png";
+import howdenImg from "../../../assets/IMG/howdens_ssj.png";
+import electricImg from "../../../assets/IMG/electric_center_ssj-removebg-preview.png";
+import clockImg from "../../../assets/IMG/clock_ssj-removebg-preview.png";
 import SponsorsContainer from "./SponsorsContainer/SponsorsContainer";
 
 function Sponsors() {

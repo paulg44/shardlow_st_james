@@ -1,6 +1,6 @@
 // News Component
 
-import "./News.css";
+import "../../../assets/css/News.css";
 import { TwitterTweetEmbed } from "react-twitter-embed";
 import { InstagramEmbed } from "react-social-media-embed";
 import { useSpring, animated } from "react-spring";
@@ -47,7 +47,7 @@ function News({ id }) {
         >
           {/* Latest */}
           <InstagramEmbed
-            url="https://www.instagram.com/p/C_501EpNdc7/"
+            url="https://www.instagram.com/p/DBGWC12gdRo/"
             width={328}
           />
           <div className="tweetContainer">
@@ -56,7 +56,7 @@ function News({ id }) {
 
           {/* Middle */}
           <InstagramEmbed
-            url="https://www.instagram.com/p/C_5jXMQN9zK/"
+            url="https://www.instagram.com/p/DBEZnWoguT_/"
             width={328}
           />
           <div className="tweetContainer">
@@ -65,7 +65,7 @@ function News({ id }) {
 
           {/* Oldest */}
           <InstagramEmbed
-            url="https://www.instagram.com/p/C_46pt6gx4t/"
+            url="https://www.instagram.com/p/DBD58fqACZX/"
             width={328}
           />
           <div className="tweetContainer">

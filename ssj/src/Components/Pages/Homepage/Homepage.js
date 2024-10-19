@@ -1,5 +1,5 @@
 // Homepage Component
-import "./Homepage.css";
+import "../../../assets/css/Homepage.css";
 import { useSpring, animated } from "react-spring";
 
 function Homepage({ homepageImg }) {

@@ -1,7 +1,7 @@
 // Contact Person's Component
 
 import { FaRegBell, FaRegUser, FaRegEnvelope } from "react-icons/fa";
-import "./ContactPerson.css";
+import "../../../../assets/css/ContactPerson.css";
 
 function ContactPerson(props) {
   return (

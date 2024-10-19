@@ -1,6 +1,6 @@
 // Sponsors Container Component
 
-import "./SponsorsContainer.css";
+import "../../../../assets/css/SponsorsContainer.css";
 
 function SponsorsContainer(props) {
   return (

@@ -1,6 +1,6 @@
 // Contact Component
 
-import "./Contact.css";
+import "../../../assets/css/Contact.css";
 import { useSpring, animated } from "react-spring";
 import ContactPerson from "./ContactPerson/ContactPerson";
 
