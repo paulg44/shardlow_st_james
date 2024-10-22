@@ -13,7 +13,7 @@ const PORT = process.env.REACT_APP_SERVER_PORT;
 app.get("/instagramData", async (req, res) => {
   try {
     const scrapedData = await fs.readFile(
-      "../webScraper/testJsonFile.json",
+      "../webScraper/instagramData.json",
       "utf-8"
     );
     res.json(JSON.parse(scrapedData));

@@ -4,8 +4,13 @@ import "../../../assets/css/News.css";
 import { TwitterTweetEmbed } from "react-twitter-embed";
 import { InstagramEmbed } from "react-social-media-embed";
 import { useSpring, animated } from "react-spring";
+import { useEffect, useState } from "react";
 
 function News({ id }) {
+  const [instagramHREF1, setInstagramHREF1] = useState("");
+  const [instagramHREF2, setInstagramHREF2] = useState("");
+  const [instagramHREF3, setInstagramHREF3] = useState("");
+
   // Animations
   // Header
   const header = useSpring({
@@ -29,17 +34,32 @@ function News({ id }) {
     config: { duration: "1500" },
   });
 
+  function extractInstagramPostID(url) {
+    const urlPart = url.split("/");
+    const postID =
+      urlPart.indexOf("p") !== -1
+        ? urlPart.indexOf("p") + 1
+        : urlPart.indexOf("reel") + 1;
+    return urlPart[postID] || null;
+  }
+
   async function loadInstagramURLData() {
     try {
       const response = await fetch("http://localhost:3030/instagramData");
       const data = await response.json();
-      console.log(data);
+      console.log(extractInstagramPostID(data[10]));
+
+      setInstagramHREF1(extractInstagramPostID(data[10]));
+      setInstagramHREF2(extractInstagramPostID(data[11]));
+      setInstagramHREF3(extractInstagramPostID(data[12]));
     } catch (error) {
       console.error("Error fetching data client side", error);
     }
   }
 
-  loadInstagramURLData();
+  useEffect(() => {
+    loadInstagramURLData();
+  });
 
   return (
     <animated.div id={id} className="news">
@@ -59,7 +79,7 @@ function News({ id }) {
         >
           {/* Latest */}
           <InstagramEmbed
-            url="https://www.instagram.com/p/DBGWC12gdRo/"
+            url={`https://www.instagram.com/p/${instagramHREF1}/`}
             width={328}
           />
           <div className="tweetContainer">
@@ -68,7 +88,7 @@ function News({ id }) {
 
           {/* Middle */}
           <InstagramEmbed
-            url="https://www.instagram.com/p/DBEZnWoguT_/"
+            url={`https://www.instagram.com/p/${instagramHREF2}/`}
             width={328}
           />
           <div className="tweetContainer">
@@ -77,7 +97,7 @@ function News({ id }) {
 
           {/* Oldest */}
           <InstagramEmbed
-            url="https://www.instagram.com/p/DBD58fqACZX/"
+            url={`https://www.instagram.com/p/${instagramHREF3}/`}
             width={328}
           />
           <div className="tweetContainer">
