@@ -29,6 +29,18 @@ function News({ id }) {
     config: { duration: "1500" },
   });
 
+  async function loadInstagramURLData() {
+    try {
+      const response = await fetch("http://localhost:3030/instagramData");
+      const data = await response.json();
+      console.log(data);
+    } catch (error) {
+      console.error("Error fetching data client side", error);
+    }
+  }
+
+  loadInstagramURLData();
+
   return (
     <animated.div id={id} className="news">
       <animated.div
