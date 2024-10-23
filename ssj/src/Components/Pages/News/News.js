@@ -45,15 +45,20 @@ function News({ id }) {
 
   async function loadInstagramURLData() {
     try {
-      const response = await fetch(
-        "https://shardlow-st-james.onrender.com/instagramData"
-      );
-      const data = await response.json();
-      console.log(extractInstagramPostID(data[10]));
+      const instagramResponse = await fetch(
+        "https://shardlow-st-james.onrender.com/instagramData",
+        {
+          method: "GET",
+          credentials: "include",
+        }
+      ).then((data) => {
+        return data.json();
+      });
+      console.log(extractInstagramPostID(instagramResponse[10]));
 
-      setInstagramHREF1(extractInstagramPostID(data[10]));
-      setInstagramHREF2(extractInstagramPostID(data[11]));
-      setInstagramHREF3(extractInstagramPostID(data[12]));
+      setInstagramHREF1(extractInstagramPostID(instagramResponse[10]));
+      setInstagramHREF2(extractInstagramPostID(instagramResponse[11]));
+      setInstagramHREF3(extractInstagramPostID(instagramResponse[12]));
     } catch (error) {
       console.error("Error fetching data client side", error);
     }
