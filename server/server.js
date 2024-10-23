@@ -14,7 +14,7 @@ app.use(
 );
 
 app.use((req, res, next) => {
-  res.header("Access-Control-Allow-Origin", "https://www.ssjfc.co.uk");
+  res.header("Access-Control-Allow-Origin", "https://ssjfc.co.uk");
   res.header("Access-Control-Allow-Credentials", "true");
   res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
   res.header(
