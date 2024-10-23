@@ -45,7 +45,9 @@ function News({ id }) {
 
   async function loadInstagramURLData() {
     try {
-      const response = await fetch("http://localhost:3030/instagramData");
+      const response = await fetch(
+        "https://shardlow-st-james.onrender.com/instagramData"
+      );
       const data = await response.json();
       console.log(extractInstagramPostID(data[10]));
 
