@@ -86,7 +86,7 @@ function News({ id }) {
         >
           {/* Latest */}
           <InstagramEmbed
-            url={`https://www.instagram.com/${instagramHREF1}/`}
+            url={`https://www.instagram.com/p/${instagramHREF1}/`}
             width={328}
           />
           <div className="tweetContainer">
@@ -95,7 +95,7 @@ function News({ id }) {
 
           {/* Middle */}
           <InstagramEmbed
-            url={`https://www.instagram.com/${instagramHREF2}/`}
+            url={`https://www.instagram.com/p/${instagramHREF2}/`}
             width={328}
           />
           <div className="tweetContainer">
@@ -104,7 +104,7 @@ function News({ id }) {
 
           {/* Oldest */}
           <InstagramEmbed
-            url={`https://www.instagram.com/${instagramHREF3}/`}
+            url={`https://www.instagram.com/p/${instagramHREF3}/`}
             width={328}
           />
           <div className="tweetContainer">

@@ -40,7 +40,7 @@ app.get("/instagramData", async (req, res) => {
     console.error("Error reading json data server side", error);
     res
       .status(500)
-      .json({ error: "Failed to load scraped data fromm Instagram" });
+      .json({ error: "Failed to load scraped data from Instagram" });
   }
 });
 
