@@ -1,7 +1,6 @@
 // News Component
 
 import "../../../assets/css/News.css";
-import { TwitterTweetEmbed } from "react-twitter-embed";
 import { InstagramEmbed } from "react-social-media-embed";
 import { useSpring, animated } from "react-spring";
 import { useEffect, useState } from "react";
@@ -46,6 +45,7 @@ function News({ id }) {
   async function loadInstagramURLData() {
     try {
       const instagramResponse = await fetch(
+        // "http://localhost:3000/instagramData",
         "https://shardlow-st-james.onrender.com/instagramData",
         {
           method: "GET",
@@ -65,6 +65,7 @@ function News({ id }) {
   }
 
   useEffect(() => {
+    console.log("Instagram data loading");
     loadInstagramURLData();
   });
 
@@ -83,33 +84,31 @@ function News({ id }) {
             alignItems: "center",
             justifyContent: "center",
           }}
+          key={id}
         >
           {/* Latest */}
-          <InstagramEmbed
-            url={`https://www.instagram.com/p/${instagramHREF1}/`}
-            width={328}
-          />
-          <div className="tweetContainer">
-            <TwitterTweetEmbed tweetId={"1833418545213886724"} />
-          </div>
+          {instagramHREF1 && (
+            <InstagramEmbed
+              url={`https://www.instagram.com/p/${instagramHREF1}/`}
+              width={328}
+            />
+          )}
 
           {/* Middle */}
-          <InstagramEmbed
-            url={`https://www.instagram.com/p/${instagramHREF2}/`}
-            width={328}
-          />
-          <div className="tweetContainer">
-            <TwitterTweetEmbed tweetId={"1831592588312207716"} />
-          </div>
+          {instagramHREF2 && (
+            <InstagramEmbed
+              url={`https://www.instagram.com/p/${instagramHREF2}/`}
+              width={328}
+            />
+          )}
 
           {/* Oldest */}
-          <InstagramEmbed
-            url={`https://www.instagram.com/p/${instagramHREF3}/`}
-            width={328}
-          />
-          <div className="tweetContainer">
-            <TwitterTweetEmbed tweetId={"1818566773764964861"} />
-          </div>
+          {instagramHREF3 && (
+            <InstagramEmbed
+              url={`https://www.instagram.com/p/${instagramHREF3}/`}
+              width={328}
+            />
+          )}
         </div>
       </animated.div>
     </animated.div>
