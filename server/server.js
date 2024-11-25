@@ -4,21 +4,19 @@ import fs from "fs-extra";
 import dotenv from "dotenv";
 import cron from "node-cron";
 import { scrapeInstagramWebsite } from "./scraper.js";
-// import simpleGit from "simple-git";
+import simpleGit from "simple-git";
 
 dotenv.config();
-// const git = simpleGit({
-//   baseDir: process.cwd(),
-//   config: [
-//     `user.name=${process.env.REACT_APP_GITHUB_USERNAME}`,
-//     `user,email=${process.env.REACT_APP_GITHUB_EMAIL}`,
-//   ],
-// });
 
-// await git.addRemote(
-//   "origin",
-//   `https://${process.env.REACT_APP_GITHUB_TOKEN}@github.com/paulg44/shardlow_st_james`
-// );
+const git = simpleGit({
+  baseDir: process.cwd(),
+  config: [
+    `user.name=${process.env.REACT_APP_GITHUB_USERNAME}`,
+    `user.email=${process.env.REACT_APP_GITHUB_EMAIL}`,
+  ],
+});
+
+const remoteURL = `https://${process.env.REACT_APP_GITHUB_TOKEN}@github.com/${process.env.REACT_APP_GITHUB_USERNAME}/shardlow_st_james.git`;
 
 const app = express();
 app.use(
@@ -56,9 +54,11 @@ app.get("/instagramData", async (req, res) => {
   }
 });
 
-cron.schedule("16 12 * * *", async () => {
+cron.schedule("23 13 * * *", async () => {
   try {
     console.log("Running daily scraper");
+
+    await git.remote(["set-url", "origin", remoteURL]);
 
     // Should this be in an env file as someone could change it??
     await scrapeInstagramWebsite("https://www.instagram.com/shardlowstjamesfc");
@@ -70,11 +70,11 @@ cron.schedule("16 12 * * *", async () => {
       JSON.stringify(parseData, null, 2)
     );
 
-    //   // Push changes
-    //   await git.add("./instagram.json");
-    //   await git.commit("Daily update of SSJ Instagram data fromm scraper");
-    //   await git.push("origin", "main");
-    //   console.log("Pushed daily update successfully");
+    // Push changes
+    await git.add("./instagramData.json");
+    await git.commit("Daily update of SSJ Instagram data fromm scraper");
+    await git.push("origin", "main");
+    console.log("Pushed daily update successfully");
   } catch (error) {
     console.error("Error running scheduled job:", error);
   }
