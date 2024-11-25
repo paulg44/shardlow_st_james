@@ -2,8 +2,12 @@ import express from "express";
 import cors from "cors";
 import fs from "fs-extra";
 import dotenv from "dotenv";
+import cron from "node-cron";
+import { scrapeInstagramWebsite } from "../webScraper/scraper";
+import simpleGit from "simple-git";
 
 dotenv.config();
+const git = simpleGit();
 
 const app = express();
 app.use(
@@ -41,6 +45,30 @@ app.get("/instagramData", async (req, res) => {
     res
       .status(500)
       .json({ error: "Failed to load scraped data from Instagram" });
+  }
+});
+
+cron.schedule("50 11 * * *", async () => {
+  try {
+    console.log("Running daily scraper");
+
+    // Should this be in an env file as someone could change it??
+    await scrapeInstagramWebsite("https://www.instagram.com/shardlowstjamesfc");
+
+    const data = await fs.readFile("instagramData.json", "utf-8");
+    const parseData = JSON.parse(data);
+    await fs.writeFile(
+      "instagramData.json",
+      JSON.stringify(parseData, null, 2)
+    );
+
+    // Push changes
+    await git.add("./instagram.json");
+    await git.commit("Daily update of SSJ Instagram data fromm scraper");
+    await git.push("origin", "main");
+    console.log("Pushed daily update successfully");
+  } catch (error) {
+    console.error("Error running scheduled job:", error);
   }
 });
 

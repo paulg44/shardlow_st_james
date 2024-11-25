@@ -27,7 +27,10 @@ async function scrapeInstagramWebsite(url) {
 
   console.log(linkAtrributeHrefs);
 
-  fs.writeFile("instagramData.json", JSON.stringify(linkAtrributeHrefs));
+  fs.writeFile(
+    "instagramData.json",
+    JSON.stringify(linkAtrributeHrefs, null, 2)
+  );
 
   await browser.close();
 }
