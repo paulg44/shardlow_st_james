@@ -3,11 +3,22 @@ import cors from "cors";
 import fs from "fs-extra";
 import dotenv from "dotenv";
 import cron from "node-cron";
-import { scrapeInstagramWebsite } from "../webScraper/scraper";
+import { scrapeInstagramWebsite } from "../webScraper/scraper.js";
 import simpleGit from "simple-git";
 
 dotenv.config();
-const git = simpleGit();
+// const git = simpleGit({
+//   baseDir: process.cwd(),
+//   config: [
+//     `user.name=${process.env.REACT_APP_GITHUB_USERNAME}`,
+//     `user,email=${process.env.REACT_APP_GITHUB_EMAIL}`,
+//   ],
+// });
+
+// await git.addRemote(
+//   "origin",
+//   `https://${process.env.REACT_APP_GITHUB_TOKEN}@github.com/paulg44/shardlow_st_james`
+// );
 
 const app = express();
 app.use(
@@ -48,7 +59,7 @@ app.get("/instagramData", async (req, res) => {
   }
 });
 
-cron.schedule("50 11 * * *", async () => {
+cron.schedule("15 12 * * *", async () => {
   try {
     console.log("Running daily scraper");
 
@@ -62,14 +73,14 @@ cron.schedule("50 11 * * *", async () => {
       JSON.stringify(parseData, null, 2)
     );
 
-    // Push changes
-    await git.add("./instagram.json");
-    await git.commit("Daily update of SSJ Instagram data fromm scraper");
-    await git.push("origin", "main");
-    console.log("Pushed daily update successfully");
-  } catch (error) {
-    console.error("Error running scheduled job:", error);
-  }
+  //   // Push changes
+  //   await git.add("./instagram.json");
+  //   await git.commit("Daily update of SSJ Instagram data fromm scraper");
+  //   await git.push("origin", "main");
+  //   console.log("Pushed daily update successfully");
+  // } catch (error) {
+  //   console.error("Error running scheduled job:", error);
+  // }
 });
 
 app.listen(PORT, () => {

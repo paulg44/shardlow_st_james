@@ -1,7 +1,7 @@
 import playwright from "playwright";
 import fs from "fs-extra";
 
-async function scrapeInstagramWebsite(url) {
+export async function scrapeInstagramWebsite(url) {
   const browser = await playwright.chromium.launch({ headless: true });
 
   const context = await browser.newContext();
@@ -34,5 +34,3 @@ async function scrapeInstagramWebsite(url) {
 
   await browser.close();
 }
-
-scrapeInstagramWebsite("https://www.instagram.com/shardlowstjamesfc");
