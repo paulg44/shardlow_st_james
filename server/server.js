@@ -59,7 +59,7 @@ app.get("/instagramData", async (req, res) => {
   }
 });
 
-cron.schedule("15 12 * * *", async () => {
+cron.schedule("16 12 * * *", async () => {
   try {
     console.log("Running daily scraper");
 
@@ -73,14 +73,14 @@ cron.schedule("15 12 * * *", async () => {
       JSON.stringify(parseData, null, 2)
     );
 
-  //   // Push changes
-  //   await git.add("./instagram.json");
-  //   await git.commit("Daily update of SSJ Instagram data fromm scraper");
-  //   await git.push("origin", "main");
-  //   console.log("Pushed daily update successfully");
-  // } catch (error) {
-  //   console.error("Error running scheduled job:", error);
-  // }
+    //   // Push changes
+    //   await git.add("./instagram.json");
+    //   await git.commit("Daily update of SSJ Instagram data fromm scraper");
+    //   await git.push("origin", "main");
+    //   console.log("Pushed daily update successfully");
+  } catch (error) {
+    console.error("Error running scheduled job:", error);
+  }
 });
 
 app.listen(PORT, () => {
