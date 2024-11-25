@@ -3,7 +3,7 @@ import cors from "cors";
 import fs from "fs-extra";
 import dotenv from "dotenv";
 import cron from "node-cron";
-import { scrapeInstagramWebsite } from "../webScraper/scraper.js";
+import { scrapeInstagramWebsite } from "./scraper.js";
 import simpleGit from "simple-git";
 
 dotenv.config();

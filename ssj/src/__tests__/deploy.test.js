@@ -1,4 +1,4 @@
-import data from "../../../webScraper/instagramData.json";
+import data from "../../../server/instagramData.json";
 
 test("if number 8 inb the array is 52 characters, the scraper has worked as expected", () => {
   const firstPostEntry = data[7];
