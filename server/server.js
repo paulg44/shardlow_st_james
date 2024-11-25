@@ -8,6 +8,7 @@ import simpleGit from "simple-git";
 
 dotenv.config();
 
+// Current variables for github are running as undefined!!!!!!!!
 const git = simpleGit({
   baseDir: process.cwd(),
   config: [
@@ -54,7 +55,7 @@ app.get("/instagramData", async (req, res) => {
   }
 });
 
-cron.schedule("0 15 * * *", async () => {
+cron.schedule("9 15 * * *", async () => {
   try {
     console.log("Running daily scraper");
 
