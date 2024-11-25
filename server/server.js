@@ -16,7 +16,7 @@ const git = simpleGit({
   ],
 });
 
-const remoteURL = `https://${process.env.REACT_APP_GITHUB_TOKEN}@github.com/${process.env.REACT_APP_GITHUB_USERNAME}/shardlow_st_james`;
+const remoteURL = `https://${process.env.REACT_APP_GITHUB_TOKEN}@github.com/${process.env.REACT_APP_GITHUB_USERNAME}/shardlow_st_james.git`;
 
 const app = express();
 app.use(
@@ -54,7 +54,7 @@ app.get("/instagramData", async (req, res) => {
   }
 });
 
-cron.schedule("33 14 * * *", async () => {
+cron.schedule("40 14 * * *", async () => {
   try {
     console.log("Running daily scraper");
 
