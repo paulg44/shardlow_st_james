@@ -11,12 +11,12 @@ dotenv.config();
 const git = simpleGit({
   baseDir: process.cwd(),
   config: [
-    `user.name=${process.env.REACT_APP_GITHUB_USERNAME}`,
-    `user.email=${process.env.REACT_APP_GITHUB_EMAIL}`,
+    `user.name=${process.env.GITHUB_USERNAME}`,
+    `user.email=${process.env.GITHUB_EMAIL}`,
   ],
 });
 
-const remoteURL = `https://${process.env.REACT_APP_GITHUB_TOKEN}@github.com/${process.env.REACT_APP_GITHUB_USERNAME}/shardlow_st_james.git`;
+const remoteURL = `https://${process.env.GITHUB_TOKEN}@github.com/${process.env.GITHUB_USERNAME}/shardlow_st_james.git`;
 
 const app = express();
 app.use(
@@ -54,7 +54,7 @@ app.get("/instagramData", async (req, res) => {
   }
 });
 
-cron.schedule("46 14 * * *", async () => {
+cron.schedule("0 15 * * *", async () => {
   try {
     console.log("Running daily scraper");
 
