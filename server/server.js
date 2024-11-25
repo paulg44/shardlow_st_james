@@ -4,7 +4,7 @@ import fs from "fs-extra";
 import dotenv from "dotenv";
 import cron from "node-cron";
 import { scrapeInstagramWebsite } from "./scraper.js";
-import simpleGit from "simple-git";
+// import simpleGit from "simple-git";
 
 dotenv.config();
 // const git = simpleGit({
@@ -46,7 +46,7 @@ const PORT = process.env.REACT_APP_SERVER_PORT;
 
 app.get("/instagramData", async (req, res) => {
   try {
-    const scrapedData = await fs.readFile("../instagramData.json", "utf-8");
+    const scrapedData = await fs.readFile("./instagramData.json", "utf-8");
     res.json(JSON.parse(scrapedData));
   } catch (error) {
     console.error("Error reading json data server side", error);
