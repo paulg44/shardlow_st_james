@@ -57,11 +57,11 @@ app.get("/instagramData", async (req, res) => {
   }
 });
 
-cron.schedule("47 20 * * *", async () => {
+cron.schedule("52 20 * * *", async () => {
   try {
     console.log("Running daily scraper");
 
-    await git.addRemote(["set-url", "origin", remoteURL]);
+    await git.addRemote("origin", remoteURL);
 
     // Should this be in an env file as someone could change it??
     await scrapeInstagramWebsite("https://www.instagram.com/shardlowstjamesfc");
