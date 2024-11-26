@@ -57,7 +57,7 @@ app.get("/instagramData", async (req, res) => {
   }
 });
 
-cron.schedule("52 20 * * *", async () => {
+cron.schedule("57 20 * * *", async () => {
   try {
     console.log("Running daily scraper");
 
