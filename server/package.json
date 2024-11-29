@@ -4,8 +4,8 @@
   "main": "server.js",
   "type": "module",
   "scripts": {
-    "start": "node server.js",
-    "build": "PLAYWRIGHT_BROWSERS_PATH=0 npm install"
+    "build": "PLAYWRIGHT_BROWSERS_PATH=0 npm install",
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "",
