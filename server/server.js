@@ -19,8 +19,6 @@ const git = simpleGit({
 
 const remoteURL = `https://${process.env.GITHUB_TOKEN}@github.com/${process.env.GITHUB_USERNAME}/shardlow_st_james.git`;
 
-console.log(remoteURL);
-
 const app = express();
 app.use(
   cors({
@@ -57,7 +55,7 @@ app.get("/instagramData", async (req, res) => {
   }
 });
 
-cron.schedule("57 20 * * *", async () => {
+cron.schedule("33 18 * * *", async () => {
   try {
     console.log("Running daily scraper");
 
