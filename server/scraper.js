@@ -22,31 +22,29 @@ export async function scrapeInstagramWebsite(url) {
   const context = await browser.newContext();
   const page = await context.newPage();
 
-  try {
-    await page.goto(url);
-    await page.waitForTimeout(3000);
-    await page.getByRole("button", { name: /allow all cookies/i }).click();
-    await page.waitForTimeout(3000);
-    const linkAtrributeHrefs = await page.evaluate(() => {
-      const mainSection = document.querySelector("section");
-      if (mainSection) {
-        return Array.from(document.links).map((item) => item.href);
-      }
-      return [];
-    });
-    console.log(linkAtrributeHrefs);
-    await fs.writeFile(
-      "instagramData.json",
-      JSON.stringify(linkAtrributeHrefs, null, 2)
-    );
-  } catch (error) {
-    console.error("Error during scraping:", error);
-  } finally {
-    await browser.close();
-  }
+  await page.goto(url);
+  await page.waitForTimeout(3000);
+
+  await page.getByRole("button", { name: /allow all cookies/i }).click();
+  await page.waitForTimeout(3000);
+
+  const linkAtrributeHrefs = await page.evaluate(() => {
+    const mainSection = document.querySelector("section");
+    if (mainSection) {
+      return Array.from(document.links).map((item) => item.href);
+    }
+    return [];
+  });
+  console.log(linkAtrributeHrefs);
+  await fs.writeFile(
+    "instagramData.json",
+    JSON.stringify(linkAtrributeHrefs, null, 2)
+  );
+
+  await browser.close();
 }
 
-cron.schedule("40 17 * * *", async () => {
+cron.schedule("48 17 * * *", async () => {
   try {
     console.log("Running scheduled scraper....");
 
