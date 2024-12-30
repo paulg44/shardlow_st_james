@@ -37,26 +37,24 @@ export async function scrapeInstagramWebsite(url) {
   });
   console.log(linkAtrributeHrefs);
   await fs.writeFile(
-    "instagramData.json",
+    "./instagramData.json",
     JSON.stringify(linkAtrributeHrefs, null, 2)
   );
 
   await browser.close();
 }
 
-cron.schedule("48 17 * * *", async () => {
-  try {
-    console.log("Running scheduled scraper....");
+try {
+  console.log("Running scheduled scraper on Render cron job....");
 
-    await scrapeInstagramWebsite("https://www.instagram.com/shardlowstjamesfc");
+  await scrapeInstagramWebsite("https://www.instagram.com/shardlowstjamesfc");
 
-    await git.addRemote("origin", remoteURL).catch(() => {});
-    await git.add("./instagramData.json");
-    await git.commit("Daily update of SSJ Instagram data from scraper");
-    await git.push("origin", "main");
+  await git.addRemote("origin", remoteURL).catch(() => {});
+  await git.add("./instagramData.json");
+  await git.commit("Daily update of SSJ Instagram data from scraper");
+  await git.push("origin", "main");
 
-    console.log("Data scraped and pushed successfully");
-  } catch (error) {
-    console.error("Error during scheduled cron job:", error);
-  }
-});
+  console.log("Data scraped and pushed successfully");
+} catch (error) {
+  console.error("Error during scheduled cron job:", error);
+}

@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "build": "PLAYWRIGHT_BROWSERS_PATH=0 npm install",
-    "start": "node server.js"
+    "start": "node server.js",
+    "postinstall": "playwright install"
   },
   "keywords": [],
   "author": "",
@@ -17,6 +18,7 @@
     "express": "^4.21.1",
     "fs-extra": "^11.2.0",
     "node-cron": "^3.0.3",
+    "playwright": "^1.49.1",
     "simple-git": "^3.27.0"
   },
   "devDependencies": {
