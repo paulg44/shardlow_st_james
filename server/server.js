@@ -54,6 +54,8 @@ app.get("/instagramData", async (req, res) => {
   }
 });
 
+// If cron job inside render has not worked, go back to this as I have now loaded playwright as a dependency not a dev dependency. Remember I may need to add an environment variable form the render forums!!
+
 // cron.schedule("22 17 * * *", async () => {
 //   try {
 //     console.log("Running daily scraper");
