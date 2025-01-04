@@ -56,9 +56,9 @@ function News({ id }) {
       });
       console.log(extractInstagramPostID(instagramResponse[10]));
 
-      setInstagramHREF1(extractInstagramPostID(instagramResponse[9]));
-      setInstagramHREF2(extractInstagramPostID(instagramResponse[10]));
-      setInstagramHREF3(extractInstagramPostID(instagramResponse[11]));
+      setInstagramHREF1(extractInstagramPostID(instagramResponse[10]));
+      setInstagramHREF2(extractInstagramPostID(instagramResponse[11]));
+      setInstagramHREF3(extractInstagramPostID(instagramResponse[12]));
     } catch (error) {
       console.error("Error fetching data client side", error);
     }
