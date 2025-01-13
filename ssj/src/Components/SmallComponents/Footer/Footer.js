@@ -35,7 +35,7 @@ function Footer() {
         </a>
       </div>
       <div className="footerInfo">
-        <p>SSJ &copy; 2024</p>
+        <p>SSJ &copy; 2025</p>
         {/* <p>
           Designed & Built by{" "}
           <a
