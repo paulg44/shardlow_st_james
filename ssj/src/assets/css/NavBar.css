@@ -39,6 +39,10 @@
   color: white;
 }
 
+.navLinks a:hover {
+  border-bottom: 2px solid var(--yellow);
+}
+
 .dropdownList {
   visibility: hidden;
   position: absolute;
@@ -99,6 +103,8 @@
   }
 
   .navLinks.open .list {
+    animation: slideIn 0.4s ease-in;
+
     display: flex;
     flex-direction: column;
     position: absolute;
@@ -133,5 +139,14 @@
     z-index: 1;
     margin: 0;
     border-bottom-left-radius: 20px;
+  }
+
+  @keyframes slideIn {
+    0% {
+      transform: translateX(400px);
+    }
+    100% {
+      transform: translateX(0);
+    }
   }
 }
