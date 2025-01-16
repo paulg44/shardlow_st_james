@@ -9,7 +9,9 @@ function ShopItem(props) {
         <img src={props.itemIMG} alt={props.itemIMGAlt}></img>
       </a>
       <p className="itemDesc">{props.itemDesc}</p>
-      <p className="itemPrice">{props.itemPrice}</p>
+      <p className="itemPrice">
+        From <span>{props.itemPrice}</span>
+      </p>
     </div>
   );
 }

@@ -18,5 +18,5 @@ test("all items load", () => {
 
   const allItems = screen.getAllByRole("link");
 
-  expect(allItems).toHaveLength(18);
+  expect(allItems).toHaveLength(12);
 });

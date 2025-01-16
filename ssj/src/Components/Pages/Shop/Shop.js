@@ -4,24 +4,18 @@ import "../../../assets/css/Shop.css";
 import ShopItem from "./ShopItem/ShopItem";
 import { useSpring, animated } from "react-spring";
 // Imported Images
-import parkaJacket from "../../../assets/IMG/ShardlowParka.webp";
-import rainJacket from "../../../assets/IMG/ShardlowRain.webp";
-import linceZip from "../../../assets/IMG/ShardlowLinceZip_183aea43-8cef-4c27-a316-d30369755bd5.webp";
-import trainingTee from "../../../assets/IMG/ShardlowLinceTee.webp";
-import trainingTop from "../../../assets/IMG/ShardlowGlobal.webp";
-import polo from "../../../assets/IMG/ShardlowNavyPolo.webp";
-import pants from "../../../assets/IMG/ShardlowPant.webp";
-import homeKit from "../../../assets/IMG/ShardlowHome.webp";
-import awayKit from "../../../assets/IMG/ShardlowAway.webp";
-import shorts from "../../../assets/IMG/ShardlowShort.webp";
-import jomaTee from "../../../assets/IMG/ssj_joma_tee.jfif";
-import jomaHalfZip from "../../../assets/IMG/ssj_joma_half_zip.jfif";
-import jomaHoodie from "../../../assets/IMG/ssj_joma_hoodie.jfif";
-import jomaTracksuit from "../../../assets/IMG/ssj_joma_tracksuit.jfif";
-import jomaPolo from "../../../assets/IMG/ssj_joma_polo.jfif";
-import jomaBottoms from "../../../assets/IMG/ssj_joma_bottoms.jfif";
-import jomaRainJacket from "../../../assets/IMG/ssj_joma_rain_jacket.jfif";
-import jomaSoftShell from "../../../assets/IMG/ssj_joma_softshell_jacket.jfif";
+import parkaJacket from "../../../assets/IMG/ShardlowParkanew.webp";
+import rainJacket from "../../../assets/IMG/ShardlowRainnew.webp";
+import linceZip from "../../../assets/IMG/ShardlowLinceZip_183aea43-8cef-4c27-a316-d30369755bd5new.webp";
+import trainingTee from "../../../assets/IMG/ssj_traint_tee_2.webp";
+import trainingTop from "../../../assets/IMG/ShardlowGlobalnew.webp";
+import polo from "../../../assets/IMG/ShardlowNavyPolonew.webp";
+import pants from "../../../assets/IMG/Shardlowpant.webp";
+import homeKit from "../../../assets/IMG/ssjhomekit.webp";
+import awayKit from "../../../assets/IMG/ssjawaykit.webp";
+import shorts from "../../../assets/IMG/new.webp";
+import newTrainTop from "../../../assets/IMG/ShardlownavyhalfzipNew.webp";
+import warriorTrainTop from "../../../assets/IMG/ShardlowwarriorhalfzipNew.webp";
 
 function Shop() {
   const shopItems = [
@@ -29,70 +23,84 @@ function Shop() {
       id: 1,
       image: parkaJacket,
       description: "Shardlow Parka Jacket",
-      price: "From £39.99",
+      price: "£57.99",
       link: "https://kelmeteamwear.co.uk/products/shardlow-parka-jacket",
     },
     {
       id: 2,
       image: rainJacket,
       description: "Shardlow Rain Jacket",
-      price: "From £23.99",
+      price: "£26.49",
       link: "https://kelmeteamwear.co.uk/products/shardlow-rain-jacket",
     },
     {
       id: 3,
-      image: linceZip,
-      description: "Shardlow Lince Jacket",
-      price: "From £23.99",
-      link: "https://kelmeteamwear.co.uk/products/shardlow-lince-jacket?_pos=1&_sid=8e5076216&_ss=r",
+      image: newTrainTop,
+      description: "Shardlow New 1/4 Zip Training Top",
+      price: "£32.00",
+      link: "https://kelmeteamwear.co.uk/products/shardlow-new-navy-1-4-zip-training-top",
     },
     {
       id: 4,
-      image: trainingTee,
-      description: "Shardlow Training Tee",
-      price: "From £14.99",
-      link: "https://kelmeteamwear.co.uk/products/shardlow-training-tee",
+      image: warriorTrainTop,
+      description: "Shardlow Warrior 1/4 Zip Top",
+      price: "£66.00",
+      link: "https://kelmeteamwear.co.uk/products/shardlow-new-navy-1-4-zip-training-top-copy",
     },
     {
       id: 5,
-      image: trainingTop,
-      description: "Shardlow 1/4 Zip Training Top",
-      price: "From £24.00",
-      link: "https://kelmeteamwear.co.uk/products/shardlow-1-4-zip-training-top",
+      image: linceZip,
+      description: "Shardlow Lince Jacket",
+      price: "£26.49",
+      link: "https://kelmeteamwear.co.uk/products/shardlow-lince-jacket?_pos=1&_sid=8e5076216&_ss=r",
     },
     {
       id: 6,
-      image: polo,
-      description: "Shardlow Polo(3 Colour Options)",
-      price: "From £13.99",
-      link: "https://kelmeteamwear.co.uk/products/shardlow-polo-navy",
+      image: trainingTee,
+      description: "Shardlow Training Tee",
+      price: "£25.00",
+      link: "https://kelmeteamwear.co.uk/products/shardlow-warrior-training-t-shirt",
     },
     {
       id: 7,
-      image: pants,
-      description: "Shardlow Training Pant",
-      price: "From £14.49",
-      link: "https://kelmeteamwear.co.uk/products/shardlow-training-pant",
+      image: trainingTop,
+      description: "Shardlow 1/4 Zip Training Top",
+      price: "£26.00",
+      link: "https://kelmeteamwear.co.uk/products/shardlow-1-4-zip-training-top",
     },
     {
       id: 8,
-      image: homeKit,
-      description: "Shardlow Home Kit",
-      price: "From £24.99",
-      link: "https://kelmeteamwear.co.uk/products/shardlow-home-set",
+      image: polo,
+      description: "Shardlow Polo(3 Colour Options)",
+      price: "£16.49",
+      link: "https://kelmeteamwear.co.uk/products/shardlow-polo-navy",
     },
     {
       id: 9,
-      image: awayKit,
-      description: "Shardlow Away Kit",
-      price: "From £24.99",
-      link: "https://kelmeteamwear.co.uk/products/copy-of-shardlow-away-set",
+      image: pants,
+      description: "Shardlow Training Pant",
+      price: "£19.99",
+      link: "https://kelmeteamwear.co.uk/products/shardlow-training-pant",
     },
     {
       id: 10,
+      image: homeKit,
+      description: "Shardlow Home Kit",
+      price: "£24.99",
+      link: "https://kelmeteamwear.co.uk/products/shardlow-home-set",
+    },
+    {
+      id: 11,
+      image: awayKit,
+      description: "Shardlow Away Kit",
+      price: "£24.99",
+      link: "https://kelmeteamwear.co.uk/products/copy-of-shardlow-away-set",
+    },
+    {
+      id: 12,
       image: shorts,
       description: "Shardlow Training Short",
-      price: "From £6.99",
+      price: "£6.49",
       link: "https://kelmeteamwear.co.uk/products/shardlow-training-short",
     },
     // {
@@ -179,7 +187,7 @@ function Shop() {
     <div className="shop">
       <animated.h2 style={{ ...fadeIn }}>Welcome to our shop</animated.h2>
       <animated.p className="shopPageInfo" style={{ ...p }}>
-        *Click item image to take you to external site (Kelme or Euro Soccer)
+        *Click item image to take you to external site Kelme
       </animated.p>
       <animated.div className="shopItems" style={{ ...items }}>
         {shopItems.map((item) => (

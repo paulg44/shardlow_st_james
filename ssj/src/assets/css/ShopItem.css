@@ -1,9 +1,21 @@
 /* CSS file for shop item */
+.shopItem {
+  text-align: center;
+  margin-bottom: 5px;
 
+  .itemPrice {
+    span {
+      font-weight: bold;
+      color: var(--dark-blue);
+    }
+  }
+}
 .shopItem img {
   width: 250px;
+  height: 250px;
+  margin-bottom: 5px;
   box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.3);
-  opacity: 0.7;
+  opacity: 0.8;
 }
 
 .shopItem img:hover {
@@ -11,7 +23,15 @@
 }
 
 @media (max-width: 1000px) {
+  .shopItem {
+    .itemPrice {
+      padding-bottom: 5px;
+      border-bottom: 1px solid var(--light-blue);
+    }
+  }
+
   .shopItem img {
     opacity: 1;
+    box-shadow: none;
   }
 }
