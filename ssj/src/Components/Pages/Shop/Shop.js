@@ -10,7 +10,7 @@ import linceZip from "../../../assets/IMG/ShardlowLinceZip_183aea43-8cef-4c27-a3
 import trainingTee from "../../../assets/IMG/ssj_traint_tee_2.webp";
 import trainingTop from "../../../assets/IMG/ShardlowGlobalnew.webp";
 import polo from "../../../assets/IMG/ShardlowNavyPolonew.webp";
-import pants from "../../../assets/IMG/Shardlowpant.webp";
+import pants from "../../../assets/IMG/Shardlowpant (1)new.webp";
 import homeKit from "../../../assets/IMG/ssjhomekit.webp";
 import awayKit from "../../../assets/IMG/ssjawaykit.webp";
 import shorts from "../../../assets/IMG/new.webp";
@@ -103,62 +103,6 @@ function Shop() {
       price: "£6.49",
       link: "https://kelmeteamwear.co.uk/products/shardlow-training-short",
     },
-    // {
-    //   id: 11,
-    //   image: jomaTee,
-    //   description: "Shardlow Academy IV Training Tee",
-    //   price: "From £16.50",
-    //   link: "https://www.eurosoccercompany.com/shardlow-st-james-club-shop/shardlow-sj-joma-academy-iv-training-tee",
-    // },
-    // {
-    //   id: 12,
-    //   image: jomaHalfZip,
-    //   description: "Shardlow Champion IV Half Zip",
-    //   price: "From £27.75",
-    //   link: "https://www.eurosoccercompany.com/shardlow-st-james-club-shop/shardlow-sj-joma-champion-vi-half-zip",
-    // },
-    // {
-    //   id: 13,
-    //   image: jomaHoodie,
-    //   description: "Shardlow Academy IV Full Zip Hoodie",
-    //   price: "From £35.35",
-    //   link: "https://www.eurosoccercompany.com/shardlow-st-james-club-shop/shardlow-sj-joma-academy-iv-full-zip-hoody",
-    // },
-    // {
-    //   id: 14,
-    //   image: jomaTracksuit,
-    //   description: "Shardlow Champion IV Tracksuit",
-    //   price: "From £36.75",
-    //   link: "https://www.eurosoccercompany.com/shardlow-st-james-club-shop/shardlow-sj-joma-champion-vi-tracksuit",
-    // },
-    // {
-    //   id: 15,
-    //   image: jomaPolo,
-    //   description: "Shardlow Champion IV Polo (slim fit)",
-    //   price: "From £19.50",
-    //   link: "https://www.eurosoccercompany.com/shardlow-st-james-club-shop/shardlow-sj-champion-vi-polo-shirt-slim-fit",
-    // },
-    // {
-    //   id: 16,
-    //   image: jomaBottoms,
-    //   description: "Shardlow Champion IV Skinny Bottoms",
-    //   price: "From £19.25",
-    //   link: "https://www.eurosoccercompany.com/shardlow-st-james-club-shop/shardlow-sj-champion-vi-skinny-bottoms",
-    // },
-    // {
-    //   id: 17,
-    //   image: jomaRainJacket,
-    //   description: "Shardlow Iris Rain Jacket",
-    //   price: "From £18.75",
-    //   link: "https://www.eurosoccercompany.com/shardlow-st-james-club-shop/shardlow-sj-joma-iris-rain-jacket",
-    // },
-    // {
-    //   id: 18,
-    //   image: jomaSoftShell,
-    //   description: "Shardlow Berna Sof Shell Jacket",
-    //   price: "From £51.00",
-    //   link: "https://www.eurosoccercompany.com/shardlow-st-james-club-shop/shardlow-sj-joma-berna-soft-shell-jacket-slim-fit",
-    // },
   ];
 
   // Animation
