@@ -54,11 +54,11 @@ function News({ id }) {
       ).then((data) => {
         return data.json();
       });
-      console.log(extractInstagramPostID(instagramResponse[10]));
+      console.log(extractInstagramPostID(instagramResponse[9]));
 
-      setInstagramHREF1(extractInstagramPostID(instagramResponse[10]));
-      setInstagramHREF2(extractInstagramPostID(instagramResponse[11]));
-      setInstagramHREF3(extractInstagramPostID(instagramResponse[12]));
+      setInstagramHREF1(extractInstagramPostID(instagramResponse[9]));
+      setInstagramHREF2(extractInstagramPostID(instagramResponse[10]));
+      setInstagramHREF3(extractInstagramPostID(instagramResponse[11]));
     } catch (error) {
       console.error("Error fetching data client side", error);
     }
