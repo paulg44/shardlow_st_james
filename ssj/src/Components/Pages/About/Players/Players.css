@@ -1,10 +1,10 @@
 .players {
-  margin-top: 340px;
   position: relative;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  overflow: scroll;
 }
 
 .playerCard {

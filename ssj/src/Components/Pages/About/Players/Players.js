@@ -2,7 +2,7 @@ import "./Players.css";
 import playerData from "../../../../assets/utils/players.json";
 import { useSpring, animated } from "react-spring";
 
-function Players() {
+function Players({ team }) {
   // Animation
   const fadeIn = useSpring({
     from: { opacity: 0 },
@@ -11,12 +11,9 @@ function Players() {
     delay: 150,
   });
 
-  console.log("active team on player page:");
-  console.log("player data:", playerData.players["SSJ Sunday"]);
-  console.log("player data.player[activeTeam]:", playerData.players);
   return (
     <animated.div className="players" style={{ ...fadeIn }}>
-      {playerData.players["SSJ Sunday"]?.map((player) => (
+      {playerData.players[team]?.map((player) => (
         <div key={player.id} className="playerCard">
           <div className="shine"></div>
           <h2>{player.name}</h2>

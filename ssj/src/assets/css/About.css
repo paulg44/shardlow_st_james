@@ -1,0 +1,15 @@
+.about {
+  overflow: scroll;
+
+  label {
+    border: 1px solid var(--dark-blue);
+    padding: 10px;
+    margin: 0 0 10px;
+    display: block;
+
+    &:hover {
+      background: var(--light-blue);
+      cursor: pointer;
+    }
+  }
+}
