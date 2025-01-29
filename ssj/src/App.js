@@ -15,6 +15,7 @@ import Shop from "./Components/Pages/Shop/Shop";
 import TeamsDisplay from "./Components/Pages/TeamsDisplay/TeamsDisplay";
 import Sponsors from "./Components/Pages/Sponsors/Sponsors";
 import Contact from "./Components/Pages/Contact/Contact";
+import About from "./Components/Pages/About/About";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
         <Route path="/teamDisplay" element={<TeamsDisplay />} />
         <Route path="/sponsors" element={<Sponsors />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/aboutUs" element={<About />} />
       </Routes>
       <Footer />
     </BrowserRouter>

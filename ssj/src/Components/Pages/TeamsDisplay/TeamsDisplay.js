@@ -12,7 +12,6 @@ import { useState, useEffect } from "react";
 import ResultsFixtures from "./Results/Fixtures/ResultsFixtures.js";
 import "./TeamsDisplay.css";
 import Table from "./Table/Table.js";
-import Players from "./Players/Players.js";
 // import { FaRegHeart } from "react-icons/fa";
 
 function TeamsDisplay() {
@@ -112,9 +111,6 @@ function TeamsDisplay() {
             <ResultsFixtures activeTeam={activeTeam} />
           )}
         </div>
-        {activeTeam && selectedElementView === "players" && (
-          <Players activeTeam={activeTeam} />
-        )}
       </div>
     </div>
   );
