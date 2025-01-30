@@ -28,21 +28,30 @@ function Players({ team }) {
 
     // Standard Style
     <div className="standardPlayers">
-      <div className="nameNumber">
-        <p>11</p>
-        <h3>Paul Garton</h3>
-        <div className="playerImage">
-          <img src={userImage} alt="profile" />
+      <div className="playerInfo">
+        <div className="nameNumber">
+          <h3>
+            <span>11</span>Paul Garton
+          </h3>
+          <div className="playerImage">
+            <img src={userImage} alt="profile" />
+          </div>
+        </div>
+        <div className="personalStats">
+          <p>Position: Full-Back</p>
+          <p>Age: 40</p>
         </div>
       </div>
-      <div className="personalStats">
-        <p>Position: Full-Back</p>
-        <p>Age: 40</p>
-      </div>
-      <div className="footballStats">
-        <p>Appearances: 22</p>
-        <p>Goals: 4</p>
-        <p>Assists: 1</p>
+      <div className="playerStats">
+        <p>
+          <span>Appearances</span> 22
+        </p>
+        <p>
+          <span>Goals</span> 4
+        </p>
+        <p>
+          <span>Assists</span> 1
+        </p>
       </div>
     </div>
   );

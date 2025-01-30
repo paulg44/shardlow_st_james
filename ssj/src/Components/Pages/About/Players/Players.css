@@ -75,6 +75,41 @@
 }
 
 /* Standard profile */
-.playerImage img {
-  width: 10%;
+.standardPlayers {
+  width: 350px;
+  border: 2px solid var(--dark-blue);
+
+  .playerInfo {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid red;
+
+    .nameNumber {
+      .playerImage img {
+        width: 40%;
+      }
+    }
+
+    .personalStats {
+      p {
+        /* width: 200px; */
+      }
+    }
+  }
+  .playerStats {
+    display: flex;
+    justify-content: center;
+    p {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      width: 100px;
+      padding: 10px;
+      margin: 5px;
+      border: solid 2px black;
+    }
+  }
 }
